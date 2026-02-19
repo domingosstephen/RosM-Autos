@@ -11,9 +11,9 @@ const steps = [
   },
   {
     number: '2',
-    title: 'Get Your Inspection Report & Quote',
+    title: 'Get Photos, Condition Details & Quote',
     description:
-      'Receive a 150-point inspection report with 40+ photos, plus a single transparent quote covering vehicle price, shipping, and all fees.',
+      'Receive photos and a condition summary of your vehicle, plus a single transparent quote covering vehicle price, shipping, and all fees.',
   },
   {
     number: '3',

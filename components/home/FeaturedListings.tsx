@@ -38,7 +38,7 @@ export function FeaturedListings() {
       <Container>
         <SectionHeading
           title="Inspected. Priced. Ready to Ship."
-          subtitle="Hand-picked from our current inventory — every unit comes with a full inspection report"
+          subtitle="Hand-picked from our current inventory — every unit is inspected and photographed before listing"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featured.map((product) => (

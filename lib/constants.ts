@@ -57,7 +57,7 @@ export const NAV_LINKS = [
 ]
 
 export const STATS = {
-  vehiclesSold: '2,500+',
+  responseTime: '24h',
   countriesServed: '45+',
   yearsInBusiness: '8+',
   satisfactionRate: '98%',

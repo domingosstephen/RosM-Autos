@@ -31,7 +31,7 @@ export default function InventoryPage() {
           <Breadcrumbs />
           <SectionHeading
             title="Inspected and Ready to Ship — Pick Your Vehicle"
-            subtitle="Every unit below has passed a 150-point inspection. Filter by category, search by name, and get a quote within 24 hours."
+            subtitle="Every unit below has been inspected and photographed. Filter by category, search by name, and get a quote within 24 hours."
             tag="h1"
             alignment="center"
             className="mb-10"

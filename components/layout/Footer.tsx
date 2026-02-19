@@ -50,7 +50,7 @@ export function Footer() {
               <span className="text-cta">RosM</span> Autos
             </Link>
             <p className="mt-4 text-white/70 text-sm leading-relaxed">
-              150-point inspected automobiles, farm tractors, and electric bikes shipped from Lübbecke, Germany to 45+ countries. From our yard to your port.
+              Inspected automobiles, farm tractors, and electric bikes shipped from Lübbecke, Germany to 45+ countries. From our yard to your port.
             </p>
             <div className="flex gap-3 mt-6">
               <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Follow RosM Autos on Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-cta transition-colors">

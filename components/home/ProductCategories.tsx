@@ -8,7 +8,7 @@ const categories = [
   {
     title: 'Used Automobiles',
     description:
-      'Toyota Hilux, Land Cruiser, Corolla. Honda CR-V, Civic. Nissan Patrol, X-Trail. Mercedes Sprinter. BMW X3. VW Amarok. Every unit passes a 150-point inspection — engine, transmission, body, and electronics checked and photographed.',
+      'Toyota Hilux, Land Cruiser, Corolla. Honda CR-V, Civic. Nissan Patrol, X-Trail. Mercedes Sprinter. BMW X3. VW Amarok. Every unit is inspected — engine, transmission, body, and electronics checked and photographed before sale.',
     image: 'Automobiles – Sedans, SUVs, Trucks',
     alt: 'Quality used automobiles including sedans, SUVs, and pickup trucks available for international export from RosM Autos',
     href: '/inventory?category=automobile',

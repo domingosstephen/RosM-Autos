@@ -22,8 +22,8 @@ export default function ShippingPage() {
       <section className="py-16 md:py-24">
         <Container>
           <SectionHeading
-            title="2,500+ Vehicles Shipped to 45+ Countries — Here Is How"
-            subtitle="Our logistics team has managed thousands of port-to-port deliveries across 3 continents. Every shipment is tracked, insured, and fully documented."
+            title="Shipping to 45+ Countries Across 3 Continents — Here Is How"
+            subtitle="Our logistics team manages port-to-port deliveries to Africa, South America, and Eastern Europe. Every shipment is tracked, insured, and fully documented."
             tag="h1"
           />
 

@@ -2,7 +2,7 @@ import { Container } from '@/components/shared/Container'
 import { STATS } from '@/lib/constants'
 
 const stats = [
-  { value: STATS.vehiclesSold, label: 'Units Sold' },
+  { value: STATS.responseTime, label: 'Quote Response' },
   { value: STATS.countriesServed, label: 'Countries Served' },
   { value: STATS.yearsInBusiness, label: 'Years Experience' },
   { value: STATS.satisfactionRate, label: 'Client Satisfaction' },

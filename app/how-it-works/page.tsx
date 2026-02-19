@@ -35,9 +35,9 @@ const steps = [
   },
   {
     number: '3',
-    title: 'Review the 150-Point Inspection Report',
-    description: 'Receive a detailed report with 40+ photos covering engine, transmission, body, electronics, and interior (for cars) or PTO, hydraulics, and structural integrity (for tractors). You see everything before you pay.',
-    details: 'Inspections are conducted by certified mechanics. Every defect — cosmetic or mechanical — is documented.',
+    title: 'Review Photos and Condition Details',
+    description: 'Receive photos and a condition summary covering engine, transmission, body, electronics, and interior (for cars) or PTO, hydraulics, and structural integrity (for tractors). You see what you are buying before you pay.',
+    details: 'We inspect every vehicle before listing. Any known issues — cosmetic or mechanical — are disclosed upfront.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/></svg>
     ),
@@ -45,7 +45,7 @@ const steps = [
   {
     number: '4',
     title: 'Pay Securely',
-    description: 'Complete payment through verified bank transfer or wire payment. You receive full transaction confirmation immediately — no payment is processed until you approve your inspection report.',
+    description: 'Complete payment through verified bank transfer or wire payment. You receive full transaction confirmation immediately — no payment is processed until you approve the vehicle condition and quote.',
     details: 'Flexible payment terms available for qualifying fleet buyers. Ask our team for details.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
@@ -63,7 +63,7 @@ const steps = [
   {
     number: '6',
     title: 'Receive Your Vehicle at Port',
-    description: 'Your vehicle arrives at your nearest port in the exact condition shown in your inspection report. We provide all import documentation and can connect you with trusted local clearing agents.',
+    description: 'Your vehicle arrives at your nearest port in the condition described and photographed before purchase. We provide all import documentation and can connect you with trusted local clearing agents.',
     details: 'Transit times: 10–16 days to Eastern Europe, 15–25 days to South America, 18–40 days to Africa.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -131,8 +131,8 @@ export default function HowItWorksPage() {
           <SectionHeading title="Included with Every Purchase — No Extra Cost" />
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
-              '150-point inspection report with 40+ photos',
-              'Complete vehicle condition documentation',
+              'Vehicle inspection with photos and condition summary',
+              'Full disclosure of any known issues',
               'Single transparent quote — zero hidden fees',
               'All export paperwork and documentation',
               'Port-to-port shipping from Germany',

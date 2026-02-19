@@ -198,8 +198,8 @@ export function howToSchema() {
       {
         '@type': 'HowToStep',
         position: 3,
-        name: 'Review Inspection Report',
-        text: 'Receive a comprehensive inspection report with detailed photos and condition assessment before committing to purchase.',
+        name: 'Review Photos and Condition Details',
+        text: 'Receive photos and a condition summary of the vehicle before committing to purchase.',
       },
       {
         '@type': 'HowToStep',

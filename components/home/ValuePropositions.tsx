@@ -3,9 +3,9 @@ import { SectionHeading } from '@/components/shared/SectionHeading'
 
 const propositions = [
   {
-    title: '150-Point Inspection — Before You Pay a Cent',
+    title: 'Every Vehicle Inspected — Before You Pay a Cent',
     description:
-      'Our certified mechanics check engine, transmission, body, electronics, and 146 other points. You get a detailed report with 40+ photos before you decide. See exactly what you are buying — no guesswork, no nasty surprises at your port.',
+      'We check engine, transmission, body, electronics, and overall condition before listing any vehicle. You receive photos and a condition summary before you decide. See what you are buying — no guesswork, no nasty surprises at your port.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/></svg>
     ),
@@ -33,7 +33,7 @@ export function ValuePropositions() {
     <section className="py-16 md:py-24 bg-surface">
       <Container>
         <SectionHeading
-          title="Why 2,500+ Buyers Across 45 Countries Trust RosM Autos"
+          title="Why Buyers Across 45 Countries Trust RosM Autos"
           subtitle="Three promises we have delivered on since 2017 — backed by a 98% satisfaction rate"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">

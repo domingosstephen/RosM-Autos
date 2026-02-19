@@ -18,8 +18,8 @@ export const metadata: Metadata = createPageMetadata({
 
 const advantages = [
   {
-    title: '150-Point Inspection with Photo Evidence',
-    description: 'Engine, transmission, body, electronics, tires, interior — 150 checkpoints documented with 40+ photos. You see the report before you pay. No other exporter gives you this level of transparency.',
+    title: 'Every Vehicle Inspected and Photographed',
+    description: 'Engine, transmission, body, electronics, tires, interior — we inspect every vehicle and send you photos with a condition summary before you pay. You see what you are buying upfront.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/></svg>
     ),
@@ -72,10 +72,10 @@ export default function AboutPage() {
                   <strong className="text-navy">The problem is real:</strong> international vehicle buyers lose thousands every year to dealers who misrepresent condition, hide fees, and disappear after payment. When you are buying from another continent, one bad purchase can derail your business for months.
                 </p>
                 <p>
-                  RosM Autos was founded in Lübbecke, Germany to fix this. Over {STATS.yearsInBusiness} years, we have shipped {STATS.vehiclesSold} automobiles, tractors, and electric bikes to {STATS.countriesServed} countries — built on one non-negotiable principle: <strong className="text-navy">what we show you is what arrives at your port.</strong>
+                  RosM Autos was founded in Lübbecke, Germany to fix this. Over {STATS.yearsInBusiness} years, we have shipped automobiles, tractors, and electric bikes to buyers in {STATS.countriesServed} countries — built on one non-negotiable principle: <strong className="text-navy">what we show you is what arrives at your port.</strong>
                 </p>
                 <p>
-                  Every unit passes a 150-point inspection with photographic proof. Every quote includes vehicle price, shipping, documentation, and insurance — no surprise charges. Every shipment is tracked from our yard to your port. Our {STATS.satisfactionRate} satisfaction rate is not a marketing number — it is what happens when you deliver on your promises, every time.
+                  Every unit is inspected and photographed before listing. Every quote includes vehicle price, shipping, documentation, and insurance — no surprise charges. Every shipment is tracked from our yard to your port. Our {STATS.satisfactionRate} satisfaction rate is not a marketing number — it is what happens when you deliver on your promises, every time.
                 </p>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function AboutPage() {
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: STATS.vehiclesSold, label: 'Units Sold' },
+              { value: STATS.responseTime, label: 'Quote Response' },
               { value: STATS.countriesServed, label: 'Countries Served' },
               { value: STATS.yearsInBusiness, label: 'Years in Business' },
               { value: STATS.satisfactionRate, label: 'Satisfaction Rate' },
