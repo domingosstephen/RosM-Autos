@@ -30,8 +30,8 @@ export default function InventoryPage() {
         <Container>
           <Breadcrumbs />
           <SectionHeading
-            title="Our Inventory"
-            subtitle="Browse our selection of quality-inspected vehicles, tractors, and electric bikes ready for international export."
+            title="Inspected and Ready to Ship — Pick Your Vehicle"
+            subtitle="Every unit below has passed a 150-point inspection. Filter by category, search by name, and get a quote within 24 hours."
             tag="h1"
             alignment="center"
             className="mb-10"

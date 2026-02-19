@@ -8,14 +8,14 @@ export default function NotFound() {
         <p className="text-6xl md:text-8xl font-extrabold text-cta">404</p>
         <h1 className="mt-4 text-2xl md:text-4xl font-bold text-navy">Page Not Found</h1>
         <p className="mt-4 text-lg text-muted max-w-md mx-auto">
-          The page you&apos;re looking for doesn&apos;t exist or has been moved. Let&apos;s get you back on track.
+          This page does not exist or has moved. No worries — let us get you where you need to go.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button href="/" variant="primary" size="lg">
-            Go to Homepage
+            Back to Homepage
           </Button>
           <Button href="/inventory" variant="secondary" size="lg">
-            Browse Inventory
+            Explore the Inventory
           </Button>
         </div>
       </Container>

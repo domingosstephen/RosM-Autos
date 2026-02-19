@@ -22,15 +22,14 @@ export default function ShippingPage() {
       <section className="py-16 md:py-24">
         <Container>
           <SectionHeading
-            title="International Shipping Doesn&apos;t Have to Be Complicated"
-            subtitle="We've shipped thousands of vehicles to ports across Africa, South America, and Eastern Europe. Our logistics team handles everything."
+            title="2,500+ Vehicles Shipped to 45+ Countries — Here Is How"
+            subtitle="Our logistics team has managed thousands of port-to-port deliveries across 3 continents. Every shipment is tracked, insured, and fully documented."
             tag="h1"
           />
 
           <p className="mt-6 text-center text-slate max-w-3xl mx-auto leading-relaxed">
-            Shipping methods vary by product type: automobiles and tractors typically ship via RoRo
-            (Roll-on/Roll-off) or container. Electric bikes ship via consolidated container or air
-            freight for faster delivery.
+            <strong className="text-navy">Automobiles and tractors</strong> ship via RoRo (Roll-on/Roll-off) or container.{' '}
+            <strong className="text-navy">Electric bikes</strong> ship via consolidated container or air freight for faster delivery. Every route includes marine cargo insurance.
           </p>
 
           {/* Region Tabs */}
@@ -113,7 +112,7 @@ export default function ShippingPage() {
       {/* Shipping FAQ */}
       <section className="py-16 md:py-20 bg-surface-alt">
         <Container size="md">
-          <SectionHeading title="Common Shipping Questions" />
+          <SectionHeading title="Shipping Questions — Answered" />
           <div className="mt-10 space-y-4">
             {[
               { q: 'How long does shipping take?', a: 'Transit times vary by destination: 10-16 days to Eastern Europe, 15-25 days to South America, and 18-40 days to Africa. We provide exact timelines in your quote.' },
@@ -132,10 +131,10 @@ export default function ShippingPage() {
       </section>
 
       <CTABanner
-        headline="Get a Shipping Quote for Your Vehicle"
-        subtext="Tell us what you want to buy and where you want it delivered. We'll provide a complete quote within 24 hours."
-        primaryCTA={{ label: 'Request a Quote', href: '/contact' }}
-        secondaryCTA={{ label: 'Browse Inventory', href: '/inventory' }}
+        headline="Get Your Shipping Quote in 24 Hours"
+        subtext="Tell us what you want to buy and your destination port. We will send you a complete quote — vehicle, shipping, documentation, and insurance — all in one number."
+        primaryCTA={{ label: 'Get My Shipping Quote', href: '/contact' }}
+        secondaryCTA={{ label: 'Explore the Inventory', href: '/inventory' }}
         variant="accent"
       />
     </>

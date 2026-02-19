@@ -3,25 +3,25 @@ import { SectionHeading } from '@/components/shared/SectionHeading'
 
 const propositions = [
   {
-    title: 'Every Unit, Thoroughly Inspected',
+    title: '150-Point Inspection — Before You Pay a Cent',
     description:
-      'Every vehicle and piece of equipment undergoes our comprehensive 150-point inspection process. You receive a detailed report with photos before you commit to buying. No surprises, no guesswork.',
+      'Our certified mechanics check engine, transmission, body, electronics, and 146 other points. You get a detailed report with 40+ photos before you decide. See exactly what you are buying — no guesswork, no nasty surprises at your port.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/></svg>
     ),
   },
   {
-    title: 'Complete Export Service',
+    title: 'From Our Yard to Your Port — We Handle Everything',
     description:
-      'We handle everything from purchase to port delivery. Shipping, documentation, customs clearance — you focus on choosing the right product, we handle all the logistics across three continents.',
+      'Shipping paperwork, export documentation, customs clearance, port-to-port logistics. You pick the vehicle. We manage every step until it reaches your country. Currently delivering to 45+ countries across 3 continents.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
     ),
   },
   {
-    title: 'Fair, Transparent Pricing',
+    title: 'One Quote. Every Cost Included. Zero Surprises.',
     description:
-      'The price you see is the price you pay. No hidden fees, no surprise charges at checkout. We provide transparent quotes that include all costs upfront so you can plan your budget with confidence.',
+      'Vehicle price, shipping, documentation fees, insurance — all in one upfront quote before you commit. Other exporters add charges after payment. We show you the full number from the start so you can budget with certainty.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
     ),
@@ -33,8 +33,8 @@ export function ValuePropositions() {
     <section className="py-16 md:py-24 bg-surface">
       <Container>
         <SectionHeading
-          title="Why International Buyers Choose RosM Autos"
-          subtitle="We built our business on three promises — and we deliver on every one"
+          title="Why 2,500+ Buyers Across 45 Countries Trust RosM Autos"
+          subtitle="Three promises we have delivered on since 2017 — backed by a 98% satisfaction rate"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {propositions.map((prop) => (

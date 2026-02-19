@@ -69,8 +69,8 @@ export default function BlogPage() {
       <section className="py-16 md:py-24">
         <Container>
           <SectionHeading
-            title="Insights & Guides for International Buyers"
-            subtitle="Tips, market updates, and expert advice to help you make informed decisions"
+            title="Guides, Market Data, and Import Tips for International Buyers"
+            subtitle="Actionable advice on import duties, shipping routes, vehicle selection, and market trends — based on real export data"
             tag="h1"
           />
 
@@ -108,10 +108,10 @@ export default function BlogPage() {
       </section>
 
       <CTABanner
-        headline="Want Market Updates?"
-        subtext="Follow our blog for the latest tips, guides, and market insights for international vehicle buyers."
-        primaryCTA={{ label: 'Browse Inventory', href: '/inventory' }}
-        secondaryCTA={{ label: 'Contact Us', href: '/contact' }}
+        headline="Ready to Buy? Start with Our Inventory"
+        subtext="Articles are coming soon. In the meantime, explore our inspected vehicles or get a free quote."
+        primaryCTA={{ label: 'Explore the Inventory', href: '/inventory' }}
+        secondaryCTA={{ label: 'Get a Free Quote', href: '/contact' }}
         variant="light"
       />
     </>

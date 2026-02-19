@@ -74,8 +74,8 @@ export default function FAQPage() {
       <section className="py-16 md:py-24">
         <Container size="md">
           <SectionHeading
-            title="Everything You Need to Know"
-            subtitle="Can't find your answer? Contact us directly — we respond within 24 hours."
+            title="Your Questions, Answered"
+            subtitle="54 answers covering buying, payment, inspections, shipping, customs, tractors, and e-bikes. Still have a question? We respond within 24 hours."
             tag="h1"
           />
 
@@ -149,9 +149,9 @@ export default function FAQPage() {
       </section>
 
       <CTABanner
-        headline="Still Have Questions?"
-        subtext="Our team is happy to help. Reach out via WhatsApp, phone, or email and we'll respond within 24 hours."
-        primaryCTA={{ label: 'Contact Us', href: '/contact' }}
+        headline="Did Not Find Your Answer?"
+        subtext="Message us on WhatsApp, call, or email. We respond within 24 hours — and our team speaks your language."
+        primaryCTA={{ label: 'Ask Us Directly', href: '/contact' }}
         variant="dark"
       />
     </>

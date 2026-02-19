@@ -35,8 +35,8 @@ export default function ContactPage() {
       <section className="pt-8 pb-12 md:pt-12 md:pb-16">
         <Container>
           <SectionHeading
-            title="Let's Get You Behind the Wheel"
-            subtitle="Have a question, need a quote, or ready to place an order? Fill out the form below or reach us directly — we typically respond within 24 hours."
+            title="Get Your Free Quote — No Obligation"
+            subtitle="Tell us what you need and where you want it delivered. We respond within 24 hours with a transparent quote covering vehicle, shipping, and all fees."
             tag="h1"
           />
         </Container>

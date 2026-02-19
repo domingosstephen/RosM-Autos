@@ -8,26 +8,29 @@ const categories = [
   {
     title: 'Used Automobiles',
     description:
-      'From reliable sedans to rugged SUVs and pickup trucks. Every vehicle passes our 150-point inspection before listing. Toyota, Honda, Nissan, Mercedes, BMW, and more.',
+      'Toyota Hilux, Land Cruiser, Corolla. Honda CR-V, Civic. Nissan Patrol, X-Trail. Mercedes Sprinter. BMW X3. VW Amarok. Every unit passes a 150-point inspection — engine, transmission, body, and electronics checked and photographed.',
     image: 'Automobiles – Sedans, SUVs, Trucks',
     alt: 'Quality used automobiles including sedans, SUVs, and pickup trucks available for international export from RosM Autos',
     href: '/inventory?category=automobile',
+    cta: 'See Available Cars & Trucks',
   },
   {
     title: 'Farm Tractors',
     description:
-      'Quality farm tractors from trusted brands like John Deere, Kubota, and Massey Ferguson. Inspected for engine, hydraulics, PTO, and structural integrity.',
+      'John Deere 5075E, Kubota M7060, Massey Ferguson 4707, New Holland T4.75. Inspected for engine hours, hydraulic pressure, PTO function, and structural integrity — with a full condition report before you buy.',
     image: 'Farm Tractors – Various Brands',
     alt: 'Used farm tractors from John Deere, Kubota, and Massey Ferguson inspected and ready for export to Africa and South America',
     href: '/inventory?category=tractor',
+    cta: 'See Available Tractors',
   },
   {
     title: 'Electric Bikes',
     description:
-      'Modern electric bikes for city commuting, cargo hauling, and off-road adventures. Battery health verified and charging specifications confirmed.',
+      'City commuters, cargo haulers, and mountain e-bikes with verified battery health and confirmed range specs. Motors from 250W to 1,000W. Shipped via container or air freight for fast delivery.',
     image: 'Electric Bikes – City, Cargo, Mountain',
     alt: 'Electric bikes including city commuters, cargo bikes, and mountain e-bikes available for international purchase from RosM Autos',
     href: '/inventory?category=electric-bike',
+    cta: 'See Available E-Bikes',
   },
 ]
 
@@ -36,8 +39,8 @@ export function ProductCategories() {
     <section className="py-16 md:py-24">
       <Container>
         <SectionHeading
-          title="What We Offer"
-          subtitle="Three categories of quality products, one trusted source for international buyers"
+          title="Vehicles and Equipment, Inspected and Ready to Ship"
+          subtitle="Three product categories, one transparent process — choose what your market needs"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {categories.map((cat) => (
@@ -53,7 +56,7 @@ export function ProductCategories() {
                 <p className="mt-2 text-slate leading-relaxed">{cat.description}</p>
                 <div className="mt-6">
                   <Button href={cat.href} variant="secondary" size="sm">
-                    Browse {cat.title}
+                    {cat.cta}
                   </Button>
                 </div>
               </div>

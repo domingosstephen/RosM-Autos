@@ -7,19 +7,19 @@ const regions = [
     name: 'Africa',
     icon: '🌍',
     countries: ['Nigeria', 'Ghana', 'Kenya', 'Tanzania', 'South Africa', 'Cameroon'],
-    description: 'Serving 20+ African nations through major West, East, and Southern ports.',
+    description: '20+ African nations reached via Lagos, Tema, Mombasa, Dar es Salaam, and Durban. Transit: 18–40 days.',
   },
   {
     name: 'South America',
     icon: '🌎',
     countries: ['Brazil', 'Colombia', 'Peru', 'Chile', 'Paraguay', 'Bolivia'],
-    description: 'Direct shipping routes to major South American ports with customs support.',
+    description: 'Direct routes to Santos, Buenaventura, Callao, and San Antonio. Transit: 15–25 days with full customs support.',
   },
   {
     name: 'Eastern Europe',
     icon: '🌏',
     countries: ['Poland', 'Romania', 'Ukraine', 'Georgia', 'Bulgaria', 'Czech Republic'],
-    description: 'EU and non-EU delivery through Baltic and Black Sea ports.',
+    description: 'EU and non-EU delivery via Gdansk, Constanta, Odessa, and Poti. Transit: 10–16 days.',
   },
 ]
 
@@ -28,8 +28,8 @@ export function RegionsCTA() {
     <section className="py-16 md:py-24 bg-navy">
       <Container>
         <SectionHeading
-          title="We Ship Worldwide"
-          subtitle="Established shipping routes to three continents with full customs and documentation support"
+          title="Delivering to 45+ Countries Across 3 Continents"
+          subtitle="Established port-to-port routes with full customs clearance and documentation — so your vehicle arrives without delays"
           light
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -50,7 +50,7 @@ export function RegionsCTA() {
         </div>
         <div className="mt-10 text-center">
           <Button href="/shipping" variant="primary" size="lg">
-            See All Shipping Destinations
+            View Routes, Ports &amp; Transit Times
           </Button>
         </div>
       </Container>

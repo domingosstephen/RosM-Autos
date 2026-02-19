@@ -97,7 +97,8 @@ export function InquiryForm() {
 
   return (
     <Card padding="lg">
-      <h2 className="text-xl font-bold text-navy mb-6">Send Us an Inquiry</h2>
+      <h2 className="text-xl font-bold text-navy mb-2">Get Your Free, No-Obligation Quote</h2>
+      <p className="text-sm text-muted mb-6">Fill out the form below and we will send you a detailed quote within 24 hours — including vehicle price, shipping, and all fees.</p>
 
       {submitStatus === 'success' && (
         <div className="mb-6 rounded-lg bg-green-50 border border-green-200 p-4 text-success text-sm font-medium">
@@ -195,7 +196,7 @@ export function InquiryForm() {
           fullWidth
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Sending...' : 'Send My Inquiry'}
+          {isSubmitting ? 'Sending...' : 'Get My Free Quote →'}
         </Button>
       </form>
     </Card>

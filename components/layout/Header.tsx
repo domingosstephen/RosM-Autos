@@ -29,7 +29,7 @@ export function Header() {
               WhatsApp
             </a>
           </div>
-          <p className="text-white/70">Quality Vehicles &amp; Equipment for International Export</p>
+          <p className="text-white/70">Inspected Vehicles &amp; Equipment — Shipped to 45+ Countries</p>
         </Container>
       </div>
 
@@ -61,7 +61,7 @@ export function Header() {
 
           <div className="flex items-center gap-3">
             <Button href="/contact" size="sm" variant="primary" className="hidden md:inline-flex">
-              Get a Quote
+              Get a Free Quote
             </Button>
 
             {/* Mobile hamburger */}

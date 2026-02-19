@@ -37,8 +37,8 @@ export function FeaturedListings() {
     <section className="py-16 md:py-24 bg-surface-alt">
       <Container>
         <SectionHeading
-          title="Featured Listings"
-          subtitle="Hand-picked quality vehicles and equipment ready for export"
+          title="Inspected. Priced. Ready to Ship."
+          subtitle="Hand-picked from our current inventory — every unit comes with a full inspection report"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featured.map((product) => (
@@ -64,7 +64,7 @@ export function FeaturedListings() {
                     size="sm"
                     fullWidth
                   >
-                    Request Quote
+                    Get My Quote
                   </Button>
                 </div>
               </div>
@@ -73,7 +73,7 @@ export function FeaturedListings() {
         </div>
         <div className="mt-10 text-center">
           <Button href="/inventory" variant="secondary" size="lg">
-            View Full Inventory
+            See All Available Vehicles
           </Button>
         </div>
       </Container>

@@ -66,7 +66,7 @@ export function ProductCard({ product }: ProductCardProps) {
             fullWidth
             href={`/contact?vehicle=${product.slug}`}
           >
-            Request Quote
+            Get My Quote
           </Button>
         </div>
       </div>

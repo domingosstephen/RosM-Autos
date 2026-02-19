@@ -30,7 +30,7 @@ function ContactItem({ icon, label, children }: ContactItemProps) {
 export function ContactInfo() {
   return (
     <Card padding="lg">
-      <h2 className="text-xl font-bold text-navy mb-6">Quick Contact</h2>
+      <h2 className="text-xl font-bold text-navy mb-6">Reach Us Directly</h2>
 
       <div className="space-y-6">
         {/* Phone */}

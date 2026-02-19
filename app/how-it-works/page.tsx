@@ -17,54 +17,54 @@ export const metadata: Metadata = createPageMetadata({
 const steps = [
   {
     number: '1',
-    title: 'Browse Our Inventory',
-    description: 'Explore our online catalog of quality-inspected automobiles, farm tractors, and electric bikes. Use category filters, price range, and condition ratings to find exactly what you need.',
-    details: 'Our inventory is updated regularly. Can\'t find what you\'re looking for? Contact us with your requirements and we\'ll source it for you.',
+    title: 'Tell Us What You Need',
+    description: 'Explore our online catalog of inspected automobiles, farm tractors, and electric bikes. Filter by category, price, and condition — or message us directly on WhatsApp with your requirements.',
+    details: 'Our inventory is updated weekly. If we do not have what you need, tell us — we source specific makes and models on request.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
     ),
   },
   {
     number: '2',
-    title: 'Select Your Vehicle',
-    description: 'Choose the vehicle or equipment that fits your needs and request a detailed quote. Tell us your destination country so we can calculate shipping and customs costs.',
-    details: 'You can request quotes for multiple vehicles at once. Bulk order discounts are available for fleet purchases.',
+    title: 'Get a Transparent Quote',
+    description: 'Tell us your destination country. We calculate vehicle price, shipping, documentation, and insurance — all in one clear quote with zero hidden fees.',
+    details: 'Request quotes for multiple vehicles at once. Fleet buyers (3+ units) get priority pricing.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
     ),
   },
   {
     number: '3',
-    title: 'Review Inspection Report',
-    description: 'Receive a comprehensive inspection report with detailed photos and condition assessment. For automobiles, this covers engine, transmission, body, interior, and electronics. For tractors, it includes PTO, hydraulics, and structural integrity.',
-    details: 'Our 150-point inspection is conducted by certified mechanics. You review everything before committing to purchase.',
+    title: 'Review the 150-Point Inspection Report',
+    description: 'Receive a detailed report with 40+ photos covering engine, transmission, body, electronics, and interior (for cars) or PTO, hydraulics, and structural integrity (for tractors). You see everything before you pay.',
+    details: 'Inspections are conducted by certified mechanics. Every defect — cosmetic or mechanical — is documented.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/></svg>
     ),
   },
   {
     number: '4',
-    title: 'Complete Secure Payment',
-    description: 'Pay securely through our verified payment channels. We accept bank transfers, wire payments, and other secure methods. Full transaction confirmation is provided immediately.',
-    details: 'We offer flexible payment terms for qualifying buyers. Contact our team to discuss your options.',
+    title: 'Pay Securely',
+    description: 'Complete payment through verified bank transfer or wire payment. You receive full transaction confirmation immediately — no payment is processed until you approve your inspection report.',
+    details: 'Flexible payment terms available for qualifying fleet buyers. Ask our team for details.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
     ),
   },
   {
     number: '5',
-    title: 'We Handle Shipping',
-    description: 'Our logistics team manages port-to-port shipping, export documentation, and coordinates customs clearance for your destination country. RoRo and container options available.',
-    details: 'Shipping methods vary by product: automobiles and tractors ship via RoRo or container, electric bikes via consolidated container or air freight.',
+    title: 'We Ship It — You Track It',
+    description: 'Our logistics team handles export documentation, port-to-port shipping, and customs coordination. RoRo and container options available. You get a tracking link the moment your vehicle is loaded.',
+    details: 'Automobiles and tractors ship via RoRo or container. Electric bikes go via consolidated container or air freight for faster delivery.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="6" width="22" height="12" rx="2"/><path d="M1 10h22"/></svg>
     ),
   },
   {
     number: '6',
-    title: 'Receive Your Vehicle',
-    description: 'Your vehicle arrives at your nearest port. We provide tracking throughout the journey and assist with local import procedures and documentation to ensure smooth customs clearance.',
-    details: 'Transit times vary by destination: 10-40 days depending on your port. We connect you with local clearing agents if needed.',
+    title: 'Receive Your Vehicle at Port',
+    description: 'Your vehicle arrives at your nearest port in the exact condition shown in your inspection report. We provide all import documentation and can connect you with trusted local clearing agents.',
+    details: 'Transit times: 10–16 days to Eastern Europe, 15–25 days to South America, 18–40 days to Africa.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
     ),
@@ -86,8 +86,8 @@ export default function HowItWorksPage() {
       <section className="py-16 md:py-24">
         <Container size="md">
           <SectionHeading
-            title="Buying a Vehicle for Export Has Never Been This Simple"
-            subtitle="Six clear steps from browsing to receiving your vehicle at your nearest port. We handle the hard parts."
+            title="From Picking a Vehicle to Receiving It at Your Port — in 6 Steps"
+            subtitle="No middlemen, no guesswork. Here is exactly what happens after you contact us."
             tag="h1"
           />
 
@@ -119,7 +119,7 @@ export default function HowItWorksPage() {
 
           <div className="mt-12 text-center">
             <Button href="/inventory" variant="primary" size="lg">
-              Start Browsing Our Inventory
+              See What Is Available Now
             </Button>
           </div>
         </Container>
@@ -128,17 +128,17 @@ export default function HowItWorksPage() {
       {/* What's Included */}
       <section className="py-16 md:py-20 bg-surface-alt">
         <Container size="md">
-          <SectionHeading title="What&apos;s Included With Every Purchase" />
+          <SectionHeading title="Included with Every Purchase — No Extra Cost" />
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
-              'Comprehensive 150-point inspection report',
-              'Detailed vehicle photographs',
-              'Transparent quote with no hidden fees',
-              'Export documentation and paperwork',
-              'Port-to-port shipping coordination',
-              'Customs clearance assistance',
-              'Real-time shipment tracking',
-              'Dedicated customer support throughout',
+              '150-point inspection report with 40+ photos',
+              'Complete vehicle condition documentation',
+              'Single transparent quote — zero hidden fees',
+              'All export paperwork and documentation',
+              'Port-to-port shipping from Germany',
+              'Customs clearance coordination at both ends',
+              'Real-time shipment tracking link',
+              'WhatsApp support from inquiry to delivery',
             ].map((item) => (
               <div key={item} className="flex items-center gap-3 py-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-success shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -152,10 +152,10 @@ export default function HowItWorksPage() {
       </section>
 
       <CTABanner
-        headline="Ready to Start?"
-        subtext="Browse our inventory of quality-inspected vehicles and equipment, or contact us for a personalized quote."
-        primaryCTA={{ label: 'Browse Inventory', href: '/inventory' }}
-        secondaryCTA={{ label: 'Contact Us', href: '/contact' }}
+        headline="Ready to Get Started? Pick Your Vehicle."
+        subtext="Explore our current inventory or tell us what you need — we will send you a transparent quote within 24 hours."
+        primaryCTA={{ label: 'Explore the Inventory', href: '/inventory' }}
+        secondaryCTA={{ label: 'Get a Free Quote', href: '/contact' }}
         variant="dark"
       />
     </>

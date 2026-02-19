@@ -3,10 +3,10 @@ import { CTABanner } from '@/components/shared/CTABanner'
 export function BottomCTA() {
   return (
     <CTABanner
-      headline="Ready to Find Your Next Vehicle?"
-      subtext="Browse our inventory of quality-inspected automobiles, tractors, and electric bikes. Get a free quote today."
-      primaryCTA={{ label: 'Browse Inventory', href: '/inventory' }}
-      secondaryCTA={{ label: 'Contact Us', href: '/contact' }}
+      headline="Your Next Vehicle Is Inspected and Ready to Ship"
+      subtext="Explore our current inventory. Pick a vehicle. Get a transparent quote within 24 hours — no obligation, no hidden fees."
+      primaryCTA={{ label: 'Explore the Inventory', href: '/inventory' }}
+      secondaryCTA={{ label: 'Get a Free Quote', href: '/contact' }}
       variant="accent"
     />
   )

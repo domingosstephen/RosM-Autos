@@ -5,21 +5,21 @@ import { Button } from '@/components/shared/Button'
 const steps = [
   {
     number: '1',
-    title: 'Browse & Select',
+    title: 'Pick Your Vehicle',
     description:
-      'Explore our online catalog of automobiles, tractors, and electric bikes. Use filters to find exactly what you need for your market.',
+      'Tell us what you need — or explore our inventory of inspected automobiles, tractors, and e-bikes. Filter by category, budget, and condition.',
   },
   {
     number: '2',
-    title: 'We Inspect & Quote',
+    title: 'Get Your Inspection Report & Quote',
     description:
-      'Receive a detailed inspection report with photos and a transparent quote including vehicle price, shipping, and all export costs.',
+      'Receive a 150-point inspection report with 40+ photos, plus a single transparent quote covering vehicle price, shipping, and all fees.',
   },
   {
     number: '3',
-    title: 'Pay & We Ship',
+    title: 'We Deliver to Your Port',
     description:
-      'Complete secure payment and we handle everything else — documentation, shipping, customs clearance, and delivery to your port.',
+      'Pay securely. We manage the paperwork, customs clearance, and shipping. Track your vehicle from Germany to your nearest port.',
   },
 ]
 
@@ -28,8 +28,8 @@ export function HowItWorksPreview() {
     <section className="py-16 md:py-24">
       <Container>
         <SectionHeading
-          title="How It Works"
-          subtitle="Three simple steps to your new vehicle or equipment"
+          title="From Germany to Your Port in 3 Steps"
+          subtitle="No middlemen, no confusion — here is exactly how the process works"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, i) => (
@@ -47,7 +47,7 @@ export function HowItWorksPreview() {
         </div>
         <div className="mt-10 text-center">
           <Button href="/how-it-works" variant="secondary" size="md">
-            See Full Process
+            See the Full 6-Step Process
           </Button>
         </div>
       </Container>
