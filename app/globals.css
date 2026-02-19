@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0F1B2D;
+  --color-navy-light: #1E293B;
+  --color-navy-dark: #0A1220;
+  --color-slate: #334155;
+  --color-slate-light: #475569;
+
+  --color-cta: #F97316;
+  --color-cta-hover: #EA580C;
+  --color-cta-light: #FFF7ED;
+
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #128C7E;
+
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F8FAFC;
+  --color-border: #E2E8F0;
+  --color-muted: #94A3B8;
+
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-sticky: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-slate);
+  background-color: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-cta);
+  color: white;
+}
+
+/* Smooth scroll offset for fixed header */
+[id] {
+  scroll-margin-top: 80px;
+}

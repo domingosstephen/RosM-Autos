@@ -1,0 +1,58 @@
+import type { Testimonial } from '@/types/testimonial'
+
+export const testimonials: Testimonial[] = [
+  {
+    id: 'test-1',
+    name: 'Emmanuel Okafor',
+    country: 'Nigeria',
+    rating: 5,
+    text: 'I was skeptical about buying a vehicle online for import, but RosM Autos made the entire process transparent. The Toyota Hilux arrived in Lagos exactly as described in the inspection report. The shipping was tracked from start to finish.',
+    productType: 'Toyota Hilux',
+    imageAlt: 'Emmanuel Okafor, satisfied customer from Nigeria who purchased a Toyota Hilux',
+  },
+  {
+    id: 'test-2',
+    name: 'Carlos Mendes',
+    country: 'Brazil',
+    rating: 5,
+    text: 'Purchased a Massey Ferguson tractor for my farm in Minas Gerais. The team helped me understand all the customs requirements for Brazil. The tractor was in excellent condition, just as the inspection photos showed.',
+    productType: 'Massey Ferguson Tractor',
+    imageAlt: 'Carlos Mendes, satisfied customer from Brazil who purchased a Massey Ferguson tractor',
+  },
+  {
+    id: 'test-3',
+    name: 'Olena Kovalenko',
+    country: 'Ukraine',
+    rating: 5,
+    text: 'RosM Autos handled everything from purchase to port delivery in Odessa. The Mercedes Sprinter was exactly what our business needed. Their export documentation was impeccable and saved us weeks of paperwork.',
+    productType: 'Mercedes Sprinter',
+    imageAlt: 'Olena Kovalenko, satisfied customer from Ukraine who purchased a Mercedes Sprinter',
+  },
+  {
+    id: 'test-4',
+    name: 'Kwame Asante',
+    country: 'Ghana',
+    rating: 4,
+    text: 'Second purchase from RosM Autos. Both vehicles arrived at Tema Port in great condition. Their WhatsApp support is very responsive and the pricing is fair compared to local dealers. Highly recommended for Ghana imports.',
+    productType: 'Honda CR-V',
+    imageAlt: 'Kwame Asante, repeat customer from Ghana who purchased a Honda CR-V',
+  },
+  {
+    id: 'test-5',
+    name: 'Maria Fernanda Lopez',
+    country: 'Colombia',
+    rating: 5,
+    text: 'I bought an electric bike for commuting in Bogota. The team was patient in explaining battery condition and charging requirements. It arrived faster than expected through Buenaventura port. Great experience overall.',
+    productType: 'Electric City Bike',
+    imageAlt: 'Maria Fernanda Lopez, customer from Colombia who purchased an electric bike',
+  },
+  {
+    id: 'test-6',
+    name: 'John Kamau',
+    country: 'Kenya',
+    rating: 5,
+    text: 'As a fleet operator in Nairobi, I have bought 12 vehicles from RosM Autos over the past two years. Their consistency in vehicle quality and reliable delivery to Mombasa port keeps me coming back. No other exporter matches their service.',
+    productType: 'Fleet Purchase - Various',
+    imageAlt: 'John Kamau, fleet operator from Kenya and loyal RosM Autos customer',
+  },
+]
