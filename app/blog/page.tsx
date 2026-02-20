@@ -6,6 +6,7 @@ import { Card } from '@/components/shared/Card'
 import { PlaceholderImage } from '@/components/shared/PlaceholderImage'
 import { CTABanner } from '@/components/shared/CTABanner'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
+import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Blog | Used Vehicle Export Tips & Market Insights',
@@ -75,27 +76,29 @@ export default function BlogPage() {
           />
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.map((post) => (
-              <Card key={post.title} hoverable padding="none" className="overflow-hidden flex flex-col">
-                <PlaceholderImage
-                  height="h-44"
-                  label={post.category}
-                  alt={post.alt}
-                  className="rounded-none"
-                />
-                <div className="p-5 flex flex-col flex-1">
-                  <span className="text-xs font-semibold text-cta uppercase tracking-wider">
-                    {post.category}
-                  </span>
-                  <h2 className="mt-2 text-lg font-bold text-navy leading-snug">
-                    {post.title}
-                  </h2>
-                  <p className="mt-2 text-sm text-slate leading-relaxed flex-1">
-                    {post.excerpt}
-                  </p>
-                  <p className="mt-4 text-xs text-muted font-medium">{post.date}</p>
-                </div>
-              </Card>
+            {blogPosts.map((post, i) => (
+              <AnimateOnScroll key={post.title} animation="fade-up" delay={i * 150}>
+                <Card hoverable padding="none" className="overflow-hidden flex flex-col">
+                  <PlaceholderImage
+                    height="h-44"
+                    label={post.category}
+                    alt={post.alt}
+                    className="rounded-none"
+                  />
+                  <div className="p-5 flex flex-col flex-1">
+                    <span className="text-xs font-semibold text-cta uppercase tracking-wider">
+                      {post.category}
+                    </span>
+                    <h2 className="mt-2 text-lg font-bold text-navy leading-snug">
+                      {post.title}
+                    </h2>
+                    <p className="mt-2 text-sm text-slate leading-relaxed flex-1">
+                      {post.excerpt}
+                    </p>
+                    <p className="mt-4 text-xs text-muted font-medium">{post.date}</p>
+                  </div>
+                </Card>
+              </AnimateOnScroll>
             ))}
           </div>
 

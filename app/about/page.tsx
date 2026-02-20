@@ -7,6 +7,7 @@ import { PlaceholderImage } from '@/components/shared/PlaceholderImage'
 import { Button } from '@/components/shared/Button'
 import { CTABanner } from '@/components/shared/CTABanner'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
+import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 import { STATS } from '@/lib/constants'
 
 export const metadata: Metadata = createPageMetadata({
@@ -65,25 +66,29 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <SectionHeading title="Our Story" alignment="left" tag="h1" />
-              <div className="mt-6 space-y-4 text-slate leading-relaxed">
-                <p>
-                  <strong className="text-navy">The problem is real:</strong> international vehicle buyers lose thousands every year to dealers who misrepresent condition, hide fees, and disappear after payment. When you are buying from another continent, one bad purchase can derail your business for months.
-                </p>
-                <p>
-                  RosM Autos was founded in Lübbecke, Germany to fix this. Over {STATS.yearsInBusiness} years, we have shipped automobiles, tractors, and electric bikes to buyers in {STATS.countriesServed} countries — built on one non-negotiable principle: <strong className="text-navy">what we show you is what arrives at your port.</strong>
-                </p>
-                <p>
-                  Every unit is inspected and photographed before listing. Every quote includes vehicle price, shipping, documentation, and insurance — no surprise charges. Every shipment is tracked from our yard to your port. Our {STATS.satisfactionRate} satisfaction rate is not a marketing number — it is what happens when you deliver on your promises, every time.
-                </p>
+            <AnimateOnScroll animation="fade-in-left">
+              <div>
+                <SectionHeading title="Our Story" alignment="left" tag="h1" />
+                <div className="mt-6 space-y-4 text-slate leading-relaxed">
+                  <p>
+                    <strong className="text-navy">The problem is real:</strong> international vehicle buyers lose thousands every year to dealers who misrepresent condition, hide fees, and disappear after payment. When you are buying from another continent, one bad purchase can derail your business for months.
+                  </p>
+                  <p>
+                    RosM Autos was founded in Lübbecke, Germany to fix this. Over {STATS.yearsInBusiness} years, we have shipped automobiles, tractors, and electric bikes to buyers in {STATS.countriesServed} countries — built on one non-negotiable principle: <strong className="text-navy">what we show you is what arrives at your port.</strong>
+                  </p>
+                  <p>
+                    Every unit is inspected and photographed before listing. Every quote includes vehicle price, shipping, documentation, and insurance — no surprise charges. Every shipment is tracked from our yard to your port. Our {STATS.satisfactionRate} satisfaction rate is not a marketing number — it is what happens when you deliver on your promises, every time.
+                  </p>
+                </div>
               </div>
-            </div>
-            <PlaceholderImage
-              height="h-[380px]"
-              label="RosM Autos Headquarters & Vehicle Yard"
-              alt="RosM Autos headquarters showing vehicle inspection yard with automobiles, tractors, and equipment ready for international export"
-            />
+            </AnimateOnScroll>
+            <AnimateOnScroll animation="fade-in-right">
+              <PlaceholderImage
+                height="h-[380px]"
+                label="RosM Autos Headquarters & Vehicle Yard"
+                alt="RosM Autos headquarters showing vehicle inspection yard with automobiles, tractors, and equipment ready for international export"
+              />
+            </AnimateOnScroll>
           </div>
         </Container>
       </section>
@@ -97,11 +102,13 @@ export default function AboutPage() {
               { value: STATS.countriesServed, label: 'Countries Served' },
               { value: STATS.yearsInBusiness, label: 'Years in Business' },
               { value: STATS.satisfactionRate, label: 'Satisfaction Rate' },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p className="text-3xl md:text-4xl font-extrabold text-white">{stat.value}</p>
-                <p className="mt-1 text-sm text-white/60">{stat.label}</p>
-              </div>
+            ].map((stat, i) => (
+              <AnimateOnScroll key={stat.label} animation="fade-up" delay={i * 150}>
+                <div>
+                  <p className="text-3xl md:text-4xl font-extrabold text-white">{stat.value}</p>
+                  <p className="mt-1 text-sm text-white/60">{stat.label}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </Container>
@@ -115,16 +122,18 @@ export default function AboutPage() {
             subtitle="Four standards we hold ourselves to — and the reason buyers come back"
           />
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {advantages.map((adv) => (
-              <Card key={adv.title} padding="md" className="flex gap-4">
-                <div className="w-12 h-12 rounded-lg bg-cta/10 text-cta flex items-center justify-center shrink-0">
-                  {adv.icon}
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-navy">{adv.title}</h3>
-                  <p className="mt-2 text-slate leading-relaxed">{adv.description}</p>
-                </div>
-              </Card>
+            {advantages.map((adv, i) => (
+              <AnimateOnScroll key={adv.title} animation="fade-up" delay={i * 150}>
+                <Card padding="md" className="flex gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-cta/10 text-cta flex items-center justify-center shrink-0">
+                    {adv.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-navy">{adv.title}</h3>
+                    <p className="mt-2 text-slate leading-relaxed">{adv.description}</p>
+                  </div>
+                </Card>
+              </AnimateOnScroll>
             ))}
           </div>
         </Container>
@@ -138,17 +147,19 @@ export default function AboutPage() {
             subtitle="From inspection to export — meet the people who make it happen"
           />
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {team.map((member) => (
-              <div key={member.role} className="text-center">
-                <PlaceholderImage
-                  height="h-48"
-                  label={member.name}
-                  alt={member.alt}
-                  className="rounded-xl mx-auto"
-                />
-                <h3 className="mt-4 font-bold text-navy">{member.name}</h3>
-                <p className="text-sm text-muted">{member.role}</p>
-              </div>
+            {team.map((member, i) => (
+              <AnimateOnScroll key={member.role} animation="fade-up" delay={i * 150}>
+                <div className="text-center">
+                  <PlaceholderImage
+                    height="h-48"
+                    label={member.name}
+                    alt={member.alt}
+                    className="rounded-xl mx-auto"
+                  />
+                  <h3 className="mt-4 font-bold text-navy">{member.name}</h3>
+                  <p className="text-sm text-muted">{member.role}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </Container>

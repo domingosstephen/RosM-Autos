@@ -8,13 +8,24 @@ import { cn } from '@/lib/utils'
 import { Container } from '@/components/shared/Container'
 import { Button } from '@/components/shared/Button'
 import { MobileNav } from './MobileNav'
+import { useScrollPosition } from '@/hooks/useScrollPosition'
+import { useMediaQuery } from '@/hooks/useMediaQuery'
 
 export function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
   const pathname = usePathname()
+  const { scrollY, scrollDirection } = useScrollPosition()
+  const isDesktop = useMediaQuery('(min-width: 1024px)')
+
+  const shouldHide = !isDesktop && scrollDirection === 'down' && scrollY > 100
 
   return (
-    <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur-sm shadow-sticky">
+    <header
+      className={cn(
+        'sticky top-0 z-50 bg-surface/95 backdrop-blur-sm shadow-sticky transition-transform duration-300',
+        shouldHide ? '-translate-y-full' : 'translate-y-0'
+      )}
+    >
       {/* Top bar */}
       <div className="hidden md:block bg-navy text-white text-sm">
         <Container className="flex items-center justify-between py-2">

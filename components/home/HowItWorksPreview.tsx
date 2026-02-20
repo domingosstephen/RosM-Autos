@@ -1,6 +1,9 @@
+'use client'
+
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
 import { Button } from '@/components/shared/Button'
+import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 
 const steps = [
   {
@@ -33,16 +36,18 @@ export function HowItWorksPreview() {
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, i) => (
-            <div key={step.number} className="text-center relative">
-              {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-6 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-border" />
-              )}
-              <div className="w-12 h-12 rounded-full bg-cta text-white text-xl font-bold flex items-center justify-center mx-auto relative z-10">
-                {step.number}
+            <AnimateOnScroll key={step.number} animation="fade-up" delay={i * 150}>
+              <div className="text-center relative">
+                {i < steps.length - 1 && (
+                  <div className="hidden md:block absolute top-6 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-border" />
+                )}
+                <div className="w-12 h-12 rounded-full bg-cta text-white text-xl font-bold flex items-center justify-center mx-auto relative z-10 animate-bounce-gentle">
+                  {step.number}
+                </div>
+                <h3 className="mt-5 text-lg font-bold text-navy">{step.title}</h3>
+                <p className="mt-2 text-slate leading-relaxed">{step.description}</p>
               </div>
-              <h3 className="mt-5 text-lg font-bold text-navy">{step.title}</h3>
-              <p className="mt-2 text-slate leading-relaxed">{step.description}</p>
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
         <div className="mt-10 text-center">

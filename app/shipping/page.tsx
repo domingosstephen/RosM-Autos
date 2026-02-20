@@ -6,6 +6,7 @@ import { SectionHeading } from '@/components/shared/SectionHeading'
 import { Card } from '@/components/shared/Card'
 import { CTABanner } from '@/components/shared/CTABanner'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
+import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 import { shippingRegions } from '@/lib/regions'
 import { cn } from '@/lib/utils'
 
@@ -51,6 +52,7 @@ export default function ShippingPage() {
           </div>
 
           {/* Region Content */}
+          <AnimateOnScroll animation="fade-up">
           <div className="mt-10">
             <Card padding="lg">
               <h2 className="text-2xl font-bold text-navy">{region.name}</h2>
@@ -106,6 +108,7 @@ export default function ShippingPage() {
               </div>
             </Card>
           </div>
+          </AnimateOnScroll>
         </Container>
       </section>
 
@@ -120,11 +123,13 @@ export default function ShippingPage() {
               { q: 'Is my vehicle insured during shipping?', a: 'Yes, all shipments include marine cargo insurance. We provide the insurance certificate as part of your export documentation package.' },
               { q: 'Can I track my shipment?', a: 'Absolutely. Once your vehicle is loaded, we provide tracking details so you can monitor the journey from departure port to arrival at your destination.' },
               { q: 'Do you handle customs clearance?', a: 'We handle all export-side customs clearance. For import customs at your destination, we provide all required documentation and can connect you with trusted local clearing agents.' },
-            ].map((item) => (
-              <Card key={item.q} padding="md">
-                <h3 className="font-semibold text-navy">{item.q}</h3>
-                <p className="mt-2 text-sm text-slate leading-relaxed">{item.a}</p>
-              </Card>
+            ].map((item, i) => (
+              <AnimateOnScroll key={item.q} animation="fade-up" delay={i * 100}>
+                <Card padding="md">
+                  <h3 className="font-semibold text-navy">{item.q}</h3>
+                  <p className="mt-2 text-sm text-slate leading-relaxed">{item.a}</p>
+                </Card>
+              </AnimateOnScroll>
             ))}
           </div>
         </Container>

@@ -1,8 +1,11 @@
+'use client'
+
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
 import { Card } from '@/components/shared/Card'
 import { PlaceholderImage } from '@/components/shared/PlaceholderImage'
 import { Button } from '@/components/shared/Button'
+import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 
 const categories = [
   {
@@ -43,24 +46,26 @@ export function ProductCategories() {
           subtitle="Three product categories, one transparent process — choose what your market needs"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {categories.map((cat) => (
-            <Card key={cat.title} hoverable padding="none" className="overflow-hidden">
-              <PlaceholderImage
-                height="h-48"
-                label={cat.image}
-                alt={cat.alt}
-                className="rounded-none"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-navy">{cat.title}</h3>
-                <p className="mt-2 text-slate leading-relaxed">{cat.description}</p>
-                <div className="mt-6">
-                  <Button href={cat.href} variant="secondary" size="sm">
-                    {cat.cta}
-                  </Button>
+          {categories.map((cat, i) => (
+            <AnimateOnScroll key={cat.title} animation="fade-up" delay={i * 150}>
+              <Card hoverable padding="none" className="overflow-hidden">
+                <PlaceholderImage
+                  height="h-48"
+                  label={cat.image}
+                  alt={cat.alt}
+                  className="rounded-none"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-navy">{cat.title}</h3>
+                  <p className="mt-2 text-slate leading-relaxed">{cat.description}</p>
+                  <div className="mt-6">
+                    <Button href={cat.href} variant="secondary" size="sm">
+                      {cat.cta}
+                    </Button>
+                  </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </AnimateOnScroll>
           ))}
         </div>
       </Container>

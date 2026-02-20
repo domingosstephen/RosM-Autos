@@ -19,7 +19,7 @@ export function Card({ children, className, hoverable = false, padding = 'md' }:
     <div
       className={cn(
         'bg-surface rounded-xl shadow-card',
-        hoverable && 'hover:shadow-card-hover transition-shadow',
+        hoverable && 'hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300',
         paddingClasses[padding],
         className
       )}

@@ -1,5 +1,9 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import { Container } from '@/components/shared/Container'
+import { cn } from '@/lib/utils'
 import {
   SITE_NAME,
   PHONE_NUMBER,
@@ -39,6 +43,8 @@ const footerLinks = {
 }
 
 export function Footer() {
+  const [openSection, setOpenSection] = useState<string | null>(null)
+
   return (
     <footer className="bg-navy text-white" role="contentinfo">
       <Container>
@@ -50,7 +56,7 @@ export function Footer() {
               <span className="text-cta">RosM</span> Autos
             </Link>
             <p className="mt-4 text-white/70 text-sm leading-relaxed">
-              Inspected automobiles, farm tractors, and electric bikes shipped from Lübbecke, Germany to 45+ countries. From our yard to your port.
+              Inspected automobiles, farm tractors, and electric bikes shipped from Lubbecke, Germany to 45+ countries. From our yard to your port.
             </p>
             <div className="flex gap-3 mt-6">
               <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Follow RosM Autos on Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-cta transition-colors">
@@ -65,13 +71,39 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Link columns */}
-          {Object.values(footerLinks).map((section) => (
-            <div key={section.title}>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">
-                {section.title}
-              </h3>
-              <ul className="space-y-3">
+          {/* Link columns — collapsible on mobile */}
+          {Object.entries(footerLinks).map(([key, section]) => (
+            <div key={key}>
+              <button
+                onClick={() => setOpenSection(openSection === key ? null : key)}
+                className="flex items-center justify-between w-full md:pointer-events-none"
+                aria-expanded={openSection === key}
+              >
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50">
+                  {section.title}
+                </h3>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={cn(
+                    'h-5 w-5 text-white/50 transition-transform md:hidden',
+                    openSection === key && 'rotate-180'
+                  )}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <ul
+                className={cn(
+                  'mt-4 space-y-3',
+                  openSection !== key && 'hidden md:block'
+                )}
+              >
                 {section.links.map((link) => (
                   <li key={link.href}>
                     <Link

@@ -9,6 +9,7 @@ import { Textarea } from '@/components/shared/Textarea'
 import { Select } from '@/components/shared/Select'
 import { HoneypotField } from '@/components/shared/HoneypotField'
 import { Button } from '@/components/shared/Button'
+import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 
 const countryOptions = PRIORITY_COUNTRIES.map((c) => ({ value: c, label: c }))
 
@@ -96,6 +97,7 @@ export function InquiryForm() {
   }
 
   return (
+    <AnimateOnScroll animation="fade-in-left">
     <Card padding="lg">
       <h2 className="text-xl font-bold text-navy mb-2">Get Your Free, No-Obligation Quote</h2>
       <p className="text-sm text-muted mb-6">Fill out the form below and we will send you a detailed quote within 24 hours — including vehicle price, shipping, and all fees.</p>
@@ -200,5 +202,6 @@ export function InquiryForm() {
         </Button>
       </form>
     </Card>
+    </AnimateOnScroll>
   )
 }

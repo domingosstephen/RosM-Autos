@@ -1,4 +1,7 @@
+'use client'
+
 import { ProductCard } from '@/components/inventory/ProductCard'
+import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 import type { Product } from '@/types/product'
 
 interface ProductGridProps {
@@ -35,8 +38,10 @@ export function ProductGrid({ products }: ProductGridProps) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+      {products.map((product, i) => (
+        <AnimateOnScroll key={product.id} animation="fade-up" delay={i * 100}>
+          <ProductCard product={product} />
+        </AnimateOnScroll>
       ))}
     </div>
   )

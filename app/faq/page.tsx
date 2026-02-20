@@ -6,6 +6,7 @@ import { SectionHeading } from '@/components/shared/SectionHeading'
 import { Card } from '@/components/shared/Card'
 import { CTABanner } from '@/components/shared/CTABanner'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
+import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 import { faqCategories, allFaqItems } from '@/lib/faq-data'
 import { faqSchema } from '@/lib/schema'
 import { cn } from '@/lib/utils'
@@ -129,19 +130,21 @@ export default function FAQPage() {
                 </button>
               </div>
             ) : (
-              filteredCategories.map((category) => (
-                <div key={category.id}>
-                  <h2 className="text-xl font-bold text-navy mb-4">{category.title}</h2>
-                  <Card padding="sm">
-                    {category.items.map((item) => (
-                      <FAQAccordionItem
-                        key={item.question}
-                        question={item.question}
-                        answer={item.answer}
-                      />
-                    ))}
-                  </Card>
-                </div>
+              filteredCategories.map((category, i) => (
+                <AnimateOnScroll key={category.id} animation="fade-up" delay={i * 150}>
+                  <div>
+                    <h2 className="text-xl font-bold text-navy mb-4">{category.title}</h2>
+                    <Card padding="sm">
+                      {category.items.map((item) => (
+                        <FAQAccordionItem
+                          key={item.question}
+                          question={item.question}
+                          answer={item.answer}
+                        />
+                      ))}
+                    </Card>
+                  </div>
+                </AnimateOnScroll>
               ))
             )}
           </div>

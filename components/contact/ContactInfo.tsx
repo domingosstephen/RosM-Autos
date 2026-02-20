@@ -1,4 +1,7 @@
+'use client'
+
 import { Card } from '@/components/shared/Card'
+import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 import {
   PHONE_NUMBER,
   EMAIL,
@@ -29,6 +32,7 @@ function ContactItem({ icon, label, children }: ContactItemProps) {
 
 export function ContactInfo() {
   return (
+    <AnimateOnScroll animation="fade-in-right">
     <Card padding="lg">
       <h2 className="text-xl font-bold text-navy mb-6">Reach Us Directly</h2>
 
@@ -114,5 +118,6 @@ export function ContactInfo() {
         </ContactItem>
       </div>
     </Card>
+    </AnimateOnScroll>
   )
 }

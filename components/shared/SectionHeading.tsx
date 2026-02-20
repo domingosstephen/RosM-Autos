@@ -30,6 +30,14 @@ export function SectionHeading({
       <Tag className={cn(tagClasses[tag], light ? 'text-white' : 'text-navy')}>
         {title}
       </Tag>
+      {/* Decorative accent bar */}
+      <div
+        className={cn(
+          'mt-4 h-[3px] w-12 rounded-full bg-cta',
+          alignment === 'center' ? 'mx-auto' : ''
+        )}
+        aria-hidden="true"
+      />
       {subtitle && (
         <p className={cn('mt-4 text-lg max-w-2xl', alignment === 'center' && 'mx-auto', light ? 'text-white/70' : 'text-muted')}>
           {subtitle}

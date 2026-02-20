@@ -1,6 +1,9 @@
+'use client'
+
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
 import { Button } from '@/components/shared/Button'
+import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 
 const regions = [
   {
@@ -33,19 +36,21 @@ export function RegionsCTA() {
           light
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {regions.map((region) => (
-            <div key={region.name} className="bg-white/5 rounded-xl p-6 border border-white/10">
-              <span className="text-4xl" role="img" aria-label={region.name}>{region.icon}</span>
-              <h3 className="mt-4 text-xl font-bold text-white">{region.name}</h3>
-              <p className="mt-2 text-white/60 text-sm">{region.description}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {region.countries.map((country) => (
-                  <span key={country} className="text-xs bg-white/10 text-white/80 px-2.5 py-1 rounded-full">
-                    {country}
-                  </span>
-                ))}
+          {regions.map((region, i) => (
+            <AnimateOnScroll key={region.name} animation="fade-up" delay={i * 150}>
+              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                <span className="text-4xl" role="img" aria-label={region.name}>{region.icon}</span>
+                <h3 className="mt-4 text-xl font-bold text-white">{region.name}</h3>
+                <p className="mt-2 text-white/60 text-sm">{region.description}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {region.countries.map((country) => (
+                    <span key={country} className="text-xs bg-white/10 text-white/80 px-2.5 py-1 rounded-full">
+                      {country}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
         <div className="mt-10 text-center">

@@ -1,10 +1,18 @@
 'use client'
 
 import { WHATSAPP_LINK, PHONE_NUMBER } from '@/lib/constants'
+import { useScrollPosition } from '@/hooks/useScrollPosition'
 
 export function StickyMobileCTA() {
+  const { scrollY } = useScrollPosition()
+  const isVisible = scrollY > 500
+
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 bg-surface border-t border-border shadow-sticky md:hidden">
+    <div
+      className={`fixed bottom-0 left-0 right-0 z-40 bg-surface border-t border-border shadow-sticky md:hidden transition-transform duration-300 ${
+        isVisible ? 'translate-y-0' : 'translate-y-full'
+      }`}
+    >
       <div className="grid grid-cols-2 divide-x divide-border">
         <a
           href={`tel:${PHONE_NUMBER}`}

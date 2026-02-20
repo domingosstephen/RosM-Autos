@@ -5,6 +5,7 @@ import { SectionHeading } from '@/components/shared/SectionHeading'
 import { Button } from '@/components/shared/Button'
 import { CTABanner } from '@/components/shared/CTABanner'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
+import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 import { howToSchema } from '@/lib/schema'
 
 export const metadata: Metadata = createPageMetadata({
@@ -93,27 +94,29 @@ export default function HowItWorksPage() {
 
           <div className="mt-16 space-y-12">
             {steps.map((step, i) => (
-              <div key={step.number} className="flex gap-6">
-                {/* Step indicator */}
-                <div className="flex flex-col items-center shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-cta text-white text-xl font-bold flex items-center justify-center">
-                    {step.number}
+              <AnimateOnScroll key={step.number} animation="fade-up" delay={i * 150}>
+                <div className="flex gap-6">
+                  {/* Step indicator */}
+                  <div className="flex flex-col items-center shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-cta text-white text-xl font-bold flex items-center justify-center">
+                      {step.number}
+                    </div>
+                    {i < steps.length - 1 && (
+                      <div className="w-0.5 flex-1 bg-border mt-3" />
+                    )}
                   </div>
-                  {i < steps.length - 1 && (
-                    <div className="w-0.5 flex-1 bg-border mt-3" />
-                  )}
-                </div>
 
-                {/* Content */}
-                <div className="pb-8">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-cta">{step.icon}</span>
-                    <h2 className="text-xl font-bold text-navy">{step.title}</h2>
+                  {/* Content */}
+                  <div className="pb-8">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-cta">{step.icon}</span>
+                      <h2 className="text-xl font-bold text-navy">{step.title}</h2>
+                    </div>
+                    <p className="text-slate leading-relaxed">{step.description}</p>
+                    <p className="mt-2 text-sm text-muted italic">{step.details}</p>
                   </div>
-                  <p className="text-slate leading-relaxed">{step.description}</p>
-                  <p className="mt-2 text-sm text-muted italic">{step.details}</p>
                 </div>
-              </div>
+              </AnimateOnScroll>
             ))}
           </div>
 
@@ -139,13 +142,15 @@ export default function HowItWorksPage() {
               'Customs clearance coordination at both ends',
               'Real-time shipment tracking link',
               'WhatsApp support from inquiry to delivery',
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-3 py-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-success shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="text-slate">{item}</span>
-              </div>
+            ].map((item, i) => (
+              <AnimateOnScroll key={item} animation="fade-up" delay={i * 100}>
+                <div className="flex items-center gap-3 py-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-success shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-slate">{item}</span>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </Container>

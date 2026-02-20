@@ -1,5 +1,8 @@
+'use client'
+
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
+import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 
 const propositions = [
   {
@@ -37,14 +40,16 @@ export function ValuePropositions() {
           subtitle="Three promises we have delivered on since 2017 — backed by a 98% satisfaction rate"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {propositions.map((prop) => (
-            <div key={prop.title} className="text-center">
-              <div className="w-16 h-16 rounded-full bg-cta/10 text-cta flex items-center justify-center mx-auto">
-                {prop.icon}
+          {propositions.map((prop, i) => (
+            <AnimateOnScroll key={prop.title} animation="fade-up" delay={i * 150}>
+              <div className="text-center">
+                <div className="w-16 h-16 rounded-full bg-cta/10 text-cta flex items-center justify-center mx-auto animate-bounce-gentle">
+                  {prop.icon}
+                </div>
+                <h3 className="mt-6 text-xl font-bold text-navy">{prop.title}</h3>
+                <p className="mt-3 text-slate leading-relaxed">{prop.description}</p>
               </div>
-              <h3 className="mt-6 text-xl font-bold text-navy">{prop.title}</h3>
-              <p className="mt-3 text-slate leading-relaxed">{prop.description}</p>
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </Container>

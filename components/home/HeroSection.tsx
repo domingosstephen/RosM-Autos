@@ -1,3 +1,5 @@
+'use client'
+
 import { Container } from '@/components/shared/Container'
 import { Button } from '@/components/shared/Button'
 import { PlaceholderImage } from '@/components/shared/PlaceholderImage'
@@ -11,20 +13,20 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Copy side */}
           <div>
-            <p className="text-cta font-semibold text-sm uppercase tracking-wider mb-4">
+            <p className="text-cta font-semibold text-sm uppercase tracking-wider mb-4 opacity-0 animate-hero-reveal delay-100">
               Germany&apos;s Trusted Vehicle Export Partner Since 2017
             </p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight opacity-0 animate-hero-reveal delay-200">
               Stop Losing Money on Vehicles You&apos;ve{' '}
               <span className="text-cta">Never Inspected</span>
             </h1>
-            <p className="mt-6 text-lg text-white/70 leading-relaxed">
+            <p className="mt-6 text-lg text-white/70 leading-relaxed opacity-0 animate-hero-reveal delay-300">
               International buyers lose thousands every year to undisclosed defects, phantom shipping fees, and dealers who disappear after payment. One bad purchase can set your business back months.
             </p>
-            <p className="mt-4 text-white/90 leading-relaxed">
+            <p className="mt-4 text-white/90 leading-relaxed opacity-0 animate-hero-reveal delay-300">
               <strong className="text-white">RosM Autos</strong> ships inspected automobiles, farm tractors, and electric bikes from Lübbecke, Germany to 45+ countries — with photos, condition details, and every cost quoted upfront before you commit.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 opacity-0 animate-hero-reveal delay-400">
               <Button href="/inventory" variant="primary" size="lg">
                 Explore Our Inspected Inventory
               </Button>
@@ -33,7 +35,7 @@ export function HeroSection() {
                 Get a Free Quote on WhatsApp
               </Button>
             </div>
-            <div className="mt-8 flex items-center gap-6 text-white/60 text-sm">
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-white/60 text-sm opacity-0 animate-hero-reveal delay-500">
               <span className="flex items-center gap-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-success" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                 Inspected with Photos Before Sale
@@ -49,10 +51,10 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Image placeholder side */}
-          <div className="hidden lg:block">
+          {/* Image placeholder side — visible on all screen sizes */}
+          <div className="opacity-0 animate-hero-reveal delay-300">
             <PlaceholderImage
-              height="h-[420px]"
+              height="h-[260px] md:h-[340px] lg:h-[420px]"
               label="Quality Used Vehicles Ready for Export"
               alt="Collection of quality-inspected used automobiles, farm tractors, and electric bikes available for international export from RosM Autos"
               className="rounded-2xl shadow-2xl"
