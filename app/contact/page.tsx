@@ -33,15 +33,15 @@ export default function ContactPage() {
         <Breadcrumbs />
       </Container>
 
-      {/* Hero image + heading */}
+      {/* Hero image — tractor, full image visible */}
       <section className="pt-6 pb-12 md:pt-8 md:pb-16">
         <Container>
-          <div className="relative h-44 md:h-56 rounded-xl overflow-hidden mb-8">
+          <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden bg-slate-100 mb-8">
             <Image
               src={SITE_IMAGES.contact}
-              alt="Get in touch with RosM Autos for a transparent quote on quality used vehicles"
+              alt="Get in touch with RosM Autos for a transparent quote on tractors and used vehicles"
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="100vw"
             />
           </div>

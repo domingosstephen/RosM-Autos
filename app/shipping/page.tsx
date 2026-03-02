@@ -22,15 +22,15 @@ export default function ShippingPage() {
         <Breadcrumbs />
       </Container>
 
-      {/* Shipping hero image */}
+      {/* Shipping hero image — tractor, full image visible */}
       <section className="pt-6 pb-4">
         <Container>
-          <div className="relative h-48 md:h-56 rounded-xl overflow-hidden">
+          <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden bg-slate-100">
             <Image
               src={SITE_IMAGES.shipping}
-              alt="Vehicles and equipment shipped from Germany to 45+ countries"
+              alt="Tractors and vehicles shipped from Germany to 45+ countries"
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="100vw"
             />
           </div>

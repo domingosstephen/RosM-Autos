@@ -86,15 +86,15 @@ export default function HowItWorksPage() {
         <Breadcrumbs />
       </Container>
 
-      {/* Page hero image */}
+      {/* Page hero image — tractor, full image visible */}
       <section className="pt-6 pb-4">
         <Container>
-          <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
+          <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden bg-slate-100">
             <Image
               src={SITE_IMAGES.howItWorks}
-              alt="Quality used vehicles — from selection to delivery at your port"
+              alt="Quality used tractors and vehicles — from selection to delivery at your port"
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="100vw"
             />
           </div>

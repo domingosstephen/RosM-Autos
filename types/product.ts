@@ -18,6 +18,8 @@ export interface BaseProduct {
   imagePlaceholder: string
   /** When set, this image is shown instead of the placeholder (e.g. /images/inventory/slug/photo.jpg) */
   image?: string
+  /** All gallery images for carousel; first is primary. When set, card shows swipeable/clickable carousel. */
+  images?: string[]
 }
 
 export interface Automobile extends BaseProduct {

@@ -74,15 +74,15 @@ export default function FAQPage() {
         <Breadcrumbs />
       </Container>
 
-      {/* FAQ hero image */}
+      {/* FAQ hero image — tractor, full image visible */}
       <section className="pt-6 pb-4">
         <Container size="md">
-          <div className="relative h-40 md:h-52 rounded-xl overflow-hidden">
+          <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden bg-slate-100">
             <Image
               src={SITE_IMAGES.faq}
-              alt="Quality inspected vehicles — your questions answered"
+              alt="Quality inspected tractors and vehicles — your questions answered"
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="(max-width: 768px) 100vw, 672px"
             />
           </div>

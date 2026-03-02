@@ -43,12 +43,12 @@ export default async function InventoryPage({ searchParams }: InventoryPageProps
       <section className="py-12 md:py-16">
         <Container>
           <Breadcrumbs />
-          <div className="relative h-44 md:h-56 rounded-xl overflow-hidden mb-10">
+          <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden bg-slate-100 mb-10">
             <Image
-              src={SITE_IMAGES.inventory}
-              alt="Browse our inspected inventory — automobiles, tractors, ready to ship"
+              src={initialCategory === 'tractor' ? SITE_IMAGES.tractorInventory : SITE_IMAGES.inventory}
+              alt={initialCategory === 'tractor' ? 'Browse our inspected tractors — ready to ship' : 'Browse our inspected inventory — automobiles, tractors, ready to ship'}
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="100vw"
             />
           </div>

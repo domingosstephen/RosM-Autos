@@ -20,26 +20,49 @@ const PROJECT_ROOT = path.join(__dirname, '..')
 const PUBLIC_INVENTORY = path.join(PROJECT_ROOT, 'public', 'images', 'inventory')
 const IMAGE_EXT = /\.(jpe?g|webp|png|gif)$/i
 
-/** Copy first image from folder/Pictures to public/images/inventory/slug/; return URL path or null */
-function copyFirstImageAndGetPath(folderPath, slug) {
+/** Display name overrides: folder name -> clean name (remove duplicate "Toyota Corolla" etc.) */
+const DISPLAY_NAME_OVERRIDES = {
+  'Toyota Corolla Toyota Corolla, 2018': 'Toyota Corolla 2018',
+  'Toyota Prado 2020 VXL v4': 'Toyota Prado 2020 VXL v4',
+  'Toyota Prado Toyota prado 2020 VXL v4': 'Toyota Prado 2020 VXL v4',
+  'Toyota Prado Toyota Prado model 2020 fuel Petrol full option Left hand drive V6': 'Toyota Prado 2020 Petrol Full Option LHD V6',
+  'Toyota Prado Toyota Prado Years 2020 VXR 2.7L AWD': 'Toyota Prado 2020 VXR 2.7L AWD',
+  'Toyota Prado Toyota prado 2020 v6 full option': 'Toyota Prado 2020 V6 Full Option',
+  'Toyota RAV4 2018 model Toyota RAV4': 'Toyota RAV4 2018',
+  'Toyota RAV4 Toyota Rav4 2019 Xle': 'Toyota RAV4 2019 XLE',
+}
+
+/**
+ * Copy all images from folder/Pictures to public/images/inventory/slug/ (1.ext, 2.ext, ...).
+ * Primary image = largest file by size (heuristic: full exterior shots are usually larger).
+ * Returns { primaryPath, imagePaths } or null.
+ */
+function copyAllImagesAndGetPrimaryPath(folderPath, slug) {
   const picturesDir = path.join(folderPath, 'Pictures')
   if (!fs.existsSync(picturesDir)) return null
   const entries = fs.readdirSync(picturesDir, { withFileTypes: true })
-  const firstImage = entries.find((e) => e.isFile() && IMAGE_EXT.test(e.name))
-  if (!firstImage) return null
-  const ext = path.extname(firstImage.name).toLowerCase()
+    .filter((e) => e.isFile() && IMAGE_EXT.test(e.name))
+  if (entries.length === 0) return null
   const destDir = path.join(PUBLIC_INVENTORY, slug)
-  const destName = `1${ext}` // normalize to 1.jpg / 1.webp for stable URLs
-  const srcPath = path.join(picturesDir, firstImage.name)
-  const destPath = path.join(destDir, destName)
-  try {
-    if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true })
-    fs.copyFileSync(srcPath, destPath)
-    return `/images/inventory/${slug}/${destName}`
-  } catch (err) {
-    console.warn(`Could not copy image for ${slug}:`, err.message)
-    return null
+  if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true })
+
+  const withSize = entries.map((e) => {
+    const src = path.join(picturesDir, e.name)
+    return { name: e.name, size: fs.statSync(src).size, src }
+  }).sort((a, b) => b.size - a.size)
+
+  const imagePaths = []
+  for (let i = 0; i < withSize.length; i++) {
+    const extI = path.extname(withSize[i].name).toLowerCase()
+    const destName = `${i + 1}${extI}`
+    try {
+      fs.copyFileSync(withSize[i].src, path.join(destDir, destName))
+      imagePaths.push(`/images/inventory/${slug}/${destName}`)
+    } catch (err) {
+      if (i === 0) console.warn(`Could not copy image for ${slug}:`, err.message)
+    }
   }
+  return imagePaths.length ? { primaryPath: imagePaths[0], imagePaths } : null
 }
 
 function slugify(name) {
@@ -152,12 +175,13 @@ function parseAutomobile(folderName, txtPath, folderSlug, index) {
 
   const slug = slugify(folderName)
   const id = `used-auto-${index + 1}`
+  const displayName = DISPLAY_NAME_OVERRIDES[folderName] || name || folderName
 
   return {
     id,
     slug: slug.length > 60 ? slug.slice(0, 60) : slug,
     category: 'automobile',
-    name: name || folderName,
+    name: displayName,
     brand: make,
     model: String(model),
     year: Number.isNaN(year) ? new Date().getFullYear() : year,
@@ -165,7 +189,7 @@ function parseAutomobile(folderName, txtPath, folderSlug, index) {
     condition: 'Good',
     description: description || `${make} ${model} ${year}. Available for export.`,
     features: features.slice(0, 8),
-    imageAlt: `${name} - used vehicle for export`,
+    imageAlt: `${displayName} - used vehicle for export`,
     imagePlaceholder: '/images/placeholders/automobile.svg',
     bodyType,
     mileage,
@@ -185,6 +209,7 @@ function parseTractor(folderName, txtPath, folderSlug, index) {
 
   const slug = slugify(folderName)
   const id = `used-tractor-${index + 1}`
+  const displayName = DISPLAY_NAME_OVERRIDES[folderName] || name || folderName
 
   const features = []
   if (specs['fuel type']) features.push(specs['fuel type'])
@@ -197,7 +222,7 @@ function parseTractor(folderName, txtPath, folderSlug, index) {
     id,
     slug: slug.length > 60 ? slug.slice(0, 60) : slug,
     category: 'tractor',
-    name: name || folderName,
+    name: displayName,
     brand: make,
     model: String(model),
     year: Number.isNaN(year) ? new Date().getFullYear() : year,
@@ -205,7 +230,7 @@ function parseTractor(folderName, txtPath, folderSlug, index) {
     condition: 'Good',
     description: description || `${make} ${model} tractor. Available for export.`,
     features: features.slice(0, 6),
-    imageAlt: `${name} - tractor for export`,
+    imageAlt: `${displayName} - tractor for export`,
     imagePlaceholder: '/images/placeholders/tractor.svg',
     horsepower,
     hoursUsed,
@@ -244,8 +269,11 @@ function main() {
       product = parseAutomobile(folderName, txtPath, folderSlug, autoIndex++)
       automobiles.push(product)
     }
-    const imagePath = copyFirstImageAndGetPath(dirPath, slug)
-    if (imagePath) product.image = imagePath
+    const result = copyAllImagesAndGetPrimaryPath(dirPath, slug)
+    if (result) {
+      product.image = result.primaryPath
+      product.images = result.imagePaths
+    }
   }
 
   const outPath = path.join(__dirname, '..', 'lib', 'used-cars-data.json')
