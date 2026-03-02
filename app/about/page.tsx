@@ -4,7 +4,6 @@ import { createPageMetadata } from '@/lib/metadata'
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
 import { Card } from '@/components/shared/Card'
-import { PlaceholderImage } from '@/components/shared/PlaceholderImage'
 import { Button } from '@/components/shared/Button'
 import { CTABanner } from '@/components/shared/CTABanner'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
@@ -48,13 +47,6 @@ const advantages = [
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     ),
   },
-]
-
-const team = [
-  { name: 'Managing Director', role: 'Founder & CEO', alt: 'Portrait of RosM Autos founder and CEO overseeing international vehicle export operations' },
-  { name: 'Head of Sales', role: 'Sales Director', alt: 'Portrait of RosM Autos sales director managing international client relationships' },
-  { name: 'Logistics Manager', role: 'Shipping & Export', alt: 'Portrait of RosM Autos logistics manager coordinating global vehicle shipments' },
-  { name: 'Lead Inspector', role: 'Vehicle Inspection', alt: 'Portrait of RosM Autos lead vehicle inspector conducting quality assessments' },
 ]
 
 export default function AboutPage() {
@@ -139,32 +131,6 @@ export default function AboutPage() {
                     <p className="mt-2 text-slate leading-relaxed">{adv.description}</p>
                   </div>
                 </Card>
-              </AnimateOnScroll>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Team */}
-      <section className="py-16 md:py-24 bg-surface-alt">
-        <Container>
-          <SectionHeading
-            title="The Team Behind Your Purchase"
-            subtitle="From inspection to export — meet the people who make it happen"
-          />
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {team.map((member, i) => (
-              <AnimateOnScroll key={member.role} animation="fade-up" delay={i * 150}>
-                <div className="text-center">
-                  <PlaceholderImage
-                    height="h-48"
-                    label={member.name}
-                    alt={member.alt}
-                    className="rounded-xl mx-auto"
-                  />
-                  <h3 className="mt-4 font-bold text-navy">{member.name}</h3>
-                  <p className="text-sm text-muted">{member.role}</p>
-                </div>
               </AnimateOnScroll>
             ))}
           </div>

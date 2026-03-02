@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { createPageMetadata } from '@/lib/metadata'
 import { localBusinessSchema } from '@/lib/schema'
 import { WHATSAPP_LINK, PHONE_NUMBER, EMAIL } from '@/lib/constants'
@@ -10,7 +9,6 @@ import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { InquiryForm } from '@/components/contact/InquiryForm'
 import { ContactInfo } from '@/components/contact/ContactInfo'
 import { MapPlaceholder } from '@/components/contact/MapPlaceholder'
-import { SITE_IMAGES } from '@/lib/site-images'
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Contact RosM Autos | Get a Quote | WhatsApp, Phone, Email',
@@ -33,18 +31,8 @@ export default function ContactPage() {
         <Breadcrumbs />
       </Container>
 
-      {/* Hero image — tractor, full image visible */}
-      <section className="pt-6 pb-12 md:pt-8 md:pb-16">
+      <section className="pt-8 pb-12 md:pt-12 md:pb-16">
         <Container>
-          <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden bg-slate-100 mb-8">
-            <Image
-              src={SITE_IMAGES.contact}
-              alt="Get in touch with RosM Autos for a transparent quote on tractors and used vehicles"
-              fill
-              className="object-contain"
-              sizes="100vw"
-            />
-          </div>
           <SectionHeading
             title="Get Your Free Quote — No Obligation"
             subtitle="Tell us what you need and where you want it delivered. We respond within 24 hours with a transparent quote covering vehicle, shipping, and all fees."

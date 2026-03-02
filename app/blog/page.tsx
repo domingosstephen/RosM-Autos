@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { createPageMetadata } from '@/lib/metadata'
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
 import { Card } from '@/components/shared/Card'
-import { PlaceholderImage } from '@/components/shared/PlaceholderImage'
 import { CTABanner } from '@/components/shared/CTABanner'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
@@ -22,6 +22,7 @@ const blogPosts = [
     category: 'Buying Guide',
     date: 'Coming Soon',
     alt: 'Article about the most durable vehicles for African road conditions including Toyota Hilux and Land Cruiser',
+    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',
   },
   {
     title: 'Import Duty Guide: What to Expect When Importing to Nigeria',
@@ -29,6 +30,7 @@ const blogPosts = [
     category: 'Import Guide',
     date: 'Coming Soon',
     alt: 'Guide to Nigerian vehicle import duties and customs regulations for used car buyers',
+    image: 'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800&q=80',
   },
   {
     title: 'RoRo vs. Container Shipping: Which Is Right for Your Vehicle?',
@@ -36,6 +38,7 @@ const blogPosts = [
     category: 'Shipping',
     date: 'Coming Soon',
     alt: 'Comparison of RoRo and container shipping methods for international vehicle export',
+    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80',
   },
   {
     title: 'Used Farm Tractors: What to Look for Before You Buy',
@@ -43,6 +46,7 @@ const blogPosts = [
     category: 'Buying Guide',
     date: 'Coming Soon',
     alt: 'Buyers guide for evaluating used farm tractors before purchase including inspection checklist',
+    image: 'https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=800&q=80',
   },
   {
     title: 'Electric Bikes in Africa: The Growing Market Opportunity',
@@ -50,6 +54,7 @@ const blogPosts = [
     category: 'Market Insight',
     date: 'Coming Soon',
     alt: 'Overview of the growing electric bike market in Africa and transportation trends',
+    image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&q=80',
   },
   {
     title: 'How to Clear Customs in 5 Common Destination Countries',
@@ -57,6 +62,7 @@ const blogPosts = [
     category: 'Import Guide',
     date: 'Coming Soon',
     alt: 'Customs clearance guide for importing vehicles to Ghana, Kenya, Brazil, Colombia, and Poland',
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80',
   },
 ]
 
@@ -79,12 +85,15 @@ export default function BlogPage() {
             {blogPosts.map((post, i) => (
               <AnimateOnScroll key={post.title} animation="fade-up" delay={i * 150}>
                 <Card hoverable padding="none" className="overflow-hidden flex flex-col">
-                  <PlaceholderImage
-                    height="h-44"
-                    label={post.category}
-                    alt={post.alt}
-                    className="rounded-none"
-                  />
+                  <div className="relative h-44 w-full bg-slate-200">
+                    <Image
+                      src={post.image}
+                      alt={post.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
                   <div className="p-5 flex flex-col flex-1">
                     <span className="text-xs font-semibold text-cta uppercase tracking-wider">
                       {post.category}

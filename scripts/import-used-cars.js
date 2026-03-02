@@ -34,7 +34,7 @@ const DISPLAY_NAME_OVERRIDES = {
 
 /**
  * Copy all images from folder/Pictures to public/images/inventory/slug/ (1.ext, 2.ext, ...).
- * Primary image = largest file by size (heuristic: full exterior shots are usually larger).
+ * Primary image = file named "main" (e.g. main.webp, main.jpg) if present, else largest by size.
  * Returns { primaryPath, imagePaths } or null.
  */
 function copyAllImagesAndGetPrimaryPath(folderPath, slug) {
@@ -48,15 +48,21 @@ function copyAllImagesAndGetPrimaryPath(folderPath, slug) {
 
   const withSize = entries.map((e) => {
     const src = path.join(picturesDir, e.name)
-    return { name: e.name, size: fs.statSync(src).size, src }
-  }).sort((a, b) => b.size - a.size)
+    const base = path.basename(e.name, path.extname(e.name)).toLowerCase()
+    return { name: e.name, size: fs.statSync(src).size, src, isMain: base === 'main' }
+  })
+
+  const mainFile = withSize.find((e) => e.isMain)
+  const primary = mainFile || withSize.sort((a, b) => b.size - a.size)[0]
+  const others = withSize.filter((e) => e !== primary).sort((a, b) => b.size - a.size)
+  const ordered = [primary, ...others]
 
   const imagePaths = []
-  for (let i = 0; i < withSize.length; i++) {
-    const extI = path.extname(withSize[i].name).toLowerCase()
+  for (let i = 0; i < ordered.length; i++) {
+    const extI = path.extname(ordered[i].name).toLowerCase()
     const destName = `${i + 1}${extI}`
     try {
-      fs.copyFileSync(withSize[i].src, path.join(destDir, destName))
+      fs.copyFileSync(ordered[i].src, path.join(destDir, destName))
       imagePaths.push(`/images/inventory/${slug}/${destName}`)
     } catch (err) {
       if (i === 0) console.warn(`Could not copy image for ${slug}:`, err.message)
