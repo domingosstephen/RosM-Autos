@@ -75,8 +75,9 @@ export function Footer() {
           {Object.entries(footerLinks).map(([key, section]) => (
             <div key={key}>
               <button
+                type="button"
                 onClick={() => setOpenSection(openSection === key ? null : key)}
-                className="flex items-center justify-between w-full md:pointer-events-none"
+                className="flex items-center justify-between w-full py-3 min-h-[44px] text-left md:pointer-events-none"
                 aria-expanded={openSection === key}
               >
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50">

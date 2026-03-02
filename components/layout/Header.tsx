@@ -125,10 +125,11 @@ export function Header() {
               Get a Free Quote
             </Button>
 
-            {/* Mobile hamburger */}
+            {/* Mobile hamburger — min 44px touch target (mobile-first) */}
             <button
+              type="button"
               onClick={() => setMobileNavOpen(true)}
-              className="lg:hidden p-2 rounded-lg hover:bg-surface-alt transition-colors"
+              className="lg:hidden p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg hover:bg-surface-alt transition-colors"
               aria-label="Open navigation menu"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">

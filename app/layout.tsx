@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
@@ -15,6 +15,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = defaultMetadata
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: 'cover',
+}
 
 export default function RootLayout({
   children,
@@ -45,9 +52,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col antialiased">
+      <body className="min-h-screen flex flex-col antialiased overflow-x-hidden">
         <Header />
-        <main className="flex-1 pb-16 md:pb-0">
+        <main className="flex-1 pb-20 md:pb-0 min-h-0">
           {children}
         </main>
         <Footer />

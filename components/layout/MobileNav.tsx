@@ -26,41 +26,37 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
   useEffect(() => { onClose() }, [pathname, onClose])
 
+  // Only render when open — avoids any overlay covering the page when closed (mobile-first)
+  if (!isOpen) return null
+
   return (
     <>
-      {/* Backdrop */}
+      {/* Backdrop — tap to close; content behind remains visible (dimmed) */}
       <div
-        className={cn(
-          'fixed inset-0 z-50 bg-black/50 transition-opacity lg:hidden',
-          isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        )}
+        className="fixed inset-0 z-[100] bg-black/40 transition-opacity lg:hidden"
         onClick={onClose}
         aria-hidden="true"
       />
 
-      {/* Bottom Sheet */}
+      {/* Right-side drawer — leaves most of the screen visible behind */}
       <div
         className={cn(
-          'fixed bottom-0 left-0 right-0 z-50 bg-surface rounded-t-2xl shadow-xl transition-transform duration-300 ease-out lg:hidden max-h-[85vh] overflow-y-auto',
-          isOpen ? 'translate-y-0' : 'translate-y-full'
+          'fixed top-0 right-0 z-[101] w-full max-w-[min(320px,85vw)] h-full bg-surface shadow-2xl overflow-y-auto lg:hidden',
+          'transition-transform duration-300 ease-out'
         )}
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
       >
-        {/* Drag handle */}
-        <div className="flex justify-center pt-3 pb-2">
-          <div className="w-10 h-1 rounded-full bg-gray-300" />
-        </div>
-
         {/* Header row */}
-        <div className="flex items-center justify-between px-6 pb-4 border-b border-border">
+        <div className="flex items-center justify-between px-4 py-4 border-b border-border sticky top-0 bg-surface">
           <span className="text-navy font-extrabold text-lg">
             <span className="text-cta">RosM</span> Autos
           </span>
           <button
+            type="button"
             onClick={onClose}
-            className="p-2 rounded-lg hover:bg-surface-alt transition-colors"
+            className="p-2.5 -mr-2 rounded-lg hover:bg-surface-alt transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Close navigation menu"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
