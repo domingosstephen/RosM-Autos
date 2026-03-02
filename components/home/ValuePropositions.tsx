@@ -1,10 +1,8 @@
 'use client'
 
-import Image from 'next/image'
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
 import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
-import { SITE_IMAGES } from '@/lib/site-images'
 
 const propositions = [
   {
@@ -41,15 +39,6 @@ export function ValuePropositions() {
           title="Why Buyers Across 45 Countries Trust RosM Autos"
           subtitle="Three promises we have delivered on since 2017 — backed by a 98% satisfaction rate"
         />
-        <div className="mt-10 relative h-40 md:h-52 rounded-xl overflow-hidden">
-          <Image
-            src={SITE_IMAGES.valueProp}
-            alt="Trusted international vehicle export — inspected and ready to ship"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-        </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {propositions.map((prop, i) => (
             <AnimateOnScroll key={prop.title} animation="fade-up" delay={i * 150}>

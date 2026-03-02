@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react'
 import Image from 'next/image'
 import { PlaceholderImage } from '@/components/shared/PlaceholderImage'
+import { ImageLightbox } from '@/components/inventory/ImageLightbox'
 import { cn } from '@/lib/utils'
 
 interface ProductImageCarouselProps {
@@ -32,6 +33,7 @@ export function ProductImageCarousel({
   const [index, setIndex] = useState(0)
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
 
   const goTo = useCallback(
     (i: number) => {
@@ -81,29 +83,35 @@ export function ProductImageCarousel({
   const showCarousel = list.length > 1
 
   return (
-    <div
-      className={cn('relative w-full bg-slate-200 overflow-hidden', height, className)}
-      onTouchStart={onTouchStart}
-      onTouchMove={onTouchMove}
-      onTouchEnd={onTouchEnd}
-    >
-      {list.map((src, i) => (
-        <div
-          key={src}
-          className={cn(
-            'absolute inset-0 transition-opacity duration-300 ease-out',
-            i === index ? 'opacity-100 z-0' : 'opacity-0 pointer-events-none z-0'
-          )}
-        >
-          <Image
-            src={src}
-            alt={`${alt} — photo ${i + 1} of ${list.length}`}
-            fill
-            className="object-cover"
-            sizes={sizes}
-          />
-        </div>
-      ))}
+    <>
+      <div
+        className={cn('relative w-full bg-slate-200 overflow-hidden cursor-pointer', height, className)}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        onClick={() => list.length > 0 && setLightboxOpen(true)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); list.length > 0 && setLightboxOpen(true) } }}
+        aria-label={`View ${name} photos in full size`}
+      >
+        {list.map((src, i) => (
+          <div
+            key={src}
+            className={cn(
+              'absolute inset-0 transition-opacity duration-300 ease-out',
+              i === index ? 'opacity-100 z-0' : 'opacity-0 pointer-events-none z-0'
+            )}
+          >
+            <Image
+              src={src}
+              alt={`${alt} — photo ${i + 1} of ${list.length}`}
+              fill
+              className="object-cover"
+              sizes={sizes}
+            />
+          </div>
+        ))}
 
       {/* Prev / Next arrows — visible when multiple images */}
       {showCarousel && (
@@ -115,7 +123,7 @@ export function ProductImageCarousel({
               e.stopPropagation()
               goTo(index - 1)
             }}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
             aria-label="Previous photo"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -129,7 +137,7 @@ export function ProductImageCarousel({
               e.stopPropagation()
               goTo(index + 1)
             }}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
             aria-label="Next photo"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -141,7 +149,7 @@ export function ProductImageCarousel({
 
       {/* Dot indicators */}
       {showCarousel && (
-        <div className="absolute bottom-2 left-0 right-0 z-10 flex justify-center gap-1.5">
+        <div className="absolute bottom-2 left-0 right-0 z-20 flex justify-center gap-1.5">
           {list.map((_, i) => (
             <button
               key={i}
@@ -170,6 +178,24 @@ export function ProductImageCarousel({
           </span>
         </div>
       )}
+
+      {/* Click to open full resolution */}
+      <div className="absolute bottom-2 right-2 z-10 pointer-events-none">
+        <span className="text-xs font-medium text-white/90 bg-black/40 px-2 py-1 rounded-full backdrop-blur-sm">
+          Click for full size
+        </span>
+      </div>
     </div>
+
+    {lightboxOpen && list.length > 0 && (
+      <ImageLightbox
+        images={list}
+        initialIndex={index}
+        alt={alt}
+        name={name}
+        onClose={() => setLightboxOpen(false)}
+      />
+    )}
+    </>
   )
 }
