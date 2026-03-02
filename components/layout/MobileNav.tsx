@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { NAV_LINKS, WHATSAPP_LINK, PHONE_NUMBER, PRODUCT_CATEGORIES } from '@/lib/constants'
@@ -34,11 +35,12 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
   // Only render when open — avoids any overlay covering the page when closed (mobile-first)
   if (!isOpen) return null
 
-  return (
+  // Portal to body so the menu stacks above hero and all page content (no parent z-index/overflow issues)
+  const menuContent = (
     <>
       {/* Backdrop — tap to close; content behind remains visible (dimmed) */}
       <div
-        className="fixed inset-0 z-[100] bg-black/40 transition-opacity lg:hidden"
+        className="fixed inset-0 z-[9998] bg-black/40 transition-opacity lg:hidden"
         onClick={onClose}
         aria-hidden="true"
       />
@@ -46,7 +48,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
       {/* Right-side drawer — leaves most of the screen visible behind */}
       <div
         className={cn(
-          'fixed top-0 right-0 z-[101] w-full max-w-[min(320px,85vw)] h-full bg-surface shadow-2xl overflow-y-auto lg:hidden',
+          'fixed top-0 right-0 z-[9999] w-full max-w-[min(320px,85vw)] h-full bg-surface shadow-2xl overflow-y-auto lg:hidden',
           'transition-transform duration-300 ease-out'
         )}
         role="dialog"
@@ -135,4 +137,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
       </div>
     </>
   )
+
+  if (typeof document === 'undefined') return null
+  return createPortal(menuContent, document.body)
 }
