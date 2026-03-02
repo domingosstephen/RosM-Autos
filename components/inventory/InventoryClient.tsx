@@ -1,7 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
-import { Container } from '@/components/shared/Container'
+import { useState, useMemo, useEffect } from 'react'
 import { CTABanner } from '@/components/shared/CTABanner'
 import { CategoryTabs } from '@/components/inventory/CategoryTabs'
 import { ProductGrid } from '@/components/inventory/ProductGrid'
@@ -10,9 +9,17 @@ import type { ProductCategory } from '@/types/product'
 
 type CategoryFilter = ProductCategory | 'all'
 
-export function InventoryClient() {
-  const [activeCategory, setActiveCategory] = useState<CategoryFilter>('all')
+interface InventoryClientProps {
+  initialCategory?: CategoryFilter
+}
+
+export function InventoryClient({ initialCategory = 'all' }: InventoryClientProps) {
+  const [activeCategory, setActiveCategory] = useState<CategoryFilter>(initialCategory)
   const [searchQuery, setSearchQuery] = useState('')
+
+  useEffect(() => {
+    setActiveCategory(initialCategory)
+  }, [initialCategory])
 
   const filteredProducts = useMemo(() => {
     let products = allProducts

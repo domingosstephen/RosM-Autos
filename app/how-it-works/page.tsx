@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { createPageMetadata } from '@/lib/metadata'
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
@@ -7,6 +8,7 @@ import { CTABanner } from '@/components/shared/CTABanner'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 import { howToSchema } from '@/lib/schema'
+import { SITE_IMAGES } from '@/lib/site-images'
 
 export const metadata: Metadata = createPageMetadata({
   title: 'How to Buy a Used Vehicle for Export | Step-by-Step Guide',
@@ -83,6 +85,21 @@ export default function HowItWorksPage() {
       <Container>
         <Breadcrumbs />
       </Container>
+
+      {/* Page hero image */}
+      <section className="pt-6 pb-4">
+        <Container>
+          <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
+            <Image
+              src={SITE_IMAGES.howItWorks}
+              alt="Quality used vehicles — from selection to delivery at your port"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+        </Container>
+      </section>
 
       <section className="py-16 md:py-24">
         <Container size="md">

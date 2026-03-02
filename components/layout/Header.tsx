@@ -1,9 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { NAV_LINKS, WHATSAPP_LINK, PHONE_NUMBER } from '@/lib/constants'
+import { NAV_LINKS, WHATSAPP_LINK, PHONE_NUMBER, PRODUCT_CATEGORIES } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 import { Container } from '@/components/shared/Container'
 import { Button } from '@/components/shared/Button'
@@ -13,11 +13,23 @@ import { useMediaQuery } from '@/hooks/useMediaQuery'
 
 export function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
+  const [inventoryDropdownOpen, setInventoryDropdownOpen] = useState(false)
+  const dropdownRef = useRef<HTMLLIElement>(null)
   const pathname = usePathname()
   const { scrollY, scrollDirection } = useScrollPosition()
   const isDesktop = useMediaQuery('(min-width: 1024px)')
 
   const shouldHide = !isDesktop && scrollDirection === 'down' && scrollY > 100
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setInventoryDropdownOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   return (
     <header
@@ -53,21 +65,59 @@ export function Header() {
 
           {/* Desktop nav links */}
           <ul className="hidden lg:flex items-center gap-1">
-            {NAV_LINKS.filter(l => l.href !== '/').map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={cn(
-                    'px-3 py-2 rounded-lg text-sm font-medium transition-colors',
-                    pathname === link.href
-                      ? 'text-cta bg-cta/5'
-                      : 'text-slate hover:text-navy hover:bg-surface-alt'
-                  )}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {NAV_LINKS.filter(l => l.href !== '/').map((link) => {
+              const isInventory = link.href === '/inventory' && 'hasDropdown' in link && link.hasDropdown
+              if (isInventory) {
+                return (
+                  <li key={link.href} ref={dropdownRef} className="relative">
+                    <button
+                      type="button"
+                      onClick={() => setInventoryDropdownOpen((o) => !o)}
+                      className={cn(
+                        'px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1',
+                        pathname === link.href
+                          ? 'text-cta bg-cta/5'
+                          : 'text-slate hover:text-navy hover:bg-surface-alt'
+                      )}
+                      aria-expanded={inventoryDropdownOpen}
+                      aria-haspopup="true"
+                    >
+                      {link.label}
+                      <svg xmlns="http://www.w3.org/2000/svg" className={cn('h-4 w-4 transition-transform', inventoryDropdownOpen && 'rotate-180')} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    {inventoryDropdownOpen && (
+                      <div className="absolute top-full left-0 mt-1 py-1 w-52 bg-surface border border-border rounded-lg shadow-lg z-50">
+                        {PRODUCT_CATEGORIES.map((cat) => (
+                          <Link
+                            key={cat.value}
+                            href={cat.href}
+                            className="block px-4 py-2.5 text-sm text-slate hover:bg-surface-alt hover:text-navy"
+                            onClick={() => setInventoryDropdownOpen(false)}
+                          >
+                            {cat.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </li>
+                )
+              }
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      'px-3 py-2 rounded-lg text-sm font-medium transition-colors',
+                      pathname === link.href
+                        ? 'text-cta bg-cta/5'
+                        : 'text-slate hover:text-navy hover:bg-surface-alt'
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
 
           <div className="flex items-center gap-3">

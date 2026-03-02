@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { createPageMetadata } from '@/lib/metadata'
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
@@ -9,6 +10,7 @@ import { CTABanner } from '@/components/shared/CTABanner'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 import { STATS } from '@/lib/constants'
+import { SITE_IMAGES } from '@/lib/site-images'
 
 export const metadata: Metadata = createPageMetadata({
   title: 'About RosM Autos | Trusted International Used Vehicle Dealer',
@@ -83,11 +85,15 @@ export default function AboutPage() {
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-in-right">
-              <PlaceholderImage
-                height="h-[380px]"
-                label="RosM Autos Headquarters & Vehicle Yard"
-                alt="RosM Autos headquarters showing vehicle inspection yard with automobiles, tractors, and equipment ready for international export"
-              />
+              <div className="relative h-[380px] w-full rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src={SITE_IMAGES.about}
+                  alt="RosM Autos — inspected vehicles and equipment ready for international export"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </AnimateOnScroll>
           </div>
         </Container>

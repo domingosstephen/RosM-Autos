@@ -1,9 +1,10 @@
 'use client'
 
+import Image from 'next/image'
 import { Container } from '@/components/shared/Container'
 import { Button } from '@/components/shared/Button'
-import { PlaceholderImage } from '@/components/shared/PlaceholderImage'
 import { WHATSAPP_LINK } from '@/lib/constants'
+import { SITE_IMAGES } from '@/lib/site-images'
 
 export function HeroSection() {
   return (
@@ -51,13 +52,15 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Image placeholder side — visible on all screen sizes */}
-          <div className="opacity-0 animate-hero-reveal delay-300">
-            <PlaceholderImage
-              height="h-[260px] md:h-[340px] lg:h-[420px]"
-              label="Quality Used Vehicles Ready for Export"
-              alt="Collection of quality-inspected used automobiles, farm tractors, and electric bikes available for international export from RosM Autos"
-              className="rounded-2xl shadow-2xl"
+          {/* Hero image — one of our inspected vehicles */}
+          <div className="relative h-[260px] md:h-[340px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl opacity-0 animate-hero-reveal delay-300">
+            <Image
+              src={SITE_IMAGES.hero}
+              alt="Quality-inspected used vehicles ready for international export from RosM Autos"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+              priority
             />
           </div>
         </div>

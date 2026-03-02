@@ -16,6 +16,8 @@ export interface BaseProduct {
   features: string[]
   imageAlt: string
   imagePlaceholder: string
+  /** When set, this image is shown instead of the placeholder (e.g. /images/inventory/slug/photo.jpg) */
+  image?: string
 }
 
 export interface Automobile extends BaseProduct {

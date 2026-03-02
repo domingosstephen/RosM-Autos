@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { NAV_LINKS, WHATSAPP_LINK, PHONE_NUMBER } from '@/lib/constants'
+import { NAV_LINKS, WHATSAPP_LINK, PHONE_NUMBER, PRODUCT_CATEGORIES } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/shared/Button'
 
@@ -72,21 +72,47 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         {/* Nav links */}
         <nav className="px-4 py-4">
           <ul className="space-y-1">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={cn(
-                    'block px-4 py-3 rounded-lg text-base font-medium transition-colors',
-                    pathname === link.href
-                      ? 'text-cta bg-cta/5'
-                      : 'text-slate hover:text-navy hover:bg-surface-alt'
-                  )}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isInventory = link.href === '/inventory' && 'hasDropdown' in link && link.hasDropdown
+              if (isInventory) {
+                return (
+                  <li key={link.href}>
+                    <span className="block px-4 py-2 text-sm font-semibold text-navy">{link.label}</span>
+                    <ul className="pl-4 pb-2 space-y-0.5">
+                      {PRODUCT_CATEGORIES.map((cat) => (
+                        <li key={cat.value}>
+                          <Link
+                            href={cat.href}
+                            className={cn(
+                              'block px-4 py-2.5 rounded-lg text-base font-medium transition-colors',
+                              pathname === '/inventory' ? 'text-cta bg-cta/5' : 'text-slate hover:text-navy hover:bg-surface-alt'
+                            )}
+                            onClick={onClose}
+                          >
+                            {cat.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                )
+              }
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      'block px-4 py-3 rounded-lg text-base font-medium transition-colors',
+                      pathname === link.href
+                        ? 'text-cta bg-cta/5'
+                        : 'text-slate hover:text-navy hover:bg-surface-alt'
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
 
           {/* CTAs */}

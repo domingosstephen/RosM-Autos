@@ -47,7 +47,7 @@ export const PRIORITY_COUNTRIES = [
 
 export const NAV_LINKS = [
   { label: 'Home', href: '/' },
-  { label: 'Inventory', href: '/inventory' },
+  { label: 'Inventory', href: '/inventory', hasDropdown: true },
   { label: 'How It Works', href: '/how-it-works' },
   { label: 'Shipping', href: '/shipping' },
   { label: 'About', href: '/about' },
@@ -55,6 +55,14 @@ export const NAV_LINKS = [
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ]
+
+/** Inventory categories for nav dropdown and filtering */
+export const PRODUCT_CATEGORIES = [
+  { value: 'all', label: 'All Vehicles', href: '/inventory' },
+  { value: 'automobile', label: 'Automobiles', href: '/inventory?category=automobile' },
+  { value: 'tractor', label: 'Farm Tractors', href: '/inventory?category=tractor' },
+  { value: 'electric-bike', label: 'Electric Bikes', href: '/inventory?category=electric-bike' },
+] as const
 
 export const STATS = {
   responseTime: '24h',
