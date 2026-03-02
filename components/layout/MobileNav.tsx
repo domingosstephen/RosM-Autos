@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { NAV_LINKS, WHATSAPP_LINK, PHONE_NUMBER, PRODUCT_CATEGORIES } from '@/lib/constants'
@@ -14,6 +14,8 @@ interface MobileNavProps {
 
 export function MobileNav({ isOpen, onClose }: MobileNavProps) {
   const pathname = usePathname()
+  const onCloseRef = useRef(onClose)
+  onCloseRef.current = onClose
 
   useEffect(() => {
     if (isOpen) {
@@ -24,7 +26,10 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
     return () => { document.body.style.overflow = '' }
   }, [isOpen])
 
-  useEffect(() => { onClose() }, [pathname, onClose])
+  // Close only when the route changes (user navigated), not when onClose reference changes
+  useEffect(() => {
+    onCloseRef.current()
+  }, [pathname])
 
   // Only render when open — avoids any overlay covering the page when closed (mobile-first)
   if (!isOpen) return null
