@@ -18,16 +18,12 @@ export function HeroSection() {
               Germany&apos;s Trusted Vehicle Export Partner Since 2017
             </p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight opacity-0 animate-hero-reveal delay-200">
-              Stop Losing Money on Vehicles You&apos;ve{' '}
-              <span className="text-cta">Never Inspected</span>
+              Bringing you the highest quality of fairly used cars with no logistic stress
             </h1>
-            <p className="mt-6 text-lg text-white/70 leading-relaxed opacity-0 animate-hero-reveal delay-300">
-              International buyers lose thousands every year to undisclosed defects, phantom shipping fees, and dealers who disappear after payment. One bad purchase can set your business back months.
+            <p className="mt-4 text-lg md:text-xl text-white/90 leading-relaxed opacity-0 animate-hero-reveal delay-300">
+              We take you through the buying process, and all shipping is handled by us.
             </p>
-            <p className="mt-4 text-white/90 leading-relaxed opacity-0 animate-hero-reveal delay-300">
-              <strong className="text-white">RosM Autos</strong> ships inspected automobiles, farm tractors, and electric bikes from Lübbecke, Germany to 45+ countries — with photos, condition details, and every cost quoted upfront before you commit.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 opacity-0 animate-hero-reveal delay-400">
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 opacity-0 animate-hero-reveal delay-400">
               <Button href="/inventory" variant="primary" size="lg">
                 Explore Our Inspected Inventory
               </Button>
@@ -36,6 +32,9 @@ export function HeroSection() {
                 Get a Free Quote on WhatsApp
               </Button>
             </div>
+            <p className="mt-6 text-white/80 leading-relaxed opacity-0 animate-hero-reveal delay-300">
+              <strong className="text-white">RosM Autos</strong> ships inspected automobiles, farm tractors, and electric bikes from Lübbecke, Germany to 45+ countries — with photos, condition details, and every cost quoted upfront before you commit.
+            </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-white/60 text-sm opacity-0 animate-hero-reveal delay-500">
               <span className="flex items-center gap-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-success" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
