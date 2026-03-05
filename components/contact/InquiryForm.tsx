@@ -172,7 +172,7 @@ export function InquiryForm() {
           value={formData.vehicleInterest}
           onChange={handleChange}
           error={errors.vehicleInterest}
-          placeholder="e.g., Toyota Hilux 2022"
+          placeholder="e.g., Honda CR-V 2022"
         />
 
         <Textarea

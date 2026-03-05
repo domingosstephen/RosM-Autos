@@ -20,17 +20,8 @@ const PROJECT_ROOT = path.join(__dirname, '..')
 const PUBLIC_INVENTORY = path.join(PROJECT_ROOT, 'public', 'images', 'inventory')
 const IMAGE_EXT = /\.(jpe?g|webp|png|gif)$/i
 
-/** Display name overrides: folder name -> clean name (remove duplicate "Toyota Corolla" etc.) */
-const DISPLAY_NAME_OVERRIDES = {
-  'Toyota Corolla Toyota Corolla, 2018': 'Toyota Corolla 2018',
-  'Toyota Prado 2020 VXL v4': 'Toyota Prado 2020 VXL v4',
-  'Toyota Prado Toyota prado 2020 VXL v4': 'Toyota Prado 2020 VXL v4',
-  'Toyota Prado Toyota Prado model 2020 fuel Petrol full option Left hand drive V6': 'Toyota Prado 2020 Petrol Full Option LHD V6',
-  'Toyota Prado Toyota Prado Years 2020 VXR 2.7L AWD': 'Toyota Prado 2020 VXR 2.7L AWD',
-  'Toyota Prado Toyota prado 2020 v6 full option': 'Toyota Prado 2020 V6 Full Option',
-  'Toyota RAV4 2018 model Toyota RAV4': 'Toyota RAV4 2018',
-  'Toyota RAV4 Toyota Rav4 2019 Xle': 'Toyota RAV4 2019 XLE',
-}
+/** Display name overrides: folder name -> clean name (for import from Used Cars folder) */
+const DISPLAY_NAME_OVERRIDES = {}
 
 /**
  * Copy all images from folder/Pictures to public/images/inventory/slug/ (1.ext, 2.ext, ...).

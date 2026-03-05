@@ -36,7 +36,7 @@ export function ProductCategories() {
       {
         title: 'Used Automobiles',
         description:
-          'Toyota Hilux, Land Cruiser, Corolla. Honda CR-V, Civic. Nissan Patrol, X-Trail. Mercedes Sprinter. BMW X3. VW Amarok. Every unit is inspected — engine, transmission, body, and electronics checked and photographed before sale.',
+          'Land Cruiser. Honda CR-V, Civic. Nissan Patrol, X-Trail. Mercedes Sprinter. BMW X3. VW Amarok. Every unit is inspected — engine, transmission, body, and electronics checked and photographed before sale.',
         href: '/inventory?category=automobile',
         cta: 'See Available Cars & Trucks',
         product: automobile,

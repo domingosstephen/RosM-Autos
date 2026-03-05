@@ -21,7 +21,7 @@ const blogPosts = [
     excerpt: 'Which vehicles hold up best on African roads? We rank the most reliable makes and models based on our export data and customer feedback from across the continent.',
     category: 'Buying Guide',
     date: 'Coming Soon',
-    alt: 'Article about the most durable vehicles for African road conditions including Toyota Hilux and Land Cruiser',
+    alt: 'Article about the most durable vehicles for African road conditions including Land Cruiser and other SUVs',
     image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',
   },
   {
