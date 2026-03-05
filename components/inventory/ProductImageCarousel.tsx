@@ -16,6 +16,8 @@ interface ProductImageCarouselProps {
   height?: string
   className?: string
   sizes?: string
+  /** Specs shown in full-screen lightbox (e.g. Mileage, Fuel type) */
+  specs?: Record<string, string>
 }
 
 const SWIPE_THRESHOLD = 50
@@ -28,6 +30,7 @@ export function ProductImageCarousel({
   height = 'h-48',
   className,
   sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+  specs,
 }: ProductImageCarouselProps) {
   const list = images?.length ? images : singleImage ? [singleImage] : []
   const [index, setIndex] = useState(0)
@@ -170,19 +173,25 @@ export function ProductImageCarousel({
         </div>
       )}
 
-      {/* Hint that swiping/clicking is possible */}
+      {/* Clear hint: scroll through photos */}
       {showCarousel && (
         <div className="absolute top-2 left-0 right-0 z-10 flex justify-center pointer-events-none">
-          <span className="text-xs font-medium text-white/90 bg-black/40 px-2 py-1 rounded-full backdrop-blur-sm">
-            Swipe or click arrows to see more
+          <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-black/50 px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/20">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+            Scroll through {list.length} photos
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
           </span>
         </div>
       )}
 
-      {/* Click to open full resolution */}
+      {/* Click to open full screen (photos + specs) */}
       <div className="absolute bottom-2 right-2 z-10 pointer-events-none">
-        <span className="text-xs font-medium text-white/90 bg-black/40 px-2 py-1 rounded-full backdrop-blur-sm">
-          Click for full size
+        <span className="text-xs font-semibold text-white bg-black/50 px-2.5 py-1 rounded-full backdrop-blur-sm border border-white/20">
+          Click for full screen
         </span>
       </div>
     </div>
@@ -194,6 +203,7 @@ export function ProductImageCarousel({
         alt={alt}
         name={name}
         onClose={() => setLightboxOpen(false)}
+        specs={specs}
       />
     )}
     </>

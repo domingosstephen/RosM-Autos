@@ -20,6 +20,8 @@ export interface BaseProduct {
   image?: string
   /** All gallery images for carousel; first is primary. When set, card shows swipeable/clickable carousel. */
   images?: string[]
+  /** Key-value specs for full-screen display (e.g. Mileage, Fuel type, Gearbox). */
+  specs?: Record<string, string>
 }
 
 export interface Automobile extends BaseProduct {

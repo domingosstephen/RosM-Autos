@@ -12,6 +12,8 @@ interface ImageLightboxProps {
   alt: string
   name: string
   onClose: () => void
+  /** Key-value specs shown in full-screen (e.g. Mileage, Fuel type, Gearbox) */
+  specs?: Record<string, string>
 }
 
 export function ImageLightbox({
@@ -20,10 +22,13 @@ export function ImageLightbox({
   alt,
   name,
   onClose,
+  specs = {},
 }: ImageLightboxProps) {
   const [index, setIndex] = useState(initialIndex)
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
+  const [showSpecs, setShowSpecs] = useState(false)
+  const hasSpecs = Object.keys(specs).length > 0
 
   const goTo = useCallback(
     (i: number) => {
@@ -80,7 +85,6 @@ export function ImageLightbox({
       aria-modal="true"
       aria-label={`${name} — full size image gallery`}
     >
-      {/* Backdrop — click to close; interactive elements use pointer-events-auto */}
       <div
         className="absolute inset-0 z-0"
         onClick={onClose}
@@ -88,26 +92,53 @@ export function ImageLightbox({
       />
 
       <div className="absolute inset-0 flex flex-col pointer-events-none z-[1]">
-        {/* Close button */}
-        <button
-          type="button"
-          onClick={onClose}
-          className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 pointer-events-auto"
-          aria-label="Close gallery"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
-        </button>
-
-        {/* Counter */}
-        <div className="absolute top-4 left-4 text-white/90 text-sm font-medium bg-black/40 px-3 py-1.5 rounded-full pointer-events-none">
-          {index + 1} / {images.length}
+        {/* Header: close + counter */}
+        <div className="flex items-center justify-between px-4 py-3 shrink-0 pointer-events-auto">
+          <div className="text-white/90 text-sm font-medium bg-black/40 px-3 py-1.5 rounded-full">
+            {index + 1} / {images.length} photos
+          </div>
+          <div className="flex items-center gap-2">
+            {hasSpecs && (
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); setShowSpecs((s) => !s) }}
+                className={cn(
+                  'px-3 py-1.5 rounded-full text-sm font-medium transition-colors',
+                  showSpecs ? 'bg-white/20 text-white' : 'bg-white/10 text-white/90 hover:bg-white/20'
+                )}
+              >
+                {showSpecs ? 'Hide specs' : 'View specs'}
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={onClose}
+              className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+              aria-label="Close gallery"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         </div>
 
-        {/* Image area — full resolution, swipeable; click here does not close */}
+        {/* Scroll hint — very visible */}
+        {images.length > 1 && (
+          <div className="flex items-center justify-center gap-2 py-2 text-white/95 text-sm font-medium bg-black/30 pointer-events-none">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+            <span>Swipe or use arrows to scroll through photos</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </div>
+        )}
+
+        {/* Image area + arrows */}
         <div
-          className="flex-1 flex items-center justify-center min-h-0 overflow-hidden touch-pan-y pointer-events-auto"
+          className="flex-1 flex items-center justify-center min-h-0 overflow-hidden touch-pan-y pointer-events-auto relative"
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
@@ -127,38 +158,75 @@ export function ImageLightbox({
               style={{ touchAction: 'pan-y' }}
             />
           </div>
+
+          {images.length > 1 && (
+            <>
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); goTo(index - 1) }}
+                className="absolute left-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 pointer-events-auto"
+                aria-label="Previous photo"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); goTo(index + 1) }}
+                className="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 pointer-events-auto"
+                aria-label="Next photo"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+            </>
+          )}
         </div>
 
-        {/* Prev / Next arrows */}
-        {images.length > 1 && (
-          <>
-            <button
-              type="button"
-              onClick={(e) => { e.stopPropagation(); goTo(index - 1) }}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 pointer-events-auto"
-              aria-label="Previous photo"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
-            </button>
-            <button
-              type="button"
-              onClick={(e) => { e.stopPropagation(); goTo(index + 1) }}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 pointer-events-auto"
-              aria-label="Next photo"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </button>
-          </>
+        {/* Thumbnail strip — makes scrollability obvious */}
+        {images.length > 1 && images.length <= 24 && (
+          <div className="shrink-0 overflow-x-auto py-3 px-2 bg-black/40 pointer-events-auto flex gap-2 justify-start md:justify-center">
+            {images.map((src, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={(e) => { e.stopPropagation(); setIndex(i) }}
+                className={cn(
+                  'relative w-14 h-14 shrink-0 rounded overflow-hidden border-2 transition-all focus:outline-none focus:ring-2 focus:ring-white/80',
+                  i === index ? 'border-white opacity-100 scale-105' : 'border-white/30 opacity-70 hover:opacity-90'
+                )}
+                aria-label={`Go to photo ${i + 1}`}
+                aria-current={i === index ? 'true' : undefined}
+              >
+                <Image src={src} alt="" fill className="object-cover" sizes="56px" />
+              </button>
+            ))}
+          </div>
         )}
 
-        {/* Dot indicators */}
-        {images.length > 1 && images.length <= 20 && (
-          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 flex-wrap px-4 pointer-events-auto">
-            {images.map((_, i) => (
+        {/* Specs panel */}
+        {hasSpecs && showSpecs && (
+          <div className="shrink-0 max-h-[40vh] overflow-y-auto pointer-events-auto bg-black/60 border-t border-white/10">
+            <div className="p-4">
+              <h3 className="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Specifications</h3>
+              <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                {Object.entries(specs).map(([key, value]) => (
+                  <div key={key} className="flex flex-col sm:flex-row sm:gap-2">
+                    <dt className="text-white/70 shrink-0">{key}</dt>
+                    <dd className="text-white break-words">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        )}
+
+        {/* Dot indicators (when no thumbnails) */}
+        {images.length > 1 && images.length > 24 && (
+          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 flex-wrap px-4 pointer-events-auto">
+            {images.slice(0, 20).map((_, i) => (
               <button
                 key={i}
                 type="button"

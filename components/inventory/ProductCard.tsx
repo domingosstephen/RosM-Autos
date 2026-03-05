@@ -42,6 +42,7 @@ export function ProductCard({ product }: ProductCardProps) {
         height="h-48"
         className="rounded-none"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        specs={product.specs}
       />
 
       <div className="p-4 flex flex-col flex-1">

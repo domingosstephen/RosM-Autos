@@ -55,6 +55,7 @@ export function FeaturedListings() {
                   height="h-48"
                   className="rounded-none"
                   sizes="(max-width: 768px) 280px, (max-width: 1200px) 50vw, 33vw"
+                  specs={product.specs}
                 />
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-3">
