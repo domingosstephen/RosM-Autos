@@ -72,17 +72,21 @@ function parseSpecsTxt(filePath) {
   return specs
 }
 
-/** Copy all images from folder root to public/images/inventory/slug/ */
+/** Copy all images from folder root to public/images/inventory/slug/. If a file is named "main" (e.g. main.jpg), it becomes the first/primary image. */
 function copyImagesFromRoot(folderPath, slug) {
   const entries = fs.readdirSync(folderPath, { withFileTypes: true })
     .filter((e) => e.isFile() && IMAGE_EXT.test(e.name))
   if (entries.length === 0) return null
   const destDir = path.join(PUBLIC_INVENTORY, slug)
   if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true })
+
+  const mainFile = entries.find((e) => path.basename(e.name, path.extname(e.name)).toLowerCase() === 'main')
+  const otherFiles = entries.filter((e) => e !== mainFile).map((e) => e.name).sort()
+  const ordered = mainFile ? [mainFile.name, ...otherFiles] : otherFiles
+
   const imagePaths = []
-  const sorted = entries.map((e) => e.name).sort()
-  for (let i = 0; i < sorted.length; i++) {
-    const name = sorted[i]
+  for (let i = 0; i < ordered.length; i++) {
+    const name = ordered[i]
     const ext = path.extname(name).toLowerCase()
     const destName = `${i + 1}${ext}`
     try {
