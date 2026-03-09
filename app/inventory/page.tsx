@@ -8,7 +8,6 @@ import { CTABanner } from '@/components/shared/CTABanner'
 import { createPageMetadata } from '@/lib/metadata'
 import { productListSchema } from '@/lib/schema'
 import { allProducts, automobileBrands, tractorsSampleImage } from '@/lib/products'
-import { SITE_IMAGES } from '@/lib/site-images'
 
 export function generateMetadata(): Metadata {
   return createPageMetadata({
@@ -32,15 +31,6 @@ export default async function InventoryPage() {
       <section className="py-12 md:py-16">
         <Container>
           <Breadcrumbs />
-          <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden bg-slate-100 mb-10">
-            <Image
-              src={SITE_IMAGES.inventory}
-              alt="Browse our inspected inventory — automobiles, tractors, ready to ship"
-              fill
-              className="object-contain"
-              sizes="100vw"
-            />
-          </div>
           <SectionHeading
             title="Inspected and Ready to Ship — Pick a Brand"
             subtitle="Cars are listed by brand. Choose a brand or farm tractors to see available vehicles. Click any vehicle for full-screen photos and specifications."

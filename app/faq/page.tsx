@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
 import { Card } from '@/components/shared/Card'
@@ -10,7 +9,6 @@ import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 import { faqCategories, allFaqItems } from '@/lib/faq-data'
 import { faqSchema } from '@/lib/schema'
-import { SITE_IMAGES } from '@/lib/site-images'
 import { cn } from '@/lib/utils'
 
 function FAQAccordionItem({ question, answer }: { question: string; answer: string }) {
@@ -73,21 +71,6 @@ export default function FAQPage() {
       <Container>
         <Breadcrumbs />
       </Container>
-
-      {/* FAQ hero image — tractor, full image visible */}
-      <section className="pt-6 pb-4">
-        <Container size="md">
-          <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden bg-slate-100">
-            <Image
-              src={SITE_IMAGES.faq}
-              alt="Quality inspected tractors and vehicles — your questions answered"
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, 672px"
-            />
-          </div>
-        </Container>
-      </section>
 
       <section className="py-16 md:py-24">
         <Container size="md">

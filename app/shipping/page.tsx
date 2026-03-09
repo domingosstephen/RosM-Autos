@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
 import { Card } from '@/components/shared/Card'
@@ -9,7 +8,6 @@ import { CTABanner } from '@/components/shared/CTABanner'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 import { shippingRegions } from '@/lib/regions'
-import { SITE_IMAGES } from '@/lib/site-images'
 import { cn } from '@/lib/utils'
 
 export default function ShippingPage() {
@@ -21,21 +19,6 @@ export default function ShippingPage() {
       <Container>
         <Breadcrumbs />
       </Container>
-
-      {/* Shipping hero image — tractor, full image visible */}
-      <section className="pt-6 pb-4">
-        <Container>
-          <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden bg-slate-100">
-            <Image
-              src={SITE_IMAGES.shipping}
-              alt="Tractors and vehicles shipped from Germany to 45+ countries"
-              fill
-              className="object-contain"
-              sizes="100vw"
-            />
-          </div>
-        </Container>
-      </section>
 
       <section className="py-16 md:py-24">
         <Container>
