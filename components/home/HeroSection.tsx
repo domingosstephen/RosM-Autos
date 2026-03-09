@@ -10,9 +10,9 @@ import { cn } from '@/lib/utils'
 
 const HERO_SLIDE_DURATION_MS = 4500
 
-/** First 4 automobiles for hero carousel */
+/** First 4 automobiles for hero carousel (only those with an image) */
 const heroCars = allProducts
-  .filter((p) => p.category === 'automobile')
+  .filter((p): p is typeof p & { image: string } => p.category === 'automobile' && typeof p.image === 'string')
   .slice(0, 4)
   .map((p) => ({ image: p.image, name: p.name, alt: p.imageAlt }))
 
