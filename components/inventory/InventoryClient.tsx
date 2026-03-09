@@ -5,15 +5,23 @@ import { CTABanner } from '@/components/shared/CTABanner'
 import { CategoryTabs } from '@/components/inventory/CategoryTabs'
 import { ProductGrid } from '@/components/inventory/ProductGrid'
 import { allProducts } from '@/lib/products'
-import type { ProductCategory } from '@/types/product'
+import type { Product, ProductCategory } from '@/types/product'
 
 type CategoryFilter = ProductCategory | 'all'
 
 interface InventoryClientProps {
   initialCategory?: CategoryFilter
+  /** When set, use this list instead of allProducts (e.g. for a brand page). Search still applies. */
+  productsOverride?: Product[]
+  /** Hide category tabs (e.g. on brand or tractors page where list is already filtered). */
+  hideCategoryTabs?: boolean
 }
 
-export function InventoryClient({ initialCategory = 'all' }: InventoryClientProps) {
+export function InventoryClient({
+  initialCategory = 'all',
+  productsOverride,
+  hideCategoryTabs = false,
+}: InventoryClientProps) {
   const [activeCategory, setActiveCategory] = useState<CategoryFilter>(initialCategory)
   const [searchQuery, setSearchQuery] = useState('')
 
@@ -22,9 +30,9 @@ export function InventoryClient({ initialCategory = 'all' }: InventoryClientProp
   }, [initialCategory])
 
   const filteredProducts = useMemo(() => {
-    let products = allProducts
+    let products = productsOverride ?? allProducts
 
-    if (activeCategory !== 'all') {
+    if (!productsOverride && activeCategory !== 'all') {
       products = products.filter((p) => p.category === activeCategory)
     }
 
@@ -40,13 +48,15 @@ export function InventoryClient({ initialCategory = 'all' }: InventoryClientProp
     }
 
     return products
-  }, [activeCategory, searchQuery])
+  }, [activeCategory, searchQuery, productsOverride])
 
   return (
     <>
-      <div className="mb-8">
-        <CategoryTabs activeCategory={activeCategory} onChange={setActiveCategory} />
-      </div>
+      {!hideCategoryTabs && (
+        <div className="mb-8">
+          <CategoryTabs activeCategory={activeCategory} onChange={setActiveCategory} />
+        </div>
+      )}
 
       <ProductGrid products={filteredProducts} />
 

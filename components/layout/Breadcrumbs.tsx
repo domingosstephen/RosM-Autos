@@ -7,6 +7,7 @@ import { breadcrumbSchema } from '@/lib/schema'
 
 const pathLabels: Record<string, string> = {
   inventory: 'Inventory',
+  tractors: 'Farm Tractors',
   about: 'About Us',
   'how-it-works': 'How It Works',
   shipping: 'Shipping & Export',

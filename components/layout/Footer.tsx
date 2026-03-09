@@ -17,10 +17,9 @@ const footerLinks = {
   inventory: {
     title: 'Our Products',
     links: [
-      { label: 'Used Automobiles', href: '/inventory?category=automobile' },
-      { label: 'Farm Tractors', href: '/inventory?category=tractor' },
-      { label: 'Electric Bikes', href: '/inventory?category=electric-bike' },
-      { label: 'All Inventory', href: '/inventory' },
+      { label: 'Browse cars by brand', href: '/inventory' },
+      { label: 'Farm Tractors', href: '/inventory/tractors' },
+      { label: 'All inventory', href: '/inventory' },
     ],
   },
   company: {

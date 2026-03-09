@@ -1,36 +1,25 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
-import { InventoryClient } from '@/components/inventory/InventoryClient'
+import { CTABanner } from '@/components/shared/CTABanner'
 import { createPageMetadata } from '@/lib/metadata'
 import { productListSchema } from '@/lib/schema'
-import { allProducts } from '@/lib/products'
+import { allProducts, automobileBrands } from '@/lib/products'
 import { SITE_IMAGES } from '@/lib/site-images'
-import type { ProductCategory } from '@/types/product'
-
-type InventoryPageProps = { searchParams: Promise<{ category?: string }> }
 
 export function generateMetadata(): Metadata {
   return createPageMetadata({
-    title: 'Used Vehicles, Tractors & Electric Bikes for Export | Browse Our Inventory',
+    title: 'Used Vehicles, Tractors & Electric Bikes for Export | Browse by Brand',
     description:
-      'Browse our full inventory of quality-inspected used automobiles, farm tractors, and electric bikes available for international export. Filter by category and find your ideal vehicle.',
+      'Browse our inventory by brand — Toyota, Mercedes-Benz, Ford, Nissan and more, or view farm tractors. Every vehicle inspected and ready for export.',
     path: '/inventory',
   })
 }
 
-const VALID_CATEGORIES: ProductCategory[] = ['automobile', 'tractor', 'electric-bike']
-
-export default async function InventoryPage({ searchParams }: InventoryPageProps) {
-  const params = await searchParams
-  const categoryParam = params.category
-  const initialCategory =
-    categoryParam && VALID_CATEGORIES.includes(categoryParam as ProductCategory)
-      ? (categoryParam as ProductCategory)
-      : 'all'
-
+export default async function InventoryPage() {
   const jsonLd = productListSchema(allProducts)
 
   return (
@@ -45,21 +34,49 @@ export default async function InventoryPage({ searchParams }: InventoryPageProps
           <Breadcrumbs />
           <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden bg-slate-100 mb-10">
             <Image
-              src={initialCategory === 'tractor' ? SITE_IMAGES.tractorInventory : SITE_IMAGES.inventory}
-              alt={initialCategory === 'tractor' ? 'Browse our inspected tractors — ready to ship' : 'Browse our inspected inventory — automobiles, tractors, ready to ship'}
+              src={SITE_IMAGES.inventory}
+              alt="Browse our inspected inventory — automobiles, tractors, ready to ship"
               fill
               className="object-contain"
               sizes="100vw"
             />
           </div>
           <SectionHeading
-            title="Inspected and Ready to Ship — Pick Your Vehicle"
-            subtitle="Every unit below has been inspected and photographed. Filter by category, search by name, and get a quote within 24 hours."
+            title="Inspected and Ready to Ship — Pick a Brand"
+            subtitle="Cars are listed by brand. Choose a brand or farm tractors to see available vehicles. Click any vehicle for full-screen photos and specifications."
             tag="h1"
             alignment="center"
             className="mb-10"
           />
-          <InventoryClient initialCategory={initialCategory} />
+
+          {/* Cars only on brand pages; tractors on their own page — no mixed "Automobiles" list */}
+          <div className="mb-12">
+            <h2 className="text-lg font-semibold text-navy mb-4 md:mb-6">Browse by brand</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
+              {automobileBrands.map(({ brand, slug }) => (
+                <Link
+                  key={slug}
+                  href={`/inventory/${slug}`}
+                  className="flex flex-col items-center justify-center min-h-[88px] md:min-h-[100px] rounded-xl bg-surface-alt hover:bg-cta-light border border-border hover:border-cta/30 text-navy font-medium text-sm md:text-base text-center px-3 py-4 transition-colors focus:outline-none focus:ring-2 focus:ring-cta/50"
+                >
+                  {brand}
+                </Link>
+              ))}
+              <Link
+                href="/inventory/tractors"
+                className="flex flex-col items-center justify-center min-h-[88px] md:min-h-[100px] rounded-xl bg-surface-alt hover:bg-cta-light border border-border hover:border-cta/30 text-navy font-medium text-sm md:text-base text-center px-3 py-4 transition-colors focus:outline-none focus:ring-2 focus:ring-cta/50"
+              >
+                Farm Tractors
+              </Link>
+            </div>
+          </div>
+
+          <CTABanner
+            headline="Can't Find What You're Looking For?"
+            subtext="Tell us what vehicle you need and we'll source it for you. Our team has access to a wide network of quality-inspected vehicles."
+            primaryCTA={{ label: 'Contact Us', href: '/contact' }}
+            variant="dark"
+          />
         </Container>
       </section>
     </>

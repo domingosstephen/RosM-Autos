@@ -56,12 +56,10 @@ export const NAV_LINKS = [
   { label: 'Contact', href: '/contact' },
 ]
 
-/** Inventory categories for nav dropdown and filtering */
+/** Inventory nav dropdown — cars are by brand, tractors have their own page */
 export const PRODUCT_CATEGORIES = [
-  { value: 'all', label: 'All Vehicles', href: '/inventory' },
-  { value: 'automobile', label: 'Automobiles', href: '/inventory?category=automobile' },
-  { value: 'tractor', label: 'Farm Tractors', href: '/inventory?category=tractor' },
-  { value: 'electric-bike', label: 'Electric Bikes', href: '/inventory?category=electric-bike' },
+  { value: 'all', label: 'Browse by brand', href: '/inventory' },
+  { value: 'tractor', label: 'Farm Tractors', href: '/inventory/tractors' },
 ] as const
 
 export const STATS = {

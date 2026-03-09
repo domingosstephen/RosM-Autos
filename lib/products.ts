@@ -37,3 +37,40 @@ export const allProducts: Product[] = [
   ...usedCarsAutomobiles,
   ...usedCarsTractors,
 ]
+
+// ---------------------------------------------------------------------------
+// Brand / category helpers for separate pages (Mercedes, Toyota, Tractors, etc.)
+// ---------------------------------------------------------------------------
+
+/** Slug for URL: lowercase, hyphenated (e.g. Mercedes-Benz -> mercedes-benz) */
+export function brandToSlug(brand: string): string {
+  return brand
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+    .replace(/^-|-$/g, '') || 'other'
+}
+
+/** All unique automobile brands, sorted, with slug for routing */
+export const automobileBrands = (() => {
+  const set = new Set(usedCarsAutomobiles.map((a) => a.brand))
+  return Array.from(set)
+    .sort((a, b) => a.localeCompare(b))
+    .map((brand) => ({ brand, slug: brandToSlug(brand) }))
+})()
+
+/** Automobiles for a given brand (by slug) */
+export function getAutomobilesByBrandSlug(brandSlug: string): Automobile[] {
+  const entry = automobileBrands.find((b) => b.slug === brandSlug)
+  if (!entry) return []
+  return usedCarsAutomobiles.filter((a) => a.brand === entry.brand)
+}
+
+/** All tractors for the tractors page */
+export const tractorsOnly: Tractor[] = usedCarsTractors
+
+/** Known inventory segment slugs: brand slugs + 'tractors' */
+export const inventorySegmentSlugs = [
+  ...automobileBrands.map((b) => b.slug),
+  'tractors',
+] as const

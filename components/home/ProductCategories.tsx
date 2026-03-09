@@ -37,8 +37,8 @@ export function ProductCategories() {
         title: 'Used Automobiles',
         description:
           'Land Cruiser. Honda CR-V, Civic. Nissan Patrol, X-Trail. Mercedes Sprinter. BMW X3. VW Amarok. Every unit is inspected — engine, transmission, body, and electronics checked and photographed before sale.',
-        href: '/inventory?category=automobile',
-        cta: 'See Available Cars & Trucks',
+        href: '/inventory',
+        cta: 'See cars by brand',
         product: automobile,
         alt: 'Quality used automobiles including sedans, SUVs, and pickup trucks available for international export from RosM Autos',
       },
@@ -46,7 +46,7 @@ export function ProductCategories() {
         title: 'Farm Tractors',
         description:
           'John Deere 5075E, Kubota M7060, Massey Ferguson 4707, New Holland T4.75. Inspected for engine hours, hydraulic pressure, PTO function, and structural integrity — with a full condition report before you buy.',
-        href: '/inventory?category=tractor',
+        href: '/inventory/tractors',
         cta: 'See Available Tractors',
         product: tractor,
         alt: 'Used farm tractors from John Deere, Kubota, and Massey Ferguson inspected and ready for export to Africa and South America',
