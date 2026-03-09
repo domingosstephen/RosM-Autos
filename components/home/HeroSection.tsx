@@ -10,11 +10,21 @@ import { cn } from '@/lib/utils'
 
 const HERO_SLIDE_DURATION_MS = 4500
 
-/** First 4 automobiles for hero carousel (only those with an image) */
-const heroCars = allProducts
-  .filter((p): p is typeof p & { image: string } => p.category === 'automobile' && typeof p.image === 'string')
-  .slice(0, 4)
-  .map((p) => ({ image: p.image, name: p.name, alt: p.imageAlt }))
+/** Hero slider: specific vehicles and which image to use. (2) = 2nd image (index 1), (3) = 3rd (index 2), (main) = first (index 0). */
+const HERO_SLIDE_SLUGS: { slug: string; imageIndex: number }[] = [
+  { slug: 'ford-ranger', imageIndex: 1 }, // 2024 Ford Ranger (2)
+  { slug: 'massey-ferguson-290-4wd-2023', imageIndex: 0 }, // Massey Ferguson 290 4WD 2023 (main)
+  { slug: 'white-gle-350', imageIndex: 2 }, // 2017 Mercedes-Benz GLE350 (3)
+  { slug: 'land-cruiser', imageIndex: 1 }, // 2019 Toyota Land Cruiser (2)
+]
+
+const heroCars = HERO_SLIDE_SLUGS.map(({ slug, imageIndex }) => {
+  const product = allProducts.find((p) => p.slug === slug)
+  if (!product || !product.image) return null
+  const images = product.images ?? [product.image]
+  const image = images[imageIndex] ?? images[0]
+  return { image, alt: product.imageAlt }
+}).filter((c): c is { image: string; alt: string } => c !== null)
 
 export function HeroSection() {
   const [current, setCurrent] = useState(0)

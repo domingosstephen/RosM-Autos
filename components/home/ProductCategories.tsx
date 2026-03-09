@@ -23,10 +23,9 @@ function getMainImage(product: Product): string | undefined {
 
 export function ProductCategories() {
   const { automobile, tractor } = useMemo(() => {
-    const automobiles = allProducts.filter((p) => p.category === 'automobile')
     const tractors = allProducts.filter((p) => p.category === 'tractor')
     return {
-      automobile: pickOne(automobiles),
+      automobile: allProducts.find((p) => p.slug === 'toyota-hilux-pickup-2017') ?? pickOne(allProducts.filter((p) => p.category === 'automobile')),
       tractor: pickOne(tractors),
     }
   }, [])
