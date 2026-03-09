@@ -51,12 +51,17 @@ export function brandToSlug(brand: string): string {
     .replace(/^-|-$/g, '') || 'other'
 }
 
-/** All unique automobile brands, sorted, with slug for routing */
+/** All unique automobile brands, sorted, with slug and sample image for routing / UI */
 export const automobileBrands = (() => {
   const set = new Set(usedCarsAutomobiles.map((a) => a.brand))
   return Array.from(set)
     .sort((a, b) => a.localeCompare(b))
-    .map((brand) => ({ brand, slug: brandToSlug(brand) }))
+    .map((brand) => {
+      const firstCar = usedCarsAutomobiles.find((a) => a.brand === brand)
+      const sampleImage =
+        firstCar?.images?.[0] ?? firstCar?.image ?? '/images/placeholders/automobile.svg'
+      return { brand, slug: brandToSlug(brand), sampleImage }
+    })
 })()
 
 /** Automobiles for a given brand (by slug) */
@@ -68,6 +73,10 @@ export function getAutomobilesByBrandSlug(brandSlug: string): Automobile[] {
 
 /** All tractors for the tractors page */
 export const tractorsOnly: Tractor[] = usedCarsTractors
+
+/** Sample image for the tractors category card on inventory hub */
+export const tractorsSampleImage: string =
+  usedCarsTractors[0]?.images?.[0] ?? usedCarsTractors[0]?.image ?? '/images/placeholders/tractor.svg'
 
 /** Known inventory segment slugs: brand slugs + 'tractors' */
 export const inventorySegmentSlugs = [

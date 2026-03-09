@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
@@ -78,9 +79,9 @@ export function ImageLightbox({
 
   const currentSrc = images[index]
 
-  return (
+  const lightboxContent = (
     <div
-      className="fixed inset-0 z-50 bg-black"
+      className="fixed inset-0 bg-black"
       style={{
         position: 'fixed',
         top: 0,
@@ -90,6 +91,7 @@ export function ImageLightbox({
         width: '100vw',
         height: '100vh',
         minHeight: '-webkit-fill-available',
+        zIndex: 9999,
       }}
       role="dialog"
       aria-modal="true"
@@ -238,4 +240,7 @@ export function ImageLightbox({
       </div>
     </div>
   )
+
+  if (typeof document === 'undefined') return null
+  return createPortal(lightboxContent, document.body)
 }

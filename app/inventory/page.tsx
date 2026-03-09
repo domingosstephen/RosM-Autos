@@ -7,7 +7,7 @@ import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { CTABanner } from '@/components/shared/CTABanner'
 import { createPageMetadata } from '@/lib/metadata'
 import { productListSchema } from '@/lib/schema'
-import { allProducts, automobileBrands } from '@/lib/products'
+import { allProducts, automobileBrands, tractorsSampleImage } from '@/lib/products'
 import { SITE_IMAGES } from '@/lib/site-images'
 
 export function generateMetadata(): Metadata {
@@ -49,24 +49,48 @@ export default async function InventoryPage() {
             className="mb-10"
           />
 
-          {/* Cars only on brand pages; tractors on their own page — no mixed "Automobiles" list */}
+          {/* Browse by brand — each card shows a sample image + brand name */}
           <div className="mb-12">
             <h2 className="text-lg font-semibold text-navy mb-4 md:mb-6">Browse by brand</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
-              {automobileBrands.map(({ brand, slug }) => (
+              {automobileBrands.map(({ brand, slug, sampleImage }) => (
                 <Link
                   key={slug}
                   href={`/inventory/${slug}`}
-                  className="flex flex-col items-center justify-center min-h-[88px] md:min-h-[100px] rounded-xl bg-surface-alt hover:bg-cta-light border border-border hover:border-cta/30 text-navy font-medium text-sm md:text-base text-center px-3 py-4 transition-colors focus:outline-none focus:ring-2 focus:ring-cta/50"
+                  className="group relative flex flex-col rounded-xl overflow-hidden border border-border hover:border-cta/40 focus:outline-none focus:ring-2 focus:ring-cta/50 min-h-[140px] sm:min-h-[160px] md:min-h-[180px]"
                 >
-                  {brand}
+                  <div className="absolute inset-0">
+                    <Image
+                      src={sampleImage}
+                      alt=""
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  </div>
+                  <span className="relative mt-auto p-3 text-white font-semibold text-sm md:text-base text-center drop-shadow-lg">
+                    {brand}
+                  </span>
                 </Link>
               ))}
               <Link
                 href="/inventory/tractors"
-                className="flex flex-col items-center justify-center min-h-[88px] md:min-h-[100px] rounded-xl bg-surface-alt hover:bg-cta-light border border-border hover:border-cta/30 text-navy font-medium text-sm md:text-base text-center px-3 py-4 transition-colors focus:outline-none focus:ring-2 focus:ring-cta/50"
+                className="group relative flex flex-col rounded-xl overflow-hidden border border-border hover:border-cta/40 focus:outline-none focus:ring-2 focus:ring-cta/50 min-h-[140px] sm:min-h-[160px] md:min-h-[180px]"
               >
-                Farm Tractors
+                <div className="absolute inset-0">
+                  <Image
+                    src={tractorsSampleImage}
+                    alt=""
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                </div>
+                <span className="relative mt-auto p-3 text-white font-semibold text-sm md:text-base text-center drop-shadow-lg">
+                  Farm Tractors
+                </span>
               </Link>
             </div>
           </div>
