@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Container } from '@/components/shared/Container'
@@ -11,7 +10,6 @@ import {
   getAutomobilesByBrandSlug,
 } from '@/lib/products'
 import { createPageMetadata } from '@/lib/metadata'
-import { SITE_IMAGES } from '@/lib/site-images'
 
 type PageProps = { params: Promise<{ brand: string }> }
 
@@ -42,15 +40,6 @@ export default async function BrandInventoryPage({ params }: PageProps) {
     <section className="py-12 md:py-16">
       <Container>
         <Breadcrumbs />
-        <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden bg-slate-100 mb-10">
-          <Image
-            src={SITE_IMAGES.inventory}
-            alt={`Browse our inspected ${entry.brand} vehicles`}
-            fill
-            className="object-contain"
-            sizes="100vw"
-          />
-        </div>
         <SectionHeading
           title={`${entry.brand} — Inspected and Ready to Ship`}
           subtitle="Click a vehicle to view full-screen photos and specifications. Same experience on mobile, tablet, and desktop."
