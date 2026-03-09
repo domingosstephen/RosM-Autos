@@ -80,22 +80,49 @@ export function ImageLightbox({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex flex-col bg-black min-h-[100dvh] min-h-[100vh]"
-      style={{ minHeight: '100dvh' }}
+      className="fixed inset-0 z-50 bg-black"
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        width: '100vw',
+        height: '100dvh',
+        height: '100vh',
+        minHeight: '-webkit-fill-available',
+      }}
       role="dialog"
       aria-modal="true"
       aria-label={`${name} — full size image gallery`}
     >
+      {/* Full-screen image layer — no padding, image covers entire viewport */}
       <div
-        className="absolute inset-0 z-0"
-        onClick={onClose}
-        aria-hidden
-      />
+        className="absolute inset-0 w-full h-full z-0"
+        style={{ top: 0, left: 0, right: 0, bottom: 0 }}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <Image
+          key={currentSrc}
+          src={currentSrc}
+          alt={`${alt} — photo ${index + 1} of ${images.length}`}
+          fill
+          className="object-cover select-none w-full h-full"
+          sizes="100vw"
+          priority
+          draggable={false}
+          style={{ touchAction: 'pan-y' }}
+        />
+      </div>
 
-      <div className="absolute inset-0 flex flex-col pointer-events-none z-[1] min-h-[100dvh] min-h-[100vh]">
-        {/* Header: close + counter — touch-friendly (min 44px), safe area on notched devices */}
-        <div className="flex items-center justify-between px-4 py-3 shrink-0 pointer-events-auto min-h-[56px] sm:min-h-0 sm:py-3 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] pt-[max(0.75rem,env(safe-area-inset-top))]">
-          <div className="text-white/90 text-sm font-medium bg-black/40 px-3 py-2 sm:py-1.5 rounded-full">
+      {/* Overlay UI on top of full-screen image */}
+      <div className="absolute inset-0 flex flex-col pointer-events-none z-[1]">
+        {/* Header: close + counter — overlaid on image */}
+        <div className="flex items-center justify-between px-4 py-3 shrink-0 pointer-events-auto min-h-[56px] pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] pt-[max(0.75rem,env(safe-area-inset-top))]">
+          <div className="text-white/95 text-sm font-medium bg-black/50 backdrop-blur-sm px-3 py-2 rounded-full">
             {index + 1} / {images.length} photos
           </div>
           <div className="flex items-center gap-2">
@@ -104,8 +131,8 @@ export function ImageLightbox({
                 type="button"
                 onClick={(e) => { e.stopPropagation(); setShowSpecs((s) => !s) }}
                 className={cn(
-                  'min-h-[44px] min-w-[44px] inline-flex items-center justify-center px-3 py-2 sm:py-1.5 rounded-full text-sm font-medium transition-colors',
-                  showSpecs ? 'bg-white/20 text-white' : 'bg-white/10 text-white/90 hover:bg-white/20'
+                  'min-h-[44px] min-w-[44px] inline-flex items-center justify-center px-3 py-2 rounded-full text-sm font-medium transition-colors bg-black/50 backdrop-blur-sm',
+                  showSpecs ? 'bg-white/20 text-white' : 'text-white/95 hover:bg-white/20'
                 )}
               >
                 {showSpecs ? 'Hide specs' : 'View specs'}
@@ -114,7 +141,7 @@ export function ImageLightbox({
             <button
               type="button"
               onClick={onClose}
-              className="w-12 h-12 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+              className="w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm hover:bg-black/70 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 pointer-events-auto"
               aria-label="Close gallery"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -124,68 +151,34 @@ export function ImageLightbox({
           </div>
         </div>
 
-        {/* Scroll hint — visible on mobile/tablet, compact on desktop */}
+        {/* Spacer so arrows sit at vertical center */}
+        <div className="flex-1 min-h-0" />
+
+        {/* Prev/Next arrows — overlaid on image */}
         {images.length > 1 && (
-          <div className="flex items-center justify-center gap-2 py-2 text-white/95 text-xs sm:text-sm font-medium bg-black/30 pointer-events-none">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-            <span className="hidden sm:inline">Swipe or use arrows to scroll through photos</span>
-            <span className="sm:hidden">Swipe for more photos</span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </div>
+          <>
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); goTo(index - 1) }}
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm hover:bg-black/70 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 pointer-events-auto z-10"
+              aria-label="Previous photo"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); goTo(index + 1) }}
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm hover:bg-black/70 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 pointer-events-auto z-10"
+              aria-label="Next photo"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </>
         )}
-
-        {/* Image area — fills whole screen; same experience on mobile, tablet, desktop */}
-        <div
-          className="flex-1 flex items-center justify-center min-h-0 overflow-hidden touch-pan-y pointer-events-auto relative w-full"
-          onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
-          onTouchEnd={onTouchEnd}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-4">
-            <Image
-              key={currentSrc}
-              src={currentSrc}
-              alt={`${alt} — photo ${index + 1} of ${images.length}`}
-              width={1920}
-              height={1080}
-              className="w-full h-full max-w-full max-h-full object-contain select-none"
-              sizes="100vw"
-              priority
-              draggable={false}
-              style={{ touchAction: 'pan-y' }}
-            />
-          </div>
-
-          {images.length > 1 && (
-            <>
-              <button
-                type="button"
-                onClick={(e) => { e.stopPropagation(); goTo(index - 1) }}
-                className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-white/10 hover:bg-white/20 active:bg-white/30 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 pointer-events-auto"
-                aria-label="Previous photo"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M15 18l-6-6 6-6" />
-                </svg>
-              </button>
-              <button
-                type="button"
-                onClick={(e) => { e.stopPropagation(); goTo(index + 1) }}
-                className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-white/10 hover:bg-white/20 active:bg-white/30 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 pointer-events-auto"
-                aria-label="Next photo"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M9 18l6-6-6-6" />
-                </svg>
-              </button>
-            </>
-          )}
-        </div>
 
         {/* Thumbnail strip — horizontal scroll on mobile, centered on desktop */}
         {images.length > 1 && images.length <= 24 && (
