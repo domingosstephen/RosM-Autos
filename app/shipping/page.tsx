@@ -23,7 +23,7 @@ export default function ShippingPage() {
       <section className="py-16 md:py-24">
         <Container>
           <SectionHeading
-            title="Shipping to 45+ Countries Across 3 Continents — Here Is How"
+            title="Shipping to All Countries in Africa, South America & Eastern Europe — Here Is How"
             subtitle="Our logistics team manages port-to-port deliveries to Africa, South America, and Eastern Europe. Every shipment is tracked, insured, and fully documented."
             tag="h1"
           />
@@ -65,6 +65,9 @@ export default function ShippingPage() {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
                     Destination Ports
                   </h3>
+                  <p className="text-sm text-slate mb-4">
+                    We ship to all ports in Africa, South America, and Eastern Europe.
+                  </p>
                   <div className="space-y-3">
                     {region.ports.map((port) => (
                       <div key={port.name} className="flex justify-between items-center py-2 border-b border-border last:border-0">

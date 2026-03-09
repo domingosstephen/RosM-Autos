@@ -54,7 +54,7 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'What currencies can I pay in?',
         answer:
-          'Our primary invoicing currencies are US Dollars (USD) and Euros (EUR), which are widely accepted for international trade. If you prefer to pay in another currency, please contact our finance team and we will do our best to accommodate your request. Exchange rates are calculated at the time of payment based on prevailing market rates.',
+          'Our prices and invoicing are in Euros (EUR), which is widely accepted for international trade. If you prefer to pay in another currency, please contact our finance team and we will do our best to accommodate your request. Exchange rates are calculated at the time of payment based on prevailing market rates.',
       },
       {
         question: 'Is a deposit required, and how much is it?',

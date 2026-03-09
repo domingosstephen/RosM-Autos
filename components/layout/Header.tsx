@@ -52,7 +52,7 @@ export function Header() {
               WhatsApp
             </a>
           </div>
-          <p className="text-white/70">Inspected Vehicles &amp; Equipment — Shipped to 45+ Countries</p>
+          <p className="text-white/70">Inspected Vehicles &amp; Equipment — Shipped to Africa, South America & Eastern Europe</p>
         </Container>
       </div>
 

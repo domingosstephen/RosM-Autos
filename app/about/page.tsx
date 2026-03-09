@@ -28,7 +28,7 @@ const advantages = [
   },
   {
     title: 'End-to-End Export — Purchase to Port',
-    description: 'We manage shipping logistics, export paperwork, customs clearance, and insurance for every order. You choose the vehicle — we handle the rest across 45+ countries on 3 continents.',
+    description: 'We manage shipping logistics, export paperwork, customs clearance, and insurance for every order. You choose the vehicle — we handle the rest in all countries in Africa, South America, and Eastern Europe.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="6" width="22" height="12" rx="2"/><path d="M1 10h22"/></svg>
     ),
@@ -68,7 +68,7 @@ export default function AboutPage() {
                     <strong className="text-navy">The problem is real:</strong> international vehicle buyers lose thousands every year to dealers who misrepresent condition, hide fees, and disappear after payment. When you are buying from another continent, one bad purchase can derail your business for months.
                   </p>
                   <p>
-                    RosM Autos was founded in Lübbecke, Germany to fix this. Over {STATS.yearsInBusiness} years, we have shipped automobiles, tractors, and electric bikes to buyers in {STATS.countriesServed} countries — built on one non-negotiable principle: <strong className="text-navy">what we show you is what arrives at your port.</strong>
+                    RosM Autos was founded in Lübbecke, Germany to fix this. Over {STATS.yearsInBusiness} years, we have shipped automobiles, tractors, and electric bikes to buyers in all countries in Africa, South America, and Eastern Europe — built on one non-negotiable principle: <strong className="text-navy">what we show you is what arrives at your port.</strong>
                   </p>
                   <p>
                     Every unit is inspected and photographed before listing. Every quote includes vehicle price, shipping, documentation, and insurance — no surprise charges. Every shipment is tracked from our yard to your port. Our {STATS.satisfactionRate} satisfaction rate is not a marketing number — it is what happens when you deliver on your promises, every time.
@@ -97,7 +97,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { value: STATS.responseTime, label: 'Quote Response' },
-              { value: STATS.countriesServed, label: 'Countries Served' },
+              { value: 'All', label: 'Countries in 3 Regions' },
               { value: STATS.yearsInBusiness, label: 'Years in Business' },
               { value: STATS.satisfactionRate, label: 'Satisfaction Rate' },
             ].map((stat, i) => (

@@ -10,19 +10,19 @@ const regions = [
     name: 'Africa',
     icon: '🌍',
     countries: ['Nigeria', 'Ghana', 'Kenya', 'Tanzania', 'South Africa', 'Cameroon'],
-    description: '20+ African nations reached via Lagos, Tema, Mombasa, Dar es Salaam, and Durban. Transit: 18–40 days.',
+    description: 'We ship to all countries in Africa. Transit: 18–40 days.',
   },
   {
     name: 'South America',
     icon: '🌎',
     countries: ['Brazil', 'Colombia', 'Peru', 'Chile', 'Paraguay', 'Bolivia'],
-    description: 'Direct routes to Santos, Buenaventura, Callao, and San Antonio. Transit: 15–25 days with full customs support.',
+    description: 'We ship to all countries in South America. Transit: 15–25 days with full customs support.',
   },
   {
     name: 'Eastern Europe',
     icon: '🌏',
     countries: ['Poland', 'Romania', 'Ukraine', 'Georgia', 'Bulgaria', 'Czech Republic'],
-    description: 'EU and non-EU delivery via Gdansk, Constanta, Odessa, and Poti. Transit: 10–16 days.',
+    description: 'We ship to all of Eastern Europe. Transit: 10–16 days.',
   },
 ]
 
@@ -31,7 +31,7 @@ export function RegionsCTA() {
     <section className="py-16 md:py-24 bg-navy">
       <Container>
         <SectionHeading
-          title="Delivering to 45+ Countries Across 3 Continents"
+          title="Delivering to All Countries in Africa, South America & Eastern Europe"
           subtitle="Established port-to-port routes with full customs clearance and documentation — so your vehicle arrives without delays"
           light
         />

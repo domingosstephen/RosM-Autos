@@ -6,7 +6,7 @@ import { SITE_URL } from '@/lib/constants'
 import { breadcrumbSchema } from '@/lib/schema'
 
 const pathLabels: Record<string, string> = {
-  inventory: 'Inventory',
+  inventory: 'Available Cars',
   tractors: 'Farm Tractors',
   about: 'About Us',
   'how-it-works': 'How It Works',

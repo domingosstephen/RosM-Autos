@@ -1,12 +1,32 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Container } from '@/components/shared/Container'
 import { Button } from '@/components/shared/Button'
 import { WHATSAPP_LINK } from '@/lib/constants'
-import { SITE_IMAGES } from '@/lib/site-images'
+import { allProducts } from '@/lib/products'
+import { cn } from '@/lib/utils'
+
+const HERO_SLIDE_DURATION_MS = 4500
+
+/** First 4 automobiles for hero carousel */
+const heroCars = allProducts
+  .filter((p) => p.category === 'automobile')
+  .slice(0, 4)
+  .map((p) => ({ image: p.image, name: p.name, alt: p.imageAlt }))
 
 export function HeroSection() {
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    if (heroCars.length <= 1) return
+    const id = setInterval(() => {
+      setCurrent((c) => (c + 1) % heroCars.length)
+    }, HERO_SLIDE_DURATION_MS)
+    return () => clearInterval(id)
+  }, [])
+
   return (
     <section className="bg-navy relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light/50 to-navy opacity-90" />
@@ -33,7 +53,7 @@ export function HeroSection() {
               </Button>
             </div>
             <p className="mt-6 text-white/80 leading-relaxed opacity-0 animate-hero-reveal delay-300">
-              <strong className="text-white">RosM Autos</strong> ships inspected automobiles, farm tractors, and electric bikes from Lübbecke, Germany to 45+ countries — with photos, condition details, and every cost quoted upfront before you commit.
+              <strong className="text-white">RosM Autos</strong> ships inspected automobiles, farm tractors, and electric bikes from Lübbecke, Germany to all countries in Africa, South America, and Eastern Europe — with photos, condition details, and every cost quoted upfront before you commit.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-white/60 text-sm opacity-0 animate-hero-reveal delay-500">
               <span className="flex items-center gap-1.5">
@@ -42,7 +62,7 @@ export function HeroSection() {
               </span>
               <span className="flex items-center gap-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-success" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                Door-to-Port Delivery to 45+ Countries
+                Door-to-Port Delivery to All Countries in Africa, South America & Eastern Europe
               </span>
               <span className="flex items-center gap-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-success" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -51,16 +71,47 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Hero image — one of our inspected vehicles */}
+          {/* Hero carousel — 4 cars from inventory */}
           <div className="relative h-[260px] md:h-[340px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl opacity-0 animate-hero-reveal delay-300">
-            <Image
-              src={SITE_IMAGES.hero}
-              alt="Quality-inspected used vehicles ready for international export from RosM Autos"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-              priority
-            />
+            {heroCars.length > 0 ? (
+              <>
+                {heroCars.map((car, i) => (
+                  <div
+                    key={i}
+                    className="absolute inset-0 transition-opacity duration-700 ease-in-out"
+                    style={{ opacity: current === i ? 1 : 0 }}
+                    aria-hidden={current !== i}
+                  >
+                    <Image
+                      src={car.image}
+                      alt={car.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                      priority={i === 0}
+                    />
+                  </div>
+                ))}
+                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+                  {heroCars.map((_, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      onClick={() => setCurrent(i)}
+                      className={cn(
+                        'w-2.5 h-2.5 rounded-full transition-colors',
+                        current === i ? 'bg-cta' : 'bg-white/50 hover:bg-white/70'
+                      )}
+                      aria-label={`Show slide ${i + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className="absolute inset-0 bg-surface-alt flex items-center justify-center text-muted">
+                No vehicles to display
+              </div>
+            )}
           </div>
         </div>
       </Container>

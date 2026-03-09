@@ -47,7 +47,7 @@ export const PRIORITY_COUNTRIES = [
 
 export const NAV_LINKS = [
   { label: 'Home', href: '/' },
-  { label: 'Inventory', href: '/inventory', hasDropdown: true },
+  { label: 'Available Cars', href: '/inventory', hasDropdown: true },
   { label: 'How It Works', href: '/how-it-works' },
   { label: 'Shipping', href: '/shipping' },
   { label: 'About', href: '/about' },
@@ -64,7 +64,7 @@ export const PRODUCT_CATEGORIES = [
 
 export const STATS = {
   responseTime: '24h',
-  countriesServed: '45+',
+  countriesServed: 'All',
   yearsInBusiness: '8+',
   satisfactionRate: '98%',
 }

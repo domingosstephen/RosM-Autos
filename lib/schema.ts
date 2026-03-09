@@ -94,7 +94,7 @@ export function websiteSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     description:
-      'Browse quality-inspected used vehicles for international export. Toyota, Mercedes-Benz, Ford, Nissan, farm tractors and more — shipped from Germany to 45+ countries.',
+      'Browse quality-inspected used vehicles for international export. Toyota, Mercedes-Benz, Ford, Nissan, farm tractors and more — shipped from Germany to all countries in Africa, South America, and Eastern Europe.',
     inLanguage: 'en',
     publisher: { '@id': `${SITE_URL}/#organization` },
     potentialAction: {
@@ -153,8 +153,8 @@ export function localBusinessSchema() {
         closes: '15:00',
       },
     ],
-    priceRange: '$$',
-    currenciesAccepted: 'EUR, USD',
+    priceRange: '€€',
+    currenciesAccepted: 'EUR',
     paymentAccepted: 'Bank Transfer, Wire Transfer',
     areaServed: [
       'Nigeria', 'Ghana', 'Kenya', 'Tanzania', 'Uganda', 'South Africa',
@@ -335,7 +335,7 @@ export function howToSchema() {
         '@type': 'HowToStep',
         position: 5,
         name: 'We Handle Export Shipping',
-        text: 'Our logistics team manages RoRo or container shipping, export paperwork, customs clearance, and marine insurance for your destination port across 45+ countries.',
+        text: 'Our logistics team manages RoRo or container shipping, export paperwork, customs clearance, and marine insurance for your destination port in Africa, South America, and Eastern Europe.',
         url: `${SITE_URL}/shipping`,
       },
       {

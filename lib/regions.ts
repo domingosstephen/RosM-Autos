@@ -5,7 +5,7 @@ export const shippingRegions: ShippingRegion[] = [
     id: 'africa',
     name: 'Africa',
     description:
-      'We ship to major ports across West, East, and Southern Africa. Our established routes and local partnerships ensure smooth delivery and customs clearance for automobiles, tractors, and electric bikes.',
+      'We ship to all ports in Africa. Our established routes and local partnerships ensure smooth delivery and customs clearance for automobiles, tractors, and electric bikes.',
     ports: [
       { name: 'Lagos (Tin Can Island)', country: 'Nigeria', transitTime: '18-25 days' },
       { name: 'Tema Port', country: 'Ghana', transitTime: '20-28 days' },
@@ -25,7 +25,7 @@ export const shippingRegions: ShippingRegion[] = [
       'Packing List',
       'Insurance Certificate',
     ],
-    costRange: '$1,200 - $3,500',
+    costRange: '€1,200 - €3,500',
     notes:
       'Most African countries accept vehicles up to 8-15 years old depending on regulations. Nigeria requires vehicles under 15 years. Kenya accepts up to 8 years old. We advise on age restrictions per destination before purchase.',
   },
@@ -33,7 +33,7 @@ export const shippingRegions: ShippingRegion[] = [
     id: 'south-america',
     name: 'South America',
     description:
-      'Our South American shipping routes cover major ports in Brazil, Colombia, Peru, Chile, and neighboring countries. We handle all export documentation and coordinate with local customs brokers.',
+      'We ship to all ports in South America. We handle all export documentation and coordinate with local customs brokers.',
     ports: [
       { name: 'Santos Port', country: 'Brazil', transitTime: '15-22 days' },
       { name: 'Buenaventura Port', country: 'Colombia', transitTime: '12-18 days' },
@@ -51,7 +51,7 @@ export const shippingRegions: ShippingRegion[] = [
       'Packing List',
       'Insurance Certificate',
     ],
-    costRange: '$1,000 - $3,000',
+    costRange: '€1,000 - €3,000',
     notes:
       'Brazil has specific emission and safety standards for imported vehicles. Colombia and Peru are more flexible with used vehicle imports. We provide country-specific compliance guidance and connect you with trusted local brokers.',
   },
@@ -59,7 +59,7 @@ export const shippingRegions: ShippingRegion[] = [
     id: 'eastern-europe',
     name: 'Eastern Europe',
     description:
-      'We serve Eastern European markets through major Black Sea and Baltic ports. Our experience with EU and non-EU import regulations ensures compliant delivery to your destination.',
+      'We ship to all ports in Eastern Europe. Our experience with EU and non-EU import regulations ensures compliant delivery to your destination.',
     ports: [
       { name: 'Gdansk Port', country: 'Poland', transitTime: '10-16 days' },
       { name: 'Constanta Port', country: 'Romania', transitTime: '12-18 days' },
@@ -77,7 +77,7 @@ export const shippingRegions: ShippingRegion[] = [
       'Certificate of Conformity (EU countries)',
       'Insurance Certificate',
     ],
-    costRange: '$800 - $2,500',
+    costRange: '€800 - €2,500',
     notes:
       'EU member states require Euro emission standards compliance. Non-EU countries like Georgia and Ukraine have more flexible import policies. We advise on homologation requirements and connect you with local certification services.',
   },
