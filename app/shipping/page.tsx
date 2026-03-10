@@ -66,7 +66,7 @@ export default function ShippingPage() {
                     Destination Ports
                   </h3>
                   <p className="text-sm text-slate mb-4">
-                    We ship to all ports in Africa, South America, and Eastern Europe.
+                    We ship to all ports in Africa, South America, and Eastern Europe. The ports listed below are our principal ports — contact us for any other destination.
                   </p>
                   <div className="space-y-3">
                     {region.ports.map((port) => (
