@@ -1272,6 +1272,71 @@
         "Wheel size": "R20",
         "Number of seats": "5"
       }
+    },
+    {
+      "id": "used-auto-33",
+      "slug": "toyota-land-cruiser-prado-pick-up",
+      "category": "automobile",
+      "name": "Toyota Land Cruiser Prado Pick-Up",
+      "brand": "Toyota",
+      "model": "Land Cruiser Prado Pick-Up",
+      "year": 2020,
+      "price": 18500,
+      "condition": "Good",
+      "description": "Toyota Land Cruiser Prado Pick-Up. Available for export.",
+      "features": [],
+      "imageAlt": "Toyota Land Cruiser Prado Pick-Up - used vehicle for export",
+      "imagePlaceholder": "/images/placeholders/automobile.svg",
+      "bodyType": "Truck",
+      "mileage": 0,
+      "fuelType": "Diesel",
+      "transmission": "Automatic",
+      "engineSize": "-",
+      "image": "/images/inventory/toyota-land-cruiser-prado-pick-up/1.jpeg",
+      "images": [
+        "/images/inventory/toyota-land-cruiser-prado-pick-up/1.jpeg",
+        "/images/inventory/toyota-land-cruiser-prado-pick-up/2.jpeg",
+        "/images/inventory/toyota-land-cruiser-prado-pick-up/3.jpeg",
+        "/images/inventory/toyota-land-cruiser-prado-pick-up/4.jpeg"
+      ],
+      "specs": {
+        "Make": "Toyota",
+        "Model": "Land Cruiser Prado Pick-Up",
+        "Body type": "Pick-up"
+      }
+    },
+    {
+      "id": "used-auto-34",
+      "slug": "toyota-prado",
+      "category": "automobile",
+      "name": "Toyota Prado",
+      "brand": "Toyota",
+      "model": "Prado",
+      "year": 2020,
+      "price": 19500,
+      "condition": "Good",
+      "description": "Toyota Prado. Available for export.",
+      "features": [],
+      "imageAlt": "Toyota Prado - used vehicle for export",
+      "imagePlaceholder": "/images/placeholders/automobile.svg",
+      "bodyType": "SUV",
+      "mileage": 0,
+      "fuelType": "Diesel",
+      "transmission": "Automatic",
+      "engineSize": "-",
+      "image": "/images/inventory/toyota-prado/1.jpeg",
+      "images": [
+        "/images/inventory/toyota-prado/1.jpeg",
+        "/images/inventory/toyota-prado/2.jpeg",
+        "/images/inventory/toyota-prado/3.jpeg",
+        "/images/inventory/toyota-prado/4.jpeg",
+        "/images/inventory/toyota-prado/5.jpeg"
+      ],
+      "specs": {
+        "Make": "Toyota",
+        "Model": "Prado",
+        "Body type": "SUV"
+      }
     }
   ],
   "tractors": [
