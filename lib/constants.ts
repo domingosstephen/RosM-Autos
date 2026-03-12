@@ -1,5 +1,5 @@
 export const SITE_NAME = 'RosM Autos'
-export const SITE_URL = 'https://rosmautos.com'
+export const SITE_URL = 'https://www.rosm-autos.com'
 export const SITE_DESCRIPTION =
   'Quality-inspected used automobiles, farm tractors, and electric bikes for export to Africa, South America, and Eastern Europe. Complete shipping and customs service.'
 

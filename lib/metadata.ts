@@ -124,7 +124,7 @@ export const defaultMetadata: Metadata = {
 
     // Brand
     'RosM Autos',
-    'rosmautos.com',
+    'rosm-autos.com',
   ],
 
   authors: [{ name: SITE_NAME, url: SITE_URL }],
