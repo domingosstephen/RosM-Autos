@@ -64,7 +64,9 @@
       "image": "/images/inventory/4runner-white/1.jpg",
       "images": [
         "/images/inventory/4runner-white/1.jpg",
-        "/images/inventory/4runner-white/2.jpg"
+        "/images/inventory/4runner-white/2.jpg",
+        "/images/inventory/4runner-white/3.jpg",
+        "/images/inventory/4runner-white/4.jpg"
       ],
       "specs": {
         "Color": "White"
@@ -644,15 +646,15 @@
       "id": "used-auto-17",
       "slug": "mercedes-benz-maybach-s680",
       "category": "automobile",
-      "name": "2024  Mercedes-Benz Maybach S680",
+      "name": "2024 Mercedes-Benz Maybach S680",
       "brand": "Mercedes-Benz",
       "model": "Mercedes-Benz Maybach S680",
       "year": 2024,
       "price": 12000,
       "condition": "Good",
-      "description": "2024  Mercedes-Benz Maybach S680. 18 500 km. Available for export.",
+      "description": "2024 Mercedes-Benz Maybach S680. 18 500 km. Available for export.",
       "features": [],
-      "imageAlt": "2024  Mercedes-Benz Maybach S680 - used vehicle for export",
+      "imageAlt": "2024 Mercedes-Benz Maybach S680 - used vehicle for export",
       "imagePlaceholder": "/images/placeholders/automobile.svg",
       "bodyType": "SUV",
       "mileage": 18500,
@@ -684,21 +686,21 @@
       "id": "used-auto-18",
       "slug": "mercedes-benz-s350",
       "category": "automobile",
-      "name": "2024  Mercedes-Benz Maybach S680",
+      "name": "2019 Mercedes-Benz S350",
       "brand": "Mercedes-Benz",
-      "model": "Mercedes-Benz Maybach S680",
-      "year": 2024,
+      "model": "S350",
+      "year": 2019,
       "price": 12000,
       "condition": "Good",
-      "description": "2024  Mercedes-Benz Maybach S680. 18 500 km. Available for export.",
+      "description": "2019 Mercedes-Benz S350. Available for export. For more photos and information please contact via E-mail / Whatsapp / Telegram / Viber. Possible delivery to any EU country.",
       "features": [],
-      "imageAlt": "2024  Mercedes-Benz Maybach S680 - used vehicle for export",
+      "imageAlt": "2019 Mercedes-Benz S350 - used vehicle for export",
       "imagePlaceholder": "/images/placeholders/automobile.svg",
-      "bodyType": "SUV",
-      "mileage": 18500,
+      "bodyType": "Sedan",
+      "mileage": 0,
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "engineSize": "5980 cm³, 612 HP (450kW)",
+      "engineSize": "-",
       "image": "/images/inventory/mercedes-benz-s350/1.jpg",
       "images": [
         "/images/inventory/mercedes-benz-s350/1.jpg",
@@ -707,18 +709,13 @@
         "/images/inventory/mercedes-benz-s350/4.jpg"
       ],
       "specs": {
-        "First registration": "2024",
-        "Mileage": "18 500 km",
-        "Engine": "5980 cm³, 612 HP (450kW)",
-        "Fuel type": "Petrol",
+        "First registration": "2019",
         "Body Type": "Limousine",
         "Number of doors": "4/5",
-        "Driven wheels": "All wheel (4х4)",
+        "Fuel type": "Petrol",
         "Gearbox": "Automatic",
         "Climate control": "Air conditioning",
-        "Color": "Black / Gray",
-        "Number of seats": "5",
-        "Driving assistance system": "Emergency Lane Assist"
+        "Number of seats": "5"
       }
     },
     {

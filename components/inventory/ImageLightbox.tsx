@@ -97,9 +97,9 @@ export function ImageLightbox({
       aria-modal="true"
       aria-label={`${name} — full size image gallery`}
     >
-      {/* Full-screen image layer — no padding, image covers entire viewport */}
+      {/* Full-screen image layer — image fits viewport so full photo is visible (no zoom crop on mobile) */}
       <div
-        className="absolute inset-0 w-full h-full z-0"
+        className="absolute inset-0 w-full h-full z-0 flex items-center justify-center"
         style={{ top: 0, left: 0, right: 0, bottom: 0 }}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
@@ -111,7 +111,7 @@ export function ImageLightbox({
           src={currentSrc}
           alt={`${alt} — photo ${index + 1} of ${images.length}`}
           fill
-          className="object-cover select-none w-full h-full"
+          className="object-contain select-none w-full h-full"
           sizes="100vw"
           priority
           draggable={false}
