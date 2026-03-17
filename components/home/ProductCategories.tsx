@@ -65,13 +65,13 @@ export function ProductCategories() {
           {categories.map((cat, i) => (
             <AnimateOnScroll key={cat.title} animation="fade-up" delay={i * 150}>
               <Card hoverable padding="none" className="overflow-hidden">
-                <div className="relative w-full h-48 bg-slate-200">
+                <div className="relative w-full aspect-[4/3] min-h-[200px] bg-slate-200">
                   {cat.product && getMainImage(cat.product) ? (
                     <Image
                       src={getMainImage(cat.product)!}
                       alt={cat.alt}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   ) : (

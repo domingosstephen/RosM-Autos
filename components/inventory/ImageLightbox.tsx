@@ -116,6 +116,7 @@ export function ImageLightbox({
           priority
           draggable={false}
           style={{ touchAction: 'pan-y' }}
+          unoptimized
         />
       </div>
 
@@ -196,7 +197,7 @@ export function ImageLightbox({
                 aria-label={`Go to photo ${i + 1}`}
                 aria-current={i === index ? 'true' : undefined}
               >
-                <Image src={src} alt="" fill className="object-cover" sizes="56px" />
+                <Image src={src} alt="" fill className="object-cover" sizes="56px" unoptimized />
               </button>
             ))}
           </div>

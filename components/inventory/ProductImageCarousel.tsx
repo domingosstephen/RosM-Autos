@@ -112,6 +112,7 @@ export function ProductImageCarousel({
               fill
               className="object-cover"
               sizes={sizes}
+              unoptimized
             />
           </div>
         ))}
