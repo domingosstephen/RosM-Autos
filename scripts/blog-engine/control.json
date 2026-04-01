@@ -1,0 +1,43 @@
+{
+  "engine": {
+    "enabled": true,
+    "articlesPerDay": 3,
+    "publishTime": "06:00",
+    "timezone": "UTC"
+  },
+
+  "approval": {
+    "requireApproval": false,
+    "autoApproveAfterDays": 3
+  },
+
+  "categories": {
+    "country-guide":   { "enabled": true,  "maxPerWeek": 5, "priority": "high" },
+    "buying-guide":    { "enabled": true,  "maxPerWeek": 3, "priority": "high" },
+    "shipping":        { "enabled": true,  "maxPerWeek": 2, "priority": "medium" },
+    "comparison":      { "enabled": true,  "maxPerWeek": 3, "priority": "high" },
+    "how-to":          { "enabled": true,  "maxPerWeek": 2, "priority": "medium" },
+    "tractor-guide":   { "enabled": true,  "maxPerWeek": 2, "priority": "medium" },
+    "market-insight":  { "enabled": true,  "maxPerWeek": 2, "priority": "low" },
+    "vehicle-review":  { "enabled": true,  "maxPerWeek": 2, "priority": "low" },
+    "industry-news":   { "enabled": true,  "maxPerWeek": 1, "priority": "low" },
+    "import-guide":    { "enabled": true,  "maxPerWeek": 3, "priority": "high" }
+  },
+
+  "research": {
+    "autoResearch": true,
+    "researchInterval": "weekly",
+    "minTopicsInPipeline": 20,
+    "competitorSites": [
+      "https://www.beforward.jp/blog",
+      "https://www.sbtjapan.com/blog",
+      "https://www.carjunction.com/blog"
+    ],
+    "targetRegions": [
+      "Nigeria", "Ghana", "Kenya", "Tanzania", "Uganda",
+      "Cameroon", "Mozambique", "DR Congo", "South Africa",
+      "Brazil", "Colombia", "Peru", "Chile", "Paraguay",
+      "Poland", "Romania", "Ukraine", "Georgia"
+    ]
+  }
+}

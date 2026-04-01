@@ -1,0 +1,139 @@
+name: Daily Blog Generation
+
+on:
+  # Run daily at 6:00 AM UTC
+  schedule:
+    - cron: '0 6 * * *'
+
+  # Manual trigger with full control
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'What to do'
+        required: true
+        default: 'generate'
+        type: choice
+        options:
+          - generate         # Generate articles from existing topics
+          - research         # Discover new topics (adds to pending queue)
+          - research-and-approve  # Discover + auto-approve new topics
+          - stats            # Show topic coverage stats only
+          - dry-run          # Show what would be generated without creating files
+      article_count:
+        description: 'Number of articles to generate (1-5, only for generate action)'
+        required: false
+        default: '3'
+        type: choice
+        options: ['1', '2', '3', '4', '5']
+      research_strategy:
+        description: 'Research strategy (only for research action)'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all              # Run all research strategies
+          - keyword          # Keyword expansion from existing topics
+          - competitor       # Competitor content gap analysis
+          - question         # Question mining (forums, PAA, AI queries)
+          - regional         # Create guides for uncovered countries
+
+permissions:
+  contents: write
+
+jobs:
+  blog-engine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install tsx
+        run: npm install -g tsx
+
+      # ── Stats only ──────────────────────────────────────────────
+      - name: Show stats
+        if: ${{ github.event.inputs.action == 'stats' || github.event_name == 'schedule' }}
+        run: npx tsx scripts/blog-engine/run.ts --stats
+
+      # ── Research ────────────────────────────────────────────────
+      - name: Research new topics
+        if: ${{ github.event.inputs.action == 'research' || github.event.inputs.action == 'research-and-approve' }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          STRATEGY="${{ github.event.inputs.research_strategy || 'all' }}"
+          npx tsx scripts/blog-engine/researcher.ts --strategy "$STRATEGY"
+
+      - name: Auto-approve researched topics
+        if: ${{ github.event.inputs.action == 'research-and-approve' }}
+        run: |
+          npx tsx scripts/blog-engine/researcher.ts --approve-all
+          npx tsx scripts/blog-engine/researcher.ts --sync
+
+      # ── Generate ────────────────────────────────────────────────
+      - name: Generate articles
+        if: ${{ github.event.inputs.action == 'generate' || github.event.inputs.action == '' || github.event_name == 'schedule' }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          COUNT="${{ github.event.inputs.article_count || '3' }}"
+          npx tsx scripts/blog-engine/run.ts --count "$COUNT"
+
+      # ── Dry run ─────────────────────────────────────────────────
+      - name: Dry run
+        if: ${{ github.event.inputs.action == 'dry-run' }}
+        run: |
+          COUNT="${{ github.event.inputs.article_count || '3' }}"
+          npx tsx scripts/blog-engine/run.ts --count "$COUNT" --dry-run
+
+      # ── Final stats ─────────────────────────────────────────────
+      - name: Show final stats
+        if: always()
+        run: npx tsx scripts/blog-engine/run.ts --stats
+
+      # ── Commit changes ──────────────────────────────────────────
+      - name: Commit and push
+        if: ${{ github.event.inputs.action != 'stats' && github.event.inputs.action != 'dry-run' }}
+        run: |
+          git config user.name "RosM Blog Engine"
+          git config user.email "blog-engine@rosm-autos.com"
+
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git add content/blog/*.json 2>/dev/null || true
+          git add scripts/blog-engine/published.json 2>/dev/null || true
+          git add scripts/blog-engine/pending-topics.json 2>/dev/null || true
+          git add scripts/blog-engine/addon-topics.json 2>/dev/null || true
+
+          # Determine commit message based on action
+          ACTION="${{ github.event.inputs.action || 'generate' }}"
+          if [ "$ACTION" = "research" ] || [ "$ACTION" = "research-and-approve" ]; then
+            MSG="blog: research new topics [automated]"
+          else
+            POST_COUNT=$(git diff --cached --name-only | grep "content/blog/" | wc -l || echo "0")
+            MSG="blog: add ${POST_COUNT} new article(s) [automated]"
+          fi
+
+          git commit -m "$MSG
+
+          Generated by RosM Blog Engine via GitHub Actions."
+
+          git push

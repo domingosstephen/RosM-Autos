@@ -1,0 +1,67 @@
+name: Weekly Topic Research
+
+on:
+  # Run every Monday at 5:00 AM UTC (before daily generation at 6 AM)
+  schedule:
+    - cron: '0 5 * * 1'
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  research-topics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci && npm install -g tsx
+
+      - name: Check remaining topics
+        id: check
+        run: |
+          STATS=$(npx tsx scripts/blog-engine/run.ts --stats 2>&1)
+          echo "$STATS"
+          REMAINING=$(echo "$STATS" | grep "Remaining:" | awk '{print $2}')
+          echo "remaining=$REMAINING" >> "$GITHUB_OUTPUT"
+
+      - name: Run research if topics running low
+        if: ${{ steps.check.outputs.remaining < 20 }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "Topics running low (${{ steps.check.outputs.remaining }} remaining). Researching..."
+          npx tsx scripts/blog-engine/researcher.ts
+          npx tsx scripts/blog-engine/researcher.ts --approve-all
+          npx tsx scripts/blog-engine/researcher.ts --sync
+          npx tsx scripts/blog-engine/run.ts --stats
+
+      - name: Commit research results
+        if: ${{ steps.check.outputs.remaining < 20 }}
+        run: |
+          git config user.name "RosM Blog Engine"
+          git config user.email "blog-engine@rosm-autos.com"
+
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git add scripts/blog-engine/pending-topics.json
+          git add scripts/blog-engine/addon-topics.json
+          git commit -m "blog: auto-research new topics (pipeline low) [automated]"
+          git push
