@@ -164,43 +164,81 @@ function generateSlug(title: string): string {
 }
 
 function getImageForCategory(category: string): { image: string; imageAlt: string } {
-  // Curated Unsplash images by category (direct links, no API needed)
-  const images: Record<string, { url: string; alt: string }[]> = {
+  // Use REAL inventory images from public/images/inventory/
+  // Each entry is a folder with 1.jpg inside it
+  const images: Record<string, { folder: string; alt: string }[]> = {
     'country-guide': [
-      { url: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&q=80', alt: 'Vehicles on road in Africa' },
-      { url: 'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=1200&q=80', alt: 'Port with shipping containers' },
-      { url: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=80', alt: 'Customs and border checkpoint' },
+      { folder: 'toyota-hilux-2020-2-8-diesel', alt: 'Toyota Hilux ready for export from Germany' },
+      { folder: 'toyota-prado-2020', alt: 'Toyota Prado SUV for international export' },
+      { folder: 'black-land-cruiser', alt: 'Toyota Land Cruiser for export to Africa' },
+      { folder: '2019-toyota-fortuner-66000-km-12200-eur', alt: 'Toyota Fortuner quality-inspected for export' },
+      { folder: 'ford-ranger', alt: 'Ford Ranger pickup truck for export' },
+      { folder: 'gle-350', alt: 'Mercedes-Benz GLE for international shipping' },
     ],
     'buying-guide': [
-      { url: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1200&q=80', alt: 'Used car lot with vehicles' },
-      { url: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0afa?w=1200&q=80', alt: 'Vehicle inspection process' },
-      { url: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1200&q=80', alt: 'SUV on road' },
+      { folder: 'land-cruiser', alt: 'Toyota Land Cruiser — top choice for African roads' },
+      { folder: 'toyota-hilux-double-cabin', alt: 'Toyota Hilux Double Cabin in export-ready condition' },
+      { folder: 'toyota-rav4-xle-4x4-full-option', alt: 'Toyota RAV4 XLE inspected for export' },
+      { folder: 'ford-explorer', alt: 'Ford Explorer SUV available for export from Germany' },
+      { folder: 'highlander', alt: 'Toyota Highlander from RosM Autos inventory' },
+      { folder: '4runner', alt: 'Toyota 4Runner ready for international shipping' },
     ],
     shipping: [
-      { url: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=80', alt: 'Cargo ship at port' },
-      { url: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?w=1200&q=80', alt: 'Container shipping terminal' },
+      { folder: 'toyota-hilux-pickup-2017', alt: 'Toyota Hilux prepared for RoRo shipping' },
+      { folder: '2024-ford-ranger-22-000-km-34250-eur', alt: 'Ford Ranger ready for container shipping from Germany' },
+      { folder: 'toyota-prado-vxr-4-0l-4wd', alt: 'Toyota Prado loaded for export shipping' },
+      { folder: 'isuzu-d-max', alt: 'Isuzu D-Max prepared for international vehicle shipping' },
     ],
     'tractor-guide': [
-      { url: 'https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=1200&q=80', alt: 'Farm tractor in field' },
-      { url: 'https://images.unsplash.com/photo-1530267981375-f0de937f5f13?w=1200&q=80', alt: 'Agricultural tractor working' },
+      { folder: 'massey-ferguson-385-tractor-2025', alt: 'Massey Ferguson 385 farm tractor for export' },
+      { folder: 'massey-ferguson-290-4wd-2023', alt: 'Massey Ferguson 290 4WD tractor ready for shipping' },
+      { folder: 'massey-ferguson-390-tractor-diesel-mt-4wd', alt: 'Massey Ferguson 390 diesel tractor for African farming' },
+      { folder: 'massey-ferguson-290-290', alt: 'Massey Ferguson 290 used farm tractor' },
+      { folder: 'massey-ferguson-290-4-0l', alt: 'Massey Ferguson 290 agricultural tractor for export' },
     ],
     'market-insight': [
-      { url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80', alt: 'Market data and analytics' },
-      { url: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=80', alt: 'Vehicle market trends' },
+      { folder: 'toyota-prado-full-option-top-of-the-range', alt: 'Toyota Prado full option — popular export vehicle' },
+      { folder: 'toyota-hilux-2019-2-8l', alt: 'Toyota Hilux — high-demand vehicle in African markets' },
+      { folder: 'toyota-corolla', alt: 'Toyota Corolla — widely exported sedan from Germany' },
+      { folder: 'ford-territory', alt: 'Ford Territory — emerging market vehicle trends' },
     ],
     comparison: [
-      { url: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1200&q=80', alt: 'Vehicles side by side comparison' },
-      { url: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1200&q=80', alt: 'Multiple vehicles for comparison' },
+      { folder: 'toyota-hilux-2020-gr-sport-kit', alt: 'Toyota Hilux GR Sport — vehicle comparison feature' },
+      { folder: 'ford-raptor', alt: 'Ford Raptor — pickup truck comparison' },
+      { folder: 'toyota-hilux-dc-2-7p', alt: 'Toyota Hilux vs competitors — export pickup comparison' },
+      { folder: '4runner-white', alt: 'Toyota 4Runner — SUV comparison for export buyers' },
+      { folder: 'nissan-navara', alt: 'Nissan Navara — compared against Toyota Hilux and Ford Ranger' },
     ],
     'how-to': [
-      { url: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80', alt: 'Documentation and paperwork process' },
-      { url: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80', alt: 'Step by step guide illustration' },
+      { folder: '2016-toyota-highlander-122-110-km-11475-eur', alt: 'Toyota Highlander — step-by-step export guide' },
+      { folder: 'toyota-rav4-2018-xle-2-5l-v4', alt: 'Toyota RAV4 — vehicle import process guide' },
+      { folder: '2018-toyota-corolla-153-600-km-5950-eur', alt: 'Toyota Corolla — how to buy from Germany guide' },
+      { folder: 'toyota-prado-2020-vxl-v4', alt: 'Toyota Prado — export documentation guide' },
+    ],
+    'vehicle-review': [
+      { folder: 'toyota-prado-2020-vxr-4-0l-4wd', alt: 'Toyota Prado VXR — in-depth vehicle review' },
+      { folder: 'toyota-hilux-diesel-2-8-liter', alt: 'Toyota Hilux Diesel — detailed export review' },
+      { folder: 'ford-mustang', alt: 'Ford Mustang — vehicle review and export guide' },
+      { folder: 'black-highlander', alt: 'Toyota Highlander — comprehensive buyer review' },
+    ],
+    'import-guide': [
+      { folder: 'toyota-hilux-double-cabin-2-8l', alt: 'Toyota Hilux Double Cabin — import guide featured vehicle' },
+      { folder: '2017-toyota-hilux-white-28000km-13000-eur', alt: 'Toyota Hilux — vehicle import documentation guide' },
+      { folder: 'toyota-rav4-full-option-2-0l', alt: 'Toyota RAV4 — import duty calculation example' },
+    ],
+    'industry-news': [
+      { folder: '2024-2025-toyota-hiace-commuter-6000-euros', alt: 'Toyota HiAce — vehicle export industry news' },
+      { folder: 'ford-territory-7500-eur', alt: 'Ford Territory — market update and industry trends' },
+      { folder: 'ducati-monster-bike', alt: 'Ducati Monster — expanding vehicle export categories' },
     ],
   }
 
   const categoryImages = images[category] || images['buying-guide']
   const selected = categoryImages[Math.floor(Math.random() * categoryImages.length)]
-  return { image: selected.url, imageAlt: selected.alt }
+  return {
+    image: `/images/inventory/${selected.folder}/1.jpg`,
+    imageAlt: selected.alt,
+  }
 }
 
 export async function generateArticle(topic: TopicSeed, category: string): Promise<BlogPost> {
