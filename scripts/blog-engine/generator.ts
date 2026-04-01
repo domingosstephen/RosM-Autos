@@ -122,6 +122,11 @@ Your articles must be optimized for three search paradigms simultaneously:
 - Reference RosM Autos naturally where relevant (not forced)
 - Add a TLDR/Key Takeaway at the top (2-3 sentences max)
 
+## CRITICAL: Current Year
+- The current year is ${new Date().getFullYear()}. ALL references to years MUST use ${new Date().getFullYear()}.
+- Do NOT use 2024 or 2025. When you mention a year in titles, headings, statistics, or body text, use ${new Date().getFullYear()}.
+- Example: "Complete 2025 Guide" is WRONG. "Complete ${new Date().getFullYear()} Guide" is CORRECT.
+
 ## Output Format
 Return ONLY valid JSON with this exact structure (no markdown code fences):
 {
@@ -277,6 +282,8 @@ Target regions: ${topic.targetRegions.join(', ')}
 
 AI query targets (questions this article should directly answer):
 ${topic.aiQueryTargets.map((q) => `- ${q}`).join('\n')}
+
+IMPORTANT: Today's date is ${new Date().toISOString().split('T')[0]}. The current year is ${new Date().getFullYear()}. ALL year references in the article MUST be ${new Date().getFullYear()} — not 2024, not 2025. This applies to titles, headings, body text, and statistics.
 
 Requirements:
 - ${GENERATION_CONFIG.minWordCount}-${GENERATION_CONFIG.maxWordCount} words

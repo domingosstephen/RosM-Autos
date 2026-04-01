@@ -70,7 +70,7 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
         primaryKeyword: 'import used car Nigeria from Germany',
         secondaryKeywords: [
           'Nigeria import duty used cars',
-          'vehicle import Nigeria 2025',
+          'vehicle import Nigeria 2026',
           'customs clearance Nigeria',
           'Tin Can Island vehicle import',
           'ECOWAS vehicle regulations',
@@ -105,7 +105,7 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
         ],
       },
       {
-        title: 'Importing a Used Vehicle to Kenya: Complete 2025 Guide',
+        title: 'Importing a Used Vehicle to Kenya: Complete 2026 Guide',
         primaryKeyword: 'import used car Kenya',
         secondaryKeywords: [
           'Kenya vehicle import duty calculator',
@@ -285,7 +285,7 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
         ],
       },
       {
-        title: 'Best Used Pickup Trucks for Export to Africa in 2025',
+        title: 'Best Used Pickup Trucks for Export to Africa in 2026',
         primaryKeyword: 'best pickup trucks export Africa',
         secondaryKeywords: [
           'used pickup truck Africa',
@@ -477,8 +477,8 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
     category: 'market-insight',
     topics: [
       {
-        title: 'Used Car Market Trends in Africa: What Buyers Need to Know in 2025',
-        primaryKeyword: 'used car market Africa 2025',
+        title: 'Used Car Market Trends in Africa: What Buyers Need to Know in 2026',
+        primaryKeyword: 'used car market Africa 2026',
         secondaryKeywords: [
           'Africa vehicle market trends',
           'used car demand Africa',
