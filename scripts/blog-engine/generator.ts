@@ -5,6 +5,8 @@
  * Set ANTHROPIC_API_KEY or OPENAI_API_KEY in environment.
  */
 
+import fs from 'fs'
+import path from 'path'
 import type { BlogPost, BlogAuthor } from '../../types/blog'
 import type { TopicSeed } from './config'
 import { AUTHORS, GENERATION_CONFIG } from './config'
@@ -234,10 +236,31 @@ function getImageForCategory(category: string): { image: string; imageAlt: strin
   }
 
   const categoryImages = images[category] || images['buying-guide']
-  const selected = categoryImages[Math.floor(Math.random() * categoryImages.length)]
+  // Shuffle to avoid always picking the same image
+  const shuffled = [...categoryImages].sort(() => Math.random() - 0.5)
+
+  // Find the first folder that has an actual image file
+  const inventoryDir = path.join(process.cwd(), 'public', 'images', 'inventory')
+  for (const candidate of shuffled) {
+    const folderPath = path.join(inventoryDir, candidate.folder)
+    if (!fs.existsSync(folderPath)) continue
+
+    // Check for 1.* in order of preference
+    for (const ext of ['jpg', 'jpeg', 'webp', 'png']) {
+      const imgPath = path.join(folderPath, `1.${ext}`)
+      if (fs.existsSync(imgPath)) {
+        return {
+          image: `/images/inventory/${candidate.folder}/1.${ext}`,
+          imageAlt: candidate.alt,
+        }
+      }
+    }
+  }
+
+  // Fallback — should never happen but just in case
   return {
-    image: `/images/inventory/${selected.folder}/1.jpg`,
-    imageAlt: selected.alt,
+    image: '/icons/og-image.png',
+    imageAlt: 'RosM Autos — Quality vehicles for export from Germany',
   }
 }
 
