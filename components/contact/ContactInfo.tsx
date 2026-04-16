@@ -5,6 +5,7 @@ import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 import {
   PHONE_NUMBER,
   EMAIL,
+  SALES_EMAIL,
   WHATSAPP_LINK,
   BUSINESS_HOURS,
   ADDRESS,
@@ -69,6 +70,13 @@ export function ContactInfo() {
             className="hover:text-cta transition-colors break-all"
           >
             {EMAIL}
+          </a>
+          <br />
+          <a
+            href={`mailto:${SALES_EMAIL}`}
+            className="hover:text-cta transition-colors break-all"
+          >
+            {SALES_EMAIL}
           </a>
         </ContactItem>
 

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { createPageMetadata } from '@/lib/metadata'
 import { localBusinessSchema } from '@/lib/schema'
-import { WHATSAPP_LINK, PHONE_NUMBER, EMAIL } from '@/lib/constants'
+import { WHATSAPP_LINK, PHONE_NUMBER, EMAIL, SALES_EMAIL } from '@/lib/constants'
 import { Container } from '@/components/shared/Container'
 import { SectionHeading } from '@/components/shared/SectionHeading'
 import { Button } from '@/components/shared/Button'

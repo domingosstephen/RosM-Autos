@@ -14,6 +14,7 @@ import {
   SITE_URL,
   PHONE_NUMBER,
   EMAIL,
+  SALES_EMAIL,
   ADDRESS,
   SOCIAL_LINKS,
 } from './constants'
@@ -45,7 +46,7 @@ export function organizationSchema() {
         '@type': 'ContactPoint',
         telephone: PHONE_NUMBER,
         contactType: 'sales',
-        email: EMAIL,
+        email: [EMAIL, SALES_EMAIL],
         availableLanguage: ['English', 'German', 'French'],
         hoursAvailable: {
           '@type': 'OpeningHoursSpecification',
@@ -120,7 +121,7 @@ export function localBusinessSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     telephone: PHONE_NUMBER,
-    email: EMAIL,
+    email: [EMAIL, SALES_EMAIL],
     image: `${SITE_URL}/icons/og-image.png`,
     logo: `${SITE_URL}/icons/logo.svg`,
     description:

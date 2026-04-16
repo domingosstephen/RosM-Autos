@@ -6,6 +6,7 @@ export const SITE_DESCRIPTION =
 export const WHATSAPP_NUMBER = '+4917642428612'
 export const PHONE_NUMBER = '+4917642428612'
 export const EMAIL = 'contact@rosm-autos.com'
+export const SALES_EMAIL = 'rosmautos9@gmail.com'
 export const ADDRESS = 'Siemensstrasse 7, 32312 Lübbecke, Germany'
 
 export const BUSINESS_HOURS = 'Monday - Friday: 8:00 AM - 6:00 PM | Saturday: 9:00 AM - 3:00 PM'

@@ -30,6 +30,9 @@ export interface BlogPost {
   // AEO/GEO fields
   faqItems?: { question: string; answer: string }[]
   tldr?: string // Short summary for AI extraction
+
+  // Internal linking — curated related posts (set by scripts/internal-linking.js)
+  relatedSlugs?: string[]
 }
 
 export type BlogCategory =

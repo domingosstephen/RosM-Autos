@@ -52,7 +52,7 @@ export default async function InventoryPage() {
                   <div className="absolute inset-0">
                     <Image
                       src={sampleImage}
-                      alt=""
+                      alt={`Browse used ${brand} vehicles for export`}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
@@ -71,7 +71,7 @@ export default async function InventoryPage() {
                 <div className="absolute inset-0">
                   <Image
                     src={tractorsSampleImage}
-                    alt=""
+                    alt="Browse used farm tractors for export"
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"

@@ -8,6 +8,7 @@ import {
   SITE_NAME,
   PHONE_NUMBER,
   EMAIL,
+  SALES_EMAIL,
   WHATSAPP_LINK,
   SOCIAL_LINKS,
   BUSINESS_HOURS,
@@ -138,6 +139,8 @@ export function Footer() {
               <div>
                 <p className="text-white/50">Email</p>
                 <a href={`mailto:${EMAIL}`} className="text-white hover:text-cta transition-colors">{EMAIL}</a>
+                <br />
+                <a href={`mailto:${SALES_EMAIL}`} className="text-white hover:text-cta transition-colors text-xs">{SALES_EMAIL}</a>
               </div>
             </div>
             <div className="flex items-center gap-3">

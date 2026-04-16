@@ -58,11 +58,27 @@ export function getPostsByCategory(category: BlogCategory): BlogPost[] {
 }
 
 /**
- * Get related posts (same category, excluding current).
+ * Get related posts — prefers curated relatedSlugs, falls back to same-category.
  */
 export function getRelatedPosts(currentSlug: string, limit = 3): BlogPost[] {
   const current = getPostBySlug(currentSlug)
   if (!current) return []
+
+  // Use curated relatedSlugs if available
+  if (current.relatedSlugs && current.relatedSlugs.length > 0) {
+    const curated = current.relatedSlugs
+      .map((slug) => getPostBySlug(slug))
+      .filter((p): p is BlogPost => p !== null)
+      .slice(0, limit)
+    if (curated.length >= limit) return curated
+
+    // Fill remaining slots with same-category posts
+    const curatedSlugs = new Set(curated.map((p) => p.slug))
+    const fallback = getAllPosts()
+      .filter((p) => p.slug !== currentSlug && !curatedSlugs.has(p.slug) && p.category === current.category)
+      .slice(0, limit - curated.length)
+    return [...curated, ...fallback]
+  }
 
   return getAllPosts()
     .filter((p) => p.slug !== currentSlug && p.category === current.category)
