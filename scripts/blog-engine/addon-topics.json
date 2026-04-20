@@ -556,5 +556,513 @@
         "What documents are required for tractor imports?"
       ]
     }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Mercedes-Benz C-Class Import Duty and Total Cost Calculator for Nigeria",
+      "primaryKeyword": "Mercedes C-Class import duty Nigeria",
+      "secondaryKeywords": [
+        "Mercedes C-Class import cost Nigeria",
+        "C-Class customs duty Nigeria",
+        "Mercedes C-Class total import cost"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How much does it cost to import a Mercedes C-Class to Nigeria?",
+        "What is the import duty for Mercedes C-Class in Nigeria?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "BMW X5 vs Audi Q7 vs Mercedes GLE: Best Luxury SUV for Export to Kenya",
+      "primaryKeyword": "BMW X5 vs Audi Q7 vs Mercedes GLE Kenya",
+      "secondaryKeywords": [
+        "luxury SUV comparison Kenya",
+        "best German SUV export Kenya",
+        "premium SUV import Kenya"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Kenya"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which luxury SUV is best for Kenyan roads?",
+        "Should I buy BMW X5 or Mercedes GLE for Kenya?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Total Cost Calculator: Importing a Toyota Prado to Ghana from Germany 2026",
+      "primaryKeyword": "Toyota Prado import cost Ghana calculator",
+      "secondaryKeywords": [
+        "Prado import duty Ghana",
+        "Toyota Prado total import cost Ghana",
+        "Prado customs duty Ghana"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Ghana"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How much does it cost to import Toyota Prado to Ghana?",
+        "What is the total cost of importing Prado from Germany to Ghana?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Volkswagen Passat Import Duty and Process for Colombia: Complete Guide",
+      "primaryKeyword": "Volkswagen Passat import duty Colombia",
+      "secondaryKeywords": [
+        "Passat import cost Colombia",
+        "VW Passat customs Colombia",
+        "Volkswagen import process Colombia"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Colombia"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "How much is import duty for Volkswagen Passat in Colombia?",
+        "Can I import a VW Passat to Colombia from Germany?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "How to Get Vehicle Inspection Certificate for Imported Cars in Kenya (KEBS Process)",
+      "primaryKeyword": "KEBS vehicle inspection imported car Kenya",
+      "secondaryKeywords": [
+        "Kenya vehicle inspection certificate import",
+        "KEBS imported vehicle process",
+        "vehicle inspection requirements Kenya"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Kenya"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How do I get KEBS inspection for my imported car?",
+        "What is the KEBS vehicle inspection process in Kenya?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Ford Transit vs Mercedes Sprinter vs Volkswagen Crafter: Best Commercial Van for African Export",
+      "primaryKeyword": "Ford Transit vs Mercedes Sprinter vs VW Crafter Africa",
+      "secondaryKeywords": [
+        "commercial van comparison Africa",
+        "best van for Africa export",
+        "Transit Sprinter Crafter comparison"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which commercial van is best for African conditions?",
+        "Should I buy Ford Transit or Mercedes Sprinter for Africa?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "Complete Guide to Vehicle Age Restrictions for Car Imports in East Africa 2026",
+      "primaryKeyword": "vehicle age limit East Africa import 2026",
+      "secondaryKeywords": [
+        "car age restriction Kenya Tanzania Uganda",
+        "East Africa vehicle age policy",
+        "maximum car age import East Africa"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Kenya",
+        "Tanzania",
+        "Uganda"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "What is the vehicle age limit for importing to East Africa?",
+        "How old can a car be to import to Kenya and Tanzania?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing a Used Car to South Africa: SARS Customs, Duties, and Registration",
+      "primaryKeyword": "how to import used car to south africa",
+      "secondaryKeywords": [
+        "south africa car import duty",
+        "SARS customs clearance",
+        "south africa vehicle registration",
+        "durban port car clearance"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "South Africa"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How do I import a used car to South Africa?",
+        "What are the import duties for cars in South Africa?",
+        "How to clear customs in South Africa for imported vehicles?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Best Age Limit for Used Car Imports: Country-by-Country Age Restrictions Guide",
+      "primaryKeyword": "used car import age limit by country",
+      "secondaryKeywords": [
+        "vehicle age restrictions import",
+        "maximum car age for import",
+        "import age limit africa",
+        "used car age requirements"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa",
+        "Eastern Europe",
+        "South America"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "What is the maximum age for importing used cars?",
+        "Which countries have vehicle age restrictions for imports?",
+        "Can I import a 10-year-old car to Kenya?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Left Hand Drive vs Right Hand Drive: Which Cars to Export Where?",
+      "primaryKeyword": "left hand drive vs right hand drive export",
+      "secondaryKeywords": [
+        "LHD vs RHD countries",
+        "steering wheel position export",
+        "drive side requirements by country",
+        "vehicle steering configuration"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa",
+        "Eastern Europe",
+        "South America"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which countries drive on the left side?",
+        "Should I buy left or right hand drive for export?",
+        "Do I need LHD or RHD for Nigeria?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "How to Get Vehicle Finance Pre-Approval for International Car Purchases",
+      "primaryKeyword": "international car finance pre approval",
+      "secondaryKeywords": [
+        "overseas vehicle financing",
+        "pre-approved car loans",
+        "international auto finance",
+        "export vehicle financing"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Africa",
+        "Eastern Europe",
+        "South America"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How to get pre-approved for international car finance?",
+        "Can I get financing before buying a car from Germany?",
+        "What banks offer international vehicle loans?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing a Used Car to Argentina: AFIP Customs and Registration",
+      "primaryKeyword": "how to import used car to argentina",
+      "secondaryKeywords": [
+        "argentina car import duty",
+        "AFIP customs process",
+        "argentina vehicle registration",
+        "buenos aires port clearance"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Argentina"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How do I import a used car to Argentina?",
+        "What are the import duties for cars in Argentina?",
+        "How to clear customs in Argentina for vehicles?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Vehicle Emission Standards for Export: Euro 4 vs Euro 5 Requirements by Country",
+      "primaryKeyword": "vehicle emission standards export requirements",
+      "secondaryKeywords": [
+        "euro 4 euro 5 requirements",
+        "emission standards by country",
+        "vehicle pollution standards",
+        "export emission compliance"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa",
+        "Eastern Europe",
+        "South America"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "What emission standards are required for car exports?",
+        "Do I need Euro 5 compliance for export?",
+        "Which countries require Euro 4 emissions?"
+      ]
+    }
+  },
+  {
+    "category": "tractor-guide",
+    "topic": {
+      "title": "Best Compact Tractors Under 50HP for Small Farms: Export Guide for Africa",
+      "primaryKeyword": "best compact tractors under 50hp for africa",
+      "secondaryKeywords": [
+        "small farm tractors",
+        "compact tractor export",
+        "kubota compact tractors",
+        "small acreage farming equipment"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "What are the best compact tractors for small farms?",
+        "Which tractor is best for under 50 acres?",
+        "What size tractor do I need for 20 acres?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "How to Convert Vehicle Specifications from European to Local Standards",
+      "primaryKeyword": "convert european vehicle specifications",
+      "secondaryKeywords": [
+        "vehicle spec conversion",
+        "european car standards conversion",
+        "metric to imperial conversion",
+        "vehicle compliance conversion"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa",
+        "South America"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "How to convert European vehicle specs to local standards?",
+        "How to convert km/h speedometer to mph?",
+        "What modifications are needed for imported European cars?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "How to Avoid Used Car Import Scams from Germany: Red Flags and Safety Tips",
+      "primaryKeyword": "how to avoid used car import scams from Germany",
+      "secondaryKeywords": [
+        "German car export scams",
+        "fake car dealers Germany",
+        "vehicle import fraud prevention",
+        "legitimate car exporters Germany"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Tanzania",
+        "Brazil"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How do I know if a German car dealer is legitimate?",
+        "What are the most common used car import scams from Germany?",
+        "How to verify a car exists before paying for import?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "Real Cost Breakdown: Hidden Fees When Importing Cars from Germany",
+      "primaryKeyword": "hidden costs importing cars from Germany",
+      "secondaryKeywords": [
+        "car import hidden fees",
+        "total cost import vehicle Germany",
+        "unexpected charges vehicle import",
+        "Germany car export additional costs"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "South Africa",
+        "Kenya",
+        "Brazil",
+        "Colombia"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "What hidden costs are there when importing a car from Germany?",
+        "How much does it really cost to import a car from Germany?",
+        "What extra fees should I expect when importing from Germany?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Can I Trust Vehicle Inspection Reports from German Dealers? What to Look For",
+      "primaryKeyword": "German vehicle inspection reports trustworthy",
+      "secondaryKeywords": [
+        "TÜV inspection report",
+        "German car inspection certificate",
+        "vehicle condition report Germany",
+        "pre-purchase inspection Germany"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Kenya",
+        "Ghana",
+        "Tanzania",
+        "Uganda"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Are German vehicle inspection reports reliable?",
+        "How to verify a German car inspection report is real?",
+        "What does a TÜV report tell me about a used car?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "What Happens If My Imported Car from Germany Has Problems After Arrival?",
+      "primaryKeyword": "problems with imported car from Germany after delivery",
+      "secondaryKeywords": [
+        "car warranty import Germany",
+        "vehicle defects after import",
+        "recourse faulty imported car",
+        "German car dealer liability"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Kenya",
+        "Ghana",
+        "South Africa",
+        "Brazil"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "What if my imported car has problems after delivery?",
+        "Do German car dealers offer warranty for exports?",
+        "Who is responsible if imported car has hidden defects?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "Is It Worth Importing an Electric Vehicle from Germany to Africa in 2024?",
+      "primaryKeyword": "importing electric vehicles from Germany to Africa",
+      "secondaryKeywords": [
+        "EV import Africa",
+        "electric car charging infrastructure Africa",
+        "Tesla import Germany Africa",
+        "electric vehicle maintenance Africa"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Kenya",
+        "Ghana",
+        "South Africa",
+        "Tanzania"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Should I import an electric car to Africa?",
+        "Is there charging infrastructure for EVs in Africa?",
+        "Are electric cars practical in African countries?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Why Are Some German Used Cars So Cheap? Warning Signs to Watch For",
+      "primaryKeyword": "why are German used cars so cheap",
+      "secondaryKeywords": [
+        "cheap German cars warning signs",
+        "flood damaged cars Germany",
+        "accident history German cars",
+        "salvage title Germany"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Tanzania",
+        "Brazil",
+        "Ukraine"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "Why are some cars from Germany suspiciously cheap?",
+        "What makes German cars cheaper than expected?",
+        "How to spot flood damaged cars from Germany?"
+      ]
+    }
   }
 ]
