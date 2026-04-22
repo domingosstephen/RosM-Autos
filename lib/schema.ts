@@ -18,7 +18,7 @@ import {
   ADDRESS,
   SOCIAL_LINKS,
 } from './constants'
-import type { Product } from '@/types/product'
+import type { Product, Automobile } from '@/types/product'
 import type { FAQItem } from '@/types/faq'
 
 // ---------------------------------------------------------------------------
@@ -122,7 +122,7 @@ export function localBusinessSchema() {
     url: SITE_URL,
     telephone: PHONE_NUMBER,
     email: [EMAIL, SALES_EMAIL],
-    image: `${SITE_URL}/icons/og-image.png`,
+    image: `${SITE_URL}/opengraph-image`,
     logo: `${SITE_URL}/icons/logo.svg`,
     description:
       'RosM Autos is a Germany-based international dealer of quality-inspected used cars, farm tractors, and electric bikes. We export to Africa, South America, and Eastern Europe with full shipping and customs service.',
@@ -175,18 +175,21 @@ export function productSchema(product: Product) {
   const primaryImage = product.images?.[0] ?? product.image
   const allImages = product.images ?? (product.image ? [product.image] : [])
 
+  const mileageStr = product.category === 'automobile' ? ` Mileage: ${(product as Automobile).mileage} km.` : ''
+  const fallbackDescription = `${product.name} — quality-inspected used ${product.category === 'automobile' ? 'vehicle' : product.category} for international export from Germany. Year: ${product.year}.${mileageStr} Available for shipping to Africa, South America, and Eastern Europe.`
+
   const base = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.name,
-    description: product.description,
+    description: product.description || fallbackDescription,
     brand: {
       '@type': 'Brand',
       name: product.brand,
     },
     image: primaryImage
       ? allImages.map((img) => `${SITE_URL}${img}`)
-      : `${SITE_URL}/icons/og-image.png`,
+      : `${SITE_URL}/opengraph-image`,
     url: `${SITE_URL}/inventory/${product.slug}`,
     sku: product.id,
     condition: 'https://schema.org/UsedCondition',
@@ -204,11 +207,38 @@ export function productSchema(product: Product) {
       },
       shippingDetails: {
         '@type': 'OfferShippingDetails',
-        shippingRate: { '@type': 'MonetaryAmount', currency: 'EUR' },
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: 0,
+          currency: 'EUR',
+        },
         shippingDestination: {
           '@type': 'DefinedRegion',
           addressCountry: ['NG', 'GH', 'KE', 'TZ', 'ZA', 'BR', 'CO', 'PL', 'RO', 'UA'],
         },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 1,
+            maxValue: 3,
+            unitCode: 'd',
+          },
+          transitTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 14,
+            maxValue: 42,
+            unitCode: 'd',
+          },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'DE',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+        merchantReturnDays: 0,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        description: 'All sales of used vehicles for export are final. Vehicles are sold as-inspected with full condition reports provided before purchase.',
       },
     },
   }
@@ -253,16 +283,35 @@ export function productListSchema(products: Product[], listName = 'Vehicle Inven
       item: {
         '@type': product.category === 'automobile' ? 'Car' : 'Product',
         name: product.name,
+        description: product.description || `${product.name} — quality-inspected used ${product.category === 'automobile' ? 'vehicle' : product.category} for export from Germany.`,
         url: `${SITE_URL}/inventory/${product.slug}`,
         image: product.images?.[0]
           ? `${SITE_URL}${product.images[0]}`
-          : `${SITE_URL}/icons/og-image.png`,
+          : `${SITE_URL}/opengraph-image`,
         offers: {
           '@type': 'Offer',
           price: product.price,
           priceCurrency: 'EUR',
           availability: 'https://schema.org/InStock',
           itemCondition: 'https://schema.org/UsedCondition',
+          url: `${SITE_URL}/inventory/${product.slug}`,
+          shippingDetails: {
+            '@type': 'OfferShippingDetails',
+            shippingRate: {
+              '@type': 'MonetaryAmount',
+              value: 0,
+              currency: 'EUR',
+            },
+            shippingDestination: {
+              '@type': 'DefinedRegion',
+              addressCountry: ['NG', 'GH', 'KE', 'TZ', 'ZA', 'BR', 'CO', 'PL', 'RO', 'UA'],
+            },
+          },
+          hasMerchantReturnPolicy: {
+            '@type': 'MerchantReturnPolicy',
+            applicableCountry: 'DE',
+            returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+          },
         },
         brand: { '@type': 'Brand', name: product.brand },
       },
