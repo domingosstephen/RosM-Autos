@@ -32,7 +32,8 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <head>
         <link rel="icon" href="/icons/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+        <link rel="icon" href="/icons/logo.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/icons/logo.svg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -38,7 +38,7 @@ export function createPageMetadata({
       siteName: SITE_NAME,
       images: [
         {
-          url: ogImage || `${SITE_URL}/icons/og-image.png`,
+          url: ogImage || `${SITE_URL}/opengraph-image`,
           width: 1200,
           height: 630,
           alt: `${title} - ${SITE_NAME}`,
@@ -51,7 +51,7 @@ export function createPageMetadata({
       card: 'summary_large_image',
       title: fullTitle,
       description,
-      images: [ogImage || `${SITE_URL}/icons/og-image.png`],
+      images: [ogImage || `${SITE_URL}/opengraph-image`],
     },
   }
 }
@@ -147,12 +147,9 @@ export const defaultMetadata: Metadata = {
     canonical: SITE_URL,
   },
 
-  // Verification — add Search Console / Bing verification codes here when available
-  // verification: {
-  //   google: 'YOUR_GOOGLE_SITE_VERIFICATION_CODE',
-  //   yandex: 'YOUR_YANDEX_CODE',
-  //   bing: 'YOUR_BING_CODE',
-  // },
+  verification: {
+    google: 'google4eb14543200fea69',
+  },
 
   category: 'automotive',
 }
