@@ -1546,5 +1546,404 @@
         "How to find responsive German car dealers?"
       ]
     }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Mercedes-Benz C-Class Import Duty Calculator: Complete Cost Guide for Nigeria",
+      "primaryKeyword": "Mercedes C-Class import duty Nigeria",
+      "secondaryKeywords": [
+        "Mercedes Benz import tax Nigeria",
+        "C-Class total import cost Nigeria",
+        "luxury car import duty calculator Nigeria"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How much does it cost to import a Mercedes C-Class to Nigeria?",
+        "What is the import duty on Mercedes Benz cars in Nigeria?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Total Cost to Import Volkswagen Golf to Kenya: Duty Calculator and Breakdown",
+      "primaryKeyword": "Volkswagen Golf import cost Kenya total",
+      "secondaryKeywords": [
+        "VW Golf import duty Kenya",
+        "Golf car import tax calculator Kenya",
+        "Volkswagen import cost breakdown Kenya"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Kenya"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How much does it cost to import a Volkswagen Golf to Kenya?",
+        "What is the total cost of importing VW Golf including duties?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Ford Transit vs Mercedes Sprinter vs Iveco Daily: Best Commercial Van Export to Africa",
+      "primaryKeyword": "Ford Transit vs Mercedes Sprinter vs Iveco Daily Africa",
+      "secondaryKeywords": [
+        "best commercial van export Africa",
+        "Transit Sprinter comparison Africa",
+        "commercial vehicle export Germany"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "Which is the best commercial van for African business?",
+        "Should I buy Ford Transit or Mercedes Sprinter for export?"
+      ]
+    }
+  },
+  {
+    "category": "tractor-guide",
+    "topic": {
+      "title": "New Holland vs Case IH vs Deutz-Fahr: Best German Tractors for South American Farming",
+      "primaryKeyword": "New Holland vs Case IH vs Deutz-Fahr South America",
+      "secondaryKeywords": [
+        "best German tractor South America",
+        "farm tractor comparison Brazil",
+        "agricultural machinery export Germany"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Brazil",
+        "Colombia"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which German tractor brand is best for South American farming?",
+        "Should I buy New Holland or Case IH for export to Brazil?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing Used Cars to Ethiopia: ERCA Customs and Addis Ababa Port Process",
+      "primaryKeyword": "import used car Ethiopia",
+      "secondaryKeywords": [
+        "Ethiopia car import duty",
+        "ERCA customs clearance",
+        "Djibouti port to Ethiopia",
+        "Addis Ababa vehicle registration"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Ethiopia"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How do I import a used car to Ethiopia?",
+        "What are Ethiopia car import duties?",
+        "How to clear customs in Ethiopia for imported vehicles?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "Vehicle Pre-Purchase Inspection Services in Germany: TÜV, DEKRA, and Independent Options",
+      "primaryKeyword": "vehicle inspection Germany export",
+      "secondaryKeywords": [
+        "TÜV inspection report",
+        "DEKRA vehicle check",
+        "German car inspection certificate",
+        "pre-purchase inspection"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Global"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How to get a vehicle inspected before buying in Germany?",
+        "What is TÜV inspection for exported cars?",
+        "How reliable are German vehicle inspection reports?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing a Used Car to Morocco: Customs Duties and Casablanca Port Process",
+      "primaryKeyword": "import used car Morocco",
+      "secondaryKeywords": [
+        "Morocco car import duty",
+        "Casablanca port clearance",
+        "Morocco vehicle registration",
+        "ADII customs Morocco"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Morocco"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How to import a used car to Morocco?",
+        "What are Morocco car import taxes?",
+        "How to clear customs at Casablanca port?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "German Used Car Auction Houses vs Dealers: Where to Find the Best Export Deals",
+      "primaryKeyword": "German car auctions vs dealers",
+      "secondaryKeywords": [
+        "BCA Germany auctions",
+        "Manheim Germany",
+        "German auto auction bidding",
+        "dealer vs auction prices"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Global"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "Should I buy from German auctions or dealers?",
+        "Where are the cheapest cars in Germany?",
+        "How to access German car auctions?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "Cold Climate vs Tropical Climate Vehicles: Which German Cars Are Best for Hot Weather Export",
+      "primaryKeyword": "German cars tropical climate",
+      "secondaryKeywords": [
+        "hot climate vehicle features",
+        "air conditioning reliability",
+        "tropical weather car maintenance",
+        "heat resistant vehicles"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa",
+        "South America"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which German cars work best in hot climates?",
+        "Do German cars handle tropical weather well?",
+        "What car features are important for hot climates?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing a Used Car to Senegal: Port of Dakar Process and GAINDE 2000 System",
+      "primaryKeyword": "import used car Senegal",
+      "secondaryKeywords": [
+        "Senegal car import duty",
+        "Port of Dakar clearance",
+        "GAINDE 2000 customs",
+        "Senegal vehicle registration"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Senegal"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How to import a used car to Senegal?",
+        "What is GAINDE 2000 system?",
+        "How much is car import duty in Senegal?"
+      ]
+    }
+  },
+  {
+    "category": "tractor-guide",
+    "topic": {
+      "title": "Kubota vs Fendt vs Deutz-Fahr: Best Used Compact Tractors for Export to South America",
+      "primaryKeyword": "best compact tractors South America",
+      "secondaryKeywords": [
+        "Kubota vs Fendt tractors",
+        "Deutz-Fahr export",
+        "small farm tractors",
+        "compact tractor comparison"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "South America"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which compact tractor is best for South America?",
+        "Kubota vs Fendt for small farms?",
+        "Best German tractor brands for export?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "How Much Does It Really Cost to Import a Used Car from Germany? (Hidden Fees Exposed)",
+      "primaryKeyword": "cost to import used car from Germany",
+      "secondaryKeywords": [
+        "hidden costs car import",
+        "car import fees Germany",
+        "total cost importing vehicle"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "South Africa",
+        "Brazil"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "What are the hidden costs of importing a car from Germany?",
+        "How much does it really cost to import a vehicle from Europe?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "How to Avoid Getting Scammed When Buying a Used Car from Germany Online",
+      "primaryKeyword": "avoid car import scams Germany",
+      "secondaryKeywords": [
+        "fake car dealers Germany",
+        "car export fraud",
+        "safe car buying Germany"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Tanzania",
+        "Uganda"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How do I know if a German car dealer is legitimate?",
+        "What are common scams when buying cars from Germany?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Is the Mileage on German Used Cars Real? How to Verify Odometer Reading",
+      "primaryKeyword": "verify mileage German used cars",
+      "secondaryKeywords": [
+        "odometer tampering Germany",
+        "check car mileage authenticity",
+        "German car history check"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Kenya",
+        "South Africa",
+        "Brazil",
+        "Colombia"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How can I verify the real mileage of a German car?",
+        "Are German car odometers tampered with?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Why German Used Cars Are Better Than Local Options: Quality Comparison",
+      "primaryKeyword": "German used cars vs local cars",
+      "secondaryKeywords": [
+        "German car quality",
+        "European cars vs local",
+        "why buy German cars"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Brazil",
+        "Poland"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Why should I buy a German car instead of a local one?",
+        "Are German used cars really better quality?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "What Happens If My Imported Car Breaks Down? Warranty and Support Guide",
+      "primaryKeyword": "imported car warranty Germany",
+      "secondaryKeywords": [
+        "car export warranty",
+        "imported vehicle support",
+        "German car parts availability"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Tanzania",
+        "Brazil"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Do German exported cars come with warranty?",
+        "What if my imported car needs repairs?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Can I Finance a Used Car Import from Germany? Payment Options Explained",
+      "primaryKeyword": "finance car import from Germany",
+      "secondaryKeywords": [
+        "car import financing",
+        "payment plans vehicle export",
+        "car import loans"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "South Africa",
+        "Brazil"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "Can I get financing to import a car from Germany?",
+        "What payment options exist for importing vehicles?"
+      ]
+    }
   }
 ]
