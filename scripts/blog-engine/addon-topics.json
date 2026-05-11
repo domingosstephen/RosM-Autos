@@ -1945,5 +1945,410 @@
         "What payment options exist for importing vehicles?"
       ]
     }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Toyota Land Cruiser Prado vs Mitsubishi Pajero: Best Export SUV for Kenya",
+      "primaryKeyword": "Toyota Prado vs Mitsubishi Pajero Kenya export",
+      "secondaryKeywords": [
+        "best SUV export Kenya",
+        "Prado vs Pajero reliability Africa",
+        "Toyota vs Mitsubishi for Kenya roads"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Kenya"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which is better for Kenya: Toyota Prado or Mitsubishi Pajero?",
+        "What SUV is most reliable for Kenyan conditions?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Honda Accord Import Duty Calculator: Total Cost to Import to Ghana 2026",
+      "primaryKeyword": "Honda Accord import duty Ghana calculator",
+      "secondaryKeywords": [
+        "Honda Accord import cost Ghana",
+        "sedan import duty Ghana",
+        "Honda import tax calculator Ghana"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Ghana"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How much does it cost to import a Honda Accord to Ghana?",
+        "What is the total cost including duties for importing a sedan to Ghana?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Volkswagen Golf Import Process and Costs for Colombian Market 2026",
+      "primaryKeyword": "Volkswagen Golf import Colombia cost",
+      "secondaryKeywords": [
+        "VW Golf import duty Colombia",
+        "compact car import Colombia",
+        "European car import Colombia process"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Colombia"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "How much does it cost to import a Volkswagen Golf to Colombia?",
+        "What is the import process for European cars in Colombia?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "BMW X5 vs Audi Q7: Best Luxury SUV Export to Eastern Europe",
+      "primaryKeyword": "BMW X5 vs Audi Q7 Eastern Europe export",
+      "secondaryKeywords": [
+        "luxury SUV export Eastern Europe",
+        "German SUV export comparison",
+        "BMW vs Audi for export"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Eastern Europe"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "Which luxury SUV is better for export: BMW X5 or Audi Q7?",
+        "What are the best German luxury SUVs for Eastern European markets?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Ford Ranger Import Duty and Registration Process in Tanzania 2026",
+      "primaryKeyword": "Ford Ranger import duty Tanzania",
+      "secondaryKeywords": [
+        "Ford Ranger import cost Tanzania",
+        "pickup truck import Tanzania",
+        "Ford Ranger registration Tanzania"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Tanzania"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How much does it cost to import a Ford Ranger to Tanzania?",
+        "What is the registration process for imported pickup trucks in Tanzania?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Winter Driving Features: Which German Cars Are Best for Cold Climate Export to Eastern Europe",
+      "primaryKeyword": "best German cars for winter driving",
+      "secondaryKeywords": [
+        "all wheel drive German cars",
+        "winter tires export",
+        "cold weather vehicles",
+        "AWD cars for export"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Eastern Europe",
+        "Russia",
+        "Ukraine"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which German cars are best for winter driving?",
+        "What features do I need for cold climate driving?",
+        "Are German cars good in snow?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Audi A4 vs BMW 3 Series vs Mercedes C-Class: Best German Luxury Sedan for Export",
+      "primaryKeyword": "best German luxury sedan for export",
+      "secondaryKeywords": [
+        "Audi A4 vs BMW 3 Series",
+        "Mercedes C-Class comparison",
+        "German luxury car export",
+        "premium sedan reliability"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Africa",
+        "South America",
+        "Eastern Europe"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "Which is better: Audi A4, BMW 3 Series, or Mercedes C-Class?",
+        "What's the most reliable German luxury sedan?",
+        "Which German sedan is best for export?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "Vehicle Modification Requirements: Converting German Cars for Local Markets",
+      "primaryKeyword": "convert German car specifications",
+      "secondaryKeywords": [
+        "vehicle modification for export",
+        "headlight conversion",
+        "speedometer conversion",
+        "EU to local standards"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa",
+        "South America"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How do I convert German car specifications for my country?",
+        "What modifications are required for imported cars?",
+        "Do I need to change headlights on German cars?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "German Used Car Warranty vs Japanese: What Coverage Do You Really Get?",
+      "primaryKeyword": "German vs Japanese used car warranty",
+      "secondaryKeywords": [
+        "used car warranty comparison",
+        "German car reliability",
+        "Japanese car warranty",
+        "export vehicle warranty"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Global"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Do German used cars come with warranty?",
+        "Which has better warranty: German or Japanese cars?",
+        "What warranty do I get with a German used car?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Best Used Automatic Transmission Cars Under €20,000 for Export from Germany",
+      "primaryKeyword": "best automatic transmission cars under 20000 euros",
+      "secondaryKeywords": [
+        "automatic cars for export",
+        "reliable automatic transmission",
+        "used automatic cars Germany",
+        "automatic vs manual export"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Africa",
+        "South America"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "Which automatic cars under €20,000 are most reliable?",
+        "Should I buy automatic or manual for export?",
+        "What are the best automatic transmission cars from Germany?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "Vehicle Registration Transfer: How to Handle German Paperwork for International Export",
+      "primaryKeyword": "German vehicle registration transfer",
+      "secondaryKeywords": [
+        "vehicle deregistration Germany",
+        "export documentation Germany",
+        "German car paperwork",
+        "Abmeldung process"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Global"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How do I transfer German vehicle registration for export?",
+        "What paperwork is needed to export a car from Germany?",
+        "How do I deregister a German car for export?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "Hidden Costs of Importing Used Cars from Germany: Complete Breakdown",
+      "primaryKeyword": "hidden costs importing cars from Germany",
+      "secondaryKeywords": [
+        "car import hidden fees",
+        "unexpected car import costs",
+        "total cost import car Germany",
+        "car import budget planning"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "South Africa",
+        "Brazil",
+        "Colombia",
+        "Poland"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "What are the hidden costs of importing a car from Germany?",
+        "How much does it really cost to import a car from Germany?",
+        "What fees am I not told about when importing cars?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "How to Check Used Car Condition Before Buying from Germany Online",
+      "primaryKeyword": "how to check car condition before buying Germany",
+      "secondaryKeywords": [
+        "inspect car remotely Germany",
+        "car condition verification Germany",
+        "pre-purchase car inspection Germany",
+        "buying unseen cars Germany"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Uganda",
+        "Cameroon",
+        "Peru",
+        "Romania"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How can I inspect a car in Germany before buying?",
+        "Can I trust photos when buying cars from Germany?",
+        "How to verify car condition without seeing it?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Why German Used Cars Are More Expensive: Are They Worth the Premium?",
+      "primaryKeyword": "why are German used cars expensive",
+      "secondaryKeywords": [
+        "German vs Japanese used cars cost",
+        "German car export prices",
+        "value German used cars",
+        "German car quality vs price"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Mozambique",
+        "DR Congo",
+        "Chile",
+        "Ukraine"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Why do German used cars cost more than Japanese ones?",
+        "Are German cars worth the extra money?",
+        "Is it better to buy from Germany or Japan for the price?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Can You Import Cars Over 10 Years Old? Age Restrictions by Country",
+      "primaryKeyword": "car age restrictions import from Germany",
+      "secondaryKeywords": [
+        "old car import limits",
+        "vehicle age restrictions Africa",
+        "import rules old cars",
+        "car age limits by country"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Kenya",
+        "Nigeria",
+        "Brazil",
+        "South Africa"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "Can I import a 15-year-old car from Germany?",
+        "What's the age limit for importing cars to my country?",
+        "Are there restrictions on old car imports?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "German TÜV vs Other Inspections: What It Means for Used Car Buyers",
+      "primaryKeyword": "German TÜV inspection meaning",
+      "secondaryKeywords": [
+        "TÜV certificate explained",
+        "German car inspection system",
+        "what is TÜV approval",
+        "German vehicle certification"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Poland",
+        "Romania",
+        "Ukraine",
+        "Colombia"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "What does TÜV mean on German cars?",
+        "Is TÜV inspection reliable for used cars?",
+        "Should I only buy cars with TÜV certification?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "What Happens If My Imported Car Breaks Down After Arrival?",
+      "primaryKeyword": "imported car warranty problems",
+      "secondaryKeywords": [
+        "imported car after-sales support",
+        "car warranty international import",
+        "imported vehicle breakdown",
+        "car problems after import"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Cameroon",
+        "Peru"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "What if my imported car has problems after delivery?",
+        "Do imported cars come with warranty?",
+        "Who fixes my German car if it breaks down?"
+      ]
+    }
   }
 ]
