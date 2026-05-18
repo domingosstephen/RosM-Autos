@@ -2350,5 +2350,290 @@
         "Who fixes my German car if it breaks down?"
       ]
     }
+  },
+  {
+    "category": "tractor-guide",
+    "topic": {
+      "title": "New Holland vs Case IH Tractors: Best Choice for Export to Kenya",
+      "primaryKeyword": "New Holland vs Case IH tractors Kenya export",
+      "secondaryKeywords": [
+        "best tractor for Kenya farming",
+        "New Holland tractor Kenya price",
+        "Case IH vs New Holland Africa"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Kenya"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which tractor brand is better for Kenyan farmers?",
+        "Should I buy New Holland or Case IH for Kenya export?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "How to Calculate Total Import Cost for Used Cars to Colombia from Europe",
+      "primaryKeyword": "Colombia used car import cost calculator",
+      "secondaryKeywords": [
+        "Colombia vehicle import duty calculator",
+        "car import tax Colombia 2026",
+        "total cost import car Colombia"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Colombia"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How much does it cost to import a car to Colombia?",
+        "What are all the fees for importing cars to Colombia?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Hyundai Tucson vs Kia Sportage vs Mazda CX-5: Best Used Compact SUV for Export to Africa",
+      "primaryKeyword": "best compact SUV Africa export",
+      "secondaryKeywords": [
+        "Hyundai Tucson vs Kia Sportage",
+        "Mazda CX-5 Africa",
+        "compact SUV comparison export",
+        "reliable SUV Africa roads"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "Which compact SUV is best for African roads?",
+        "Should I buy Hyundai Tucson or Kia Sportage for export?",
+        "Is Mazda CX-5 reliable in Africa?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "Vehicle Storage and Preparation for Export: Pre-Shipping Checklist Germany",
+      "primaryKeyword": "car export preparation Germany",
+      "secondaryKeywords": [
+        "vehicle storage before shipping",
+        "export preparation checklist",
+        "car cleaning for export",
+        "battery preparation shipping"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Germany",
+        "Global"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How to prepare a car for export shipping?",
+        "What should I do before shipping my car internationally?",
+        "How to store a car before export?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Seasonal Car Buying: Best Time of Year to Buy Used Cars from Germany for Export",
+      "primaryKeyword": "best time buy used cars Germany",
+      "secondaryKeywords": [
+        "German car market seasons",
+        "when to buy cars Germany",
+        "car prices by month Germany",
+        "export timing strategy"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Germany",
+        "Global"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "When is the best time to buy used cars in Germany?",
+        "Do German car prices change seasonally?",
+        "Should I wait to buy a car from Germany?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "Diesel vs Gasoline Engines for Hot Climate Export: Fuel System Reliability Analysis",
+      "primaryKeyword": "diesel vs gasoline hot climate",
+      "secondaryKeywords": [
+        "fuel system reliability hot weather",
+        "engine performance tropical climate",
+        "diesel vs petrol Africa",
+        "fuel quality requirements"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa",
+        "South America"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Is diesel or gasoline better for hot climates?",
+        "Which engine type is more reliable in Africa?",
+        "Do diesel engines work better in tropical countries?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "German Car Dealership vs Private Seller: Pros and Cons for Export Buyers",
+      "primaryKeyword": "German dealer vs private seller",
+      "secondaryKeywords": [
+        "buying from German dealers",
+        "private car sales Germany",
+        "export buyer protection",
+        "dealer warranties Germany"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Germany",
+        "Global"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "Should I buy from a German dealer or private seller?",
+        "What are the advantages of buying from German dealers?",
+        "Is it safe to buy from private sellers in Germany?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "Vehicle Tracking and GPS Requirements for Exported Cars by Country",
+      "primaryKeyword": "GPS requirements imported cars",
+      "secondaryKeywords": [
+        "vehicle tracking export",
+        "GPS installation requirements",
+        "car tracking system Africa",
+        "mandatory GPS by country"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa",
+        "South America"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "Do I need GPS tracking for imported cars?",
+        "Which countries require GPS in imported vehicles?",
+        "What are the vehicle tracking requirements?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "How to Spot Fake Used Car Dealers When Importing from Germany",
+      "primaryKeyword": "fake used car dealers Germany",
+      "secondaryKeywords": [
+        "scam car dealers",
+        "verify German car exporter",
+        "legitimate car dealers Germany"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Tanzania",
+        "Uganda"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How do I know if a German car dealer is legitimate?",
+        "What are red flags when buying cars from Germany?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Can You Trust German Car Inspection Reports for Export Vehicles?",
+      "primaryKeyword": "German car inspection reports reliability",
+      "secondaryKeywords": [
+        "TUV inspection cars",
+        "German vehicle inspection",
+        "car condition reports Germany"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "South Africa",
+        "Romania"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Are German car inspection reports accurate?",
+        "Should I trust TUV inspection for exported cars?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Why Do Some Used Cars from Germany Never Arrive After Payment?",
+      "primaryKeyword": "cars from Germany never arrived",
+      "secondaryKeywords": [
+        "car import scam",
+        "payment protection car import",
+        "secure payment car purchase"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Cameroon",
+        "DR Congo",
+        "Uganda"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "What if my car from Germany doesn't arrive?",
+        "How to protect payment when buying cars from Germany?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Should You Buy Left-Hand or Right-Hand Drive Cars from Germany for Export?",
+      "primaryKeyword": "left hand drive vs right hand drive Germany",
+      "secondaryKeywords": [
+        "LHD RHD cars export",
+        "steering side import cars",
+        "drive side used cars"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Tanzania",
+        "South Africa"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Should I buy left or right-hand drive car for my country?",
+        "Which steering side is better for export?"
+      ]
+    }
   }
 ]
