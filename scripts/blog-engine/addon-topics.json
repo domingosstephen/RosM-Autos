@@ -2635,5 +2635,436 @@
         "Which steering side is better for export?"
       ]
     }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Mercedes G-Wagon Import Cost Calculator: Complete Guide for Nigeria 2026",
+      "primaryKeyword": "Mercedes G-Wagon import cost Nigeria",
+      "secondaryKeywords": [
+        "G-Wagon import duty Nigeria",
+        "Mercedes G-Class import tax",
+        "luxury SUV import Nigeria cost"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How much does it cost to import a Mercedes G-Wagon to Nigeria?",
+        "What are the import duties for luxury SUVs in Nigeria?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "BMW X5 vs Mercedes ML-Class: Best Luxury SUV for African Export",
+      "primaryKeyword": "BMW X5 vs Mercedes ML export Africa",
+      "secondaryKeywords": [
+        "luxury SUV comparison export",
+        "BMW X5 Africa roads",
+        "Mercedes ML-Class reliability"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which is better for Africa: BMW X5 or Mercedes ML-Class?",
+        "What's the most reliable luxury SUV for African conditions?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Volkswagen Amarok vs Isuzu D-Max: Best Pickup for South American Farming",
+      "primaryKeyword": "Volkswagen Amarok vs Isuzu D-Max farming",
+      "secondaryKeywords": [
+        "pickup truck comparison farming",
+        "Amarok vs D-Max agriculture",
+        "best farm pickup South America"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Brazil",
+        "Colombia"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "Which pickup is better for farming: Amarok or D-Max?",
+        "What's the best pickup truck for agricultural work?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "How to Calculate Vehicle Import Tax in Brazil: Complete IBAMA Guide",
+      "primaryKeyword": "Brazil vehicle import tax calculator IBAMA",
+      "secondaryKeywords": [
+        "Brazil import duty calculator cars",
+        "IBAMA vehicle import requirements",
+        "Brazil customs tax vehicles"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Brazil"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How do I calculate vehicle import tax in Brazil?",
+        "What are IBAMA requirements for vehicle imports?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Ford Transit vs Mercedes Sprinter: Best Commercial Van for Export",
+      "primaryKeyword": "Ford Transit vs Mercedes Sprinter export",
+      "secondaryKeywords": [
+        "commercial van comparison export",
+        "Transit vs Sprinter reliability",
+        "best export commercial vehicle"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Kenya",
+        "Ghana"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which is better for export: Ford Transit or Mercedes Sprinter?",
+        "What's the most reliable commercial van for international markets?"
+      ]
+    }
+  },
+  {
+    "category": "tractor-guide",
+    "topic": {
+      "title": "New Holland vs Case IH Tractors: Complete Export Comparison for African Farming",
+      "primaryKeyword": "New Holland vs Case IH export Africa",
+      "secondaryKeywords": [
+        "tractor comparison Africa export",
+        "New Holland Case IH farming",
+        "best tractor brand Africa"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Kenya",
+        "Ghana",
+        "Tanzania"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "Which tractor is better for Africa: New Holland or Case IH?",
+        "What's the best tractor brand for African farming conditions?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Vehicle Spare Parts Availability in Africa: German vs Japanese Cars - Complete Guide",
+      "primaryKeyword": "vehicle spare parts availability Africa",
+      "secondaryKeywords": [
+        "German car parts Africa",
+        "Japanese car parts Africa",
+        "spare parts network",
+        "aftermarket parts"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "Are spare parts for German cars available in Africa?",
+        "Which cars have better spare parts availability in Africa?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "Vehicle Resale Value in Africa: Which German Cars Hold Value Best?",
+      "primaryKeyword": "used car resale value Africa",
+      "secondaryKeywords": [
+        "German car resale value",
+        "vehicle depreciation Africa",
+        "best cars for resale"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which German cars have the best resale value in Africa?",
+        "Do German cars hold their value in Africa?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing a Used Car to Egypt: Suez Canal Port Process",
+      "primaryKeyword": "import used car Egypt",
+      "secondaryKeywords": [
+        "Egypt car import duties",
+        "Suez Canal port clearance",
+        "Egypt customs process"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Egypt"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How to import a used car to Egypt?",
+        "What are Egypt car import duties?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Best Automatic vs Manual Transmission for African Roads: Climate and Durability Guide",
+      "primaryKeyword": "automatic vs manual transmission Africa",
+      "secondaryKeywords": [
+        "transmission durability hot climate",
+        "best transmission Africa",
+        "automatic transmission reliability"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Should I buy automatic or manual transmission for African roads?",
+        "Which transmission is more reliable in hot climate?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "Vehicle Service and Maintenance Network in South America: German vs Other Brands",
+      "primaryKeyword": "car service network South America",
+      "secondaryKeywords": [
+        "German car service South America",
+        "maintenance network Brazil",
+        "authorized service centers"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "South America",
+        "Brazil",
+        "Colombia",
+        "Argentina"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Can I get my German car serviced in South America?",
+        "Which cars have the best service network in Brazil?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing a Used Car to Tunisia: Port of Tunis Process",
+      "primaryKeyword": "import used car Tunisia",
+      "secondaryKeywords": [
+        "Tunisia car import duties",
+        "Port of Tunis clearance",
+        "Tunisia customs regulations"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Tunisia"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "How to import a used car to Tunisia?",
+        "What are Tunisia car import requirements?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Best 4WD vs 2WD Vehicles for Export: Terrain Analysis by African Country",
+      "primaryKeyword": "4WD vs 2WD cars Africa",
+      "secondaryKeywords": [
+        "all wheel drive Africa",
+        "four wheel drive necessity",
+        "terrain requirements Africa"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Do I need 4WD for African roads?",
+        "Which African countries require 4WD vehicles?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "Electric Vehicle Infrastructure in Eastern Europe: Import Readiness by Country 2026",
+      "primaryKeyword": "electric vehicle infrastructure Eastern Europe",
+      "secondaryKeywords": [
+        "EV charging stations Poland",
+        "electric car import Romania",
+        "EV infrastructure Czech Republic"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Poland",
+        "Romania",
+        "Czech Republic",
+        "Hungary"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "Is Eastern Europe ready for electric vehicles?",
+        "Can I import an electric car to Poland?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Is the Car Really in Good Condition? How to Verify Vehicle Quality Before Import",
+      "primaryKeyword": "verify used car condition before import",
+      "secondaryKeywords": [
+        "car inspection Germany",
+        "vehicle history check",
+        "pre-purchase inspection",
+        "used car quality verification"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Kenya",
+        "South Africa",
+        "Brazil",
+        "Colombia"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How can I check if a used car is in good condition before importing?",
+        "What inspection should I do before buying a car from Germany?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Import Used Car to Tanzania: Complete Cost Breakdown, Documents & Process 2026",
+      "primaryKeyword": "import used car to Tanzania",
+      "secondaryKeywords": [
+        "Tanzania car import duty",
+        "TBS inspection",
+        "Tanzania vehicle registration",
+        "Dar es Salaam port clearance"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Tanzania"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How do I import a used car to Tanzania?",
+        "What documents do I need to import a car to Tanzania?"
+      ]
+    }
+  },
+  {
+    "category": "shipping",
+    "topic": {
+      "title": "Why Is My Car Taking So Long to Arrive? Understanding Shipping Delays from Germany",
+      "primaryKeyword": "car shipping delays from Germany",
+      "secondaryKeywords": [
+        "vehicle shipping time",
+        "port delays Africa",
+        "car transit time Germany",
+        "shipping schedule delays"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Mozambique",
+        "Brazil"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "Why is my imported car taking so long to arrive?",
+        "How long does car shipping from Germany usually take?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Import Used Tractor to Uganda: Duties, Registration & Best Models 2026",
+      "primaryKeyword": "import used tractor to Uganda",
+      "secondaryKeywords": [
+        "Uganda tractor import duty",
+        "agricultural equipment import",
+        "tractor registration Uganda",
+        "best farm tractors Uganda"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Uganda"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How do I import a used tractor to Uganda?",
+        "What are the import duties for tractors in Uganda?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "Can I Import a Left-Hand Drive Car? Country Restrictions & Regulations Explained",
+      "primaryKeyword": "import left hand drive car restrictions",
+      "secondaryKeywords": [
+        "LHD car import rules",
+        "steering wheel position regulations",
+        "left hand drive countries",
+        "vehicle import restrictions"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Kenya",
+        "Tanzania",
+        "Uganda",
+        "Mozambique",
+        "South Africa"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Can I import a left-hand drive car to my country?",
+        "Which countries allow left-hand drive car imports?"
+      ]
+    }
   }
 ]
