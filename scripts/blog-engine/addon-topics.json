@@ -3066,5 +3066,386 @@
         "Which countries allow left-hand drive car imports?"
       ]
     }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Mercedes-Benz vs BMW: Which German Luxury Car Is Better for Export to South America",
+      "primaryKeyword": "Mercedes vs BMW export South America",
+      "secondaryKeywords": [
+        "German luxury cars export",
+        "Mercedes BMW comparison export",
+        "best German cars South America"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Brazil",
+        "Colombia"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which is better for export, Mercedes or BMW?",
+        "What are the best German luxury cars for South America?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Honda Civic Import Duty and Clearance Process at Mombasa Port Kenya",
+      "primaryKeyword": "Honda Civic import duty Kenya",
+      "secondaryKeywords": [
+        "Honda Civic Kenya price",
+        "Mombasa port Honda Civic clearance",
+        "import Honda Civic Kenya cost"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Kenya"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How much is import duty on Honda Civic in Kenya?",
+        "What does it cost to clear Honda Civic at Mombasa port?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Volkswagen vs Audi: Which German Brand Offers Better Value for African Export",
+      "primaryKeyword": "Volkswagen vs Audi export Africa",
+      "secondaryKeywords": [
+        "German car brands comparison Africa",
+        "VW Audi export value",
+        "best German cars Africa"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which is better for African conditions, Volkswagen or Audi?",
+        "What German car brand offers best value for Africa?"
+      ]
+    }
+  },
+  {
+    "category": "tractor-guide",
+    "topic": {
+      "title": "Case IH vs New Holland: Best Tractor Brands for South American Farming Conditions",
+      "primaryKeyword": "Case IH vs New Holland South America",
+      "secondaryKeywords": [
+        "best tractors South America",
+        "Case New Holland comparison export",
+        "tractors for South American farming"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Brazil",
+        "Colombia"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "Which tractor is better for South America, Case IH or New Holland?",
+        "What are the best tractors for South American farming?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing a Used Car to Kenya: NTSA Registration, KRA Duties, and Mombasa Port Process 2026",
+      "primaryKeyword": "import used car Kenya 2026",
+      "secondaryKeywords": [
+        "NTSA registration imported car",
+        "KRA import duty calculator",
+        "Mombasa port clearance"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Kenya"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How do I register an imported car with NTSA in Kenya?",
+        "What are the KRA import duties for used cars in Kenya 2026?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "Vehicle Age Limit for Imports by African Country: 8-Year Rule and Age Restrictions Guide 2026",
+      "primaryKeyword": "vehicle age limit imports Africa",
+      "secondaryKeywords": [
+        "8 year rule vehicle imports",
+        "car age restrictions by country",
+        "maximum age import vehicles"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "What is the maximum age for importing cars to Africa?",
+        "Which African countries have 8-year age limits for vehicle imports?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "German Vehicle History Check: How to Verify TÜV Records, Accident Reports, and Ownership Before Buying",
+      "primaryKeyword": "German vehicle history check",
+      "secondaryKeywords": [
+        "TÜV records check",
+        "German car accident history",
+        "vehicle ownership verification Germany"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Global"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How do I check a German car's history before buying?",
+        "What do TÜV records tell you about a used car?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "Used Car Parts Availability in Africa: German vs Japanese Vehicle Maintenance Costs by Country",
+      "primaryKeyword": "used car parts availability Africa",
+      "secondaryKeywords": [
+        "German car parts Africa",
+        "vehicle maintenance costs Africa",
+        "Japanese vs German spare parts"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Are German car parts expensive in Africa?",
+        "Which cars have the cheapest parts in Africa?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing a Used Car to South Africa: SARS Customs Process, Import Permits, and Cape Town Port",
+      "primaryKeyword": "import used car South Africa",
+      "secondaryKeywords": [
+        "SARS customs clearance",
+        "South Africa import permit",
+        "Cape Town port vehicle clearance"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "South Africa"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How do I get an import permit for a used car in South Africa?",
+        "What is the SARS customs process for importing vehicles?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Best Time to Buy Used Cars from Germany: Seasonal Pricing Trends and Export Opportunities 2026",
+      "primaryKeyword": "best time buy used cars Germany",
+      "secondaryKeywords": [
+        "seasonal car prices Germany",
+        "German car auction calendar",
+        "used car pricing trends"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Global"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "When are used cars cheapest in Germany?",
+        "What months have the best car deals in Germany?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing a Used Car to Botswana: BURS Customs, Registration, and Gaborone Process",
+      "primaryKeyword": "import used car Botswana",
+      "secondaryKeywords": [
+        "BURS customs clearance",
+        "vehicle registration Botswana",
+        "Gaborone car import process"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Botswana"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How do I import a car to Botswana through BURS?",
+        "What documents do I need to register an imported car in Botswana?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Real Hidden Costs When Importing Used Cars from Germany Revealed",
+      "primaryKeyword": "hidden costs importing cars from Germany",
+      "secondaryKeywords": [
+        "import duty calculator",
+        "car shipping hidden fees",
+        "total import cost breakdown"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "South Africa",
+        "Brazil"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "What are the hidden costs of importing a car from Germany?",
+        "How much does it really cost to import a used car?"
+      ]
+    }
+  },
+  {
+    "category": "shipping",
+    "topic": {
+      "title": "Why Your Used Car from Germany Arrived Damaged: Prevention Guide",
+      "primaryKeyword": "car damaged during shipping Germany",
+      "secondaryKeywords": [
+        "vehicle shipping damage claims",
+        "car transport insurance",
+        "shipping damage prevention"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Kenya",
+        "Tanzania",
+        "Ghana",
+        "Colombia"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "What if my imported car arrives damaged?",
+        "How to prevent shipping damage to vehicles?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "How to Verify a Used Car's Real Condition Before Buying from Germany",
+      "primaryKeyword": "verify used car condition Germany",
+      "secondaryKeywords": [
+        "car inspection services Germany",
+        "vehicle history check",
+        "pre-purchase car inspection"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Brazil",
+        "Colombia"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How can I check a car's condition before buying from Germany?",
+        "What inspection services are available for German used cars?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing Used Cars to Poland from Germany",
+      "primaryKeyword": "import used car to Poland from Germany",
+      "secondaryKeywords": [
+        "Poland car import duty",
+        "EU vehicle registration",
+        "Poland customs clearance"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Poland"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How do I import a used car from Germany to Poland?",
+        "What are Poland's requirements for importing German cars?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Why German Used Cars Are More Expensive: Is It Worth the Extra Cost?",
+      "primaryKeyword": "why German used cars expensive",
+      "secondaryKeywords": [
+        "German cars vs Japanese price",
+        "value for money used cars",
+        "German car quality premium"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Brazil",
+        "South Africa"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Why are German used cars more expensive than Japanese?",
+        "Are German cars worth the extra money?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "German Car Age Limits for Import: Which Countries Allow Older Vehicles",
+      "primaryKeyword": "German car age limit import",
+      "secondaryKeywords": [
+        "vehicle age restrictions",
+        "old car import rules",
+        "car age limit by country"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Tanzania",
+        "Brazil"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "What is the age limit for importing cars to my country?",
+        "Can I import a 10-year-old car from Germany?"
+      ]
+    }
   }
 ]
