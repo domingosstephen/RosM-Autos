@@ -3447,5 +3447,292 @@
         "Can I import a 10-year-old car from Germany?"
       ]
     }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Mercedes-Benz G-Class vs Toyota Land Cruiser: Best Luxury SUV for African Export",
+      "primaryKeyword": "Mercedes G-Class vs Toyota Land Cruiser export",
+      "secondaryKeywords": [
+        "luxury SUV export Africa",
+        "G-Wagon vs Land Cruiser comparison",
+        "best luxury SUV African roads"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which is better for Africa: Mercedes G-Class or Toyota Land Cruiser?",
+        "What's the best luxury SUV for African roads?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Honda Pilot Import Duty Calculator for Kenya: Total Cost Breakdown",
+      "primaryKeyword": "Honda Pilot import duty Kenya",
+      "secondaryKeywords": [
+        "Honda Pilot import cost Kenya",
+        "KRA duty Honda Pilot",
+        "import Honda Pilot Kenya calculator"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Kenya"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How much does it cost to import a Honda Pilot to Kenya?",
+        "What is the KRA duty for Honda Pilot in Kenya?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Ford Kuga vs Nissan X-Trail: Best Mid-Size SUV for Brazil Import",
+      "primaryKeyword": "Ford Kuga vs Nissan X-Trail Brazil",
+      "secondaryKeywords": [
+        "best SUV import Brazil",
+        "mid-size SUV Brazil comparison",
+        "Ford Kuga import Brazil cost"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Brazil"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which SUV is better for importing to Brazil: Ford Kuga or Nissan X-Trail?",
+        "What's the best mid-size SUV to import to Brazil?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "How to Register Imported Vehicle in Tanzania: SUMATRA System Guide",
+      "primaryKeyword": "how to register imported car Tanzania",
+      "secondaryKeywords": [
+        "SUMATRA vehicle registration",
+        "Tanzania imported car registration",
+        "register car Tanzania SUMATRA"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Tanzania"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How do I register an imported car in Tanzania using SUMATRA?",
+        "What is the process for vehicle registration in Tanzania?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "BMW X5 vs Audi Q7: Premium SUV Import Comparison for Eastern Europe",
+      "primaryKeyword": "BMW X5 vs Audi Q7 Eastern Europe import",
+      "secondaryKeywords": [
+        "luxury SUV import Eastern Europe",
+        "BMW X5 Audi Q7 comparison",
+        "premium SUV export Eastern Europe"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Poland",
+        "Romania",
+        "Bulgaria"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Which premium SUV is better for Eastern Europe: BMW X5 or Audi Q7?",
+        "What's the best luxury SUV to import to Eastern Europe?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Best Used Cars for Taxi Business in Africa: Durability and Fuel Efficiency Guide",
+      "primaryKeyword": "best used cars taxi business Africa",
+      "secondaryKeywords": [
+        "taxi cars Africa",
+        "commercial vehicles Africa",
+        "fuel efficient cars taxi"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "What are the best cars for taxi business in Africa?",
+        "Which used cars are most profitable for taxi business?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "German Car Spare Parts Distribution Network in Africa: Availability by Country",
+      "primaryKeyword": "German car spare parts Africa",
+      "secondaryKeywords": [
+        "BMW parts Africa",
+        "Mercedes parts availability",
+        "VW parts distribution Africa"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Are German car parts available in Africa?",
+        "Where to find BMW parts in Africa?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Vehicle Security Systems and Anti-Theft Protection for African Export Markets",
+      "primaryKeyword": "vehicle security systems Africa",
+      "secondaryKeywords": [
+        "car security Africa",
+        "anti-theft devices export",
+        "vehicle tracking systems"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "What security features should cars have for Africa?",
+        "How to protect exported vehicles from theft?"
+      ]
+    }
+  },
+  {
+    "category": "vehicle-review",
+    "topic": {
+      "title": "Best Used Hybrid Cars for Export to Africa: Fuel Savings vs Maintenance Costs",
+      "primaryKeyword": "best used hybrid cars Africa",
+      "secondaryKeywords": [
+        "hybrid cars export Africa",
+        "Toyota Prius Africa",
+        "hybrid maintenance Africa"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Are hybrid cars suitable for Africa?",
+        "Which hybrid cars work best in hot climates?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing Agricultural Equipment to Argentina: SENASA Regulations",
+      "primaryKeyword": "import agricultural equipment Argentina",
+      "secondaryKeywords": [
+        "SENASA regulations",
+        "tractor import Argentina",
+        "farm equipment Buenos Aires"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Argentina"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How to import tractors to Argentina?",
+        "What are SENASA requirements for farm equipment?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "Vehicle Modification Requirements for Different African Countries: Headlights, Mirrors, and Safety Standards",
+      "primaryKeyword": "vehicle modification requirements Africa",
+      "secondaryKeywords": [
+        "car modification Africa",
+        "headlight conversion",
+        "vehicle safety standards Africa"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "What modifications do cars need for Africa?",
+        "Do I need to change headlights for African export?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Can I Trust Online Photos When Buying a Used Car from Germany?",
+      "primaryKeyword": "verify used car condition online Germany",
+      "secondaryKeywords": [
+        "inspect car before shipping",
+        "vehicle condition verification",
+        "pre-purchase inspection Germany"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Uganda",
+        "Peru"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How do I know the real condition of a car I'm buying online?",
+        "Can I get an inspection before buying from Germany?",
+        "Are online car photos trustworthy?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "Which German Cities Have the Best Used Car Dealers for Export?",
+      "primaryKeyword": "best German cities buy used cars export",
+      "secondaryKeywords": [
+        "Hamburg car dealers export",
+        "Berlin used car exporters",
+        "Munich vehicle dealers"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Ukraine",
+        "Georgia"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "Where are the most reliable car dealers in Germany?",
+        "Which German city is best for buying export cars?",
+        "What are the top car export hubs in Germany?"
+      ]
+    }
   }
 ]
