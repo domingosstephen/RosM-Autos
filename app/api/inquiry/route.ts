@@ -27,7 +27,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true, message: 'Inquiry received' })
     }
 
-    const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE'
+    const WEB3FORMS_KEY = '22d879ce-78c3-4c8f-8db8-ef022a1c3ad2'
 
     // Forward to Web3Forms for email delivery
     const web3Res = await fetch('https://api.web3forms.com/submit', {
