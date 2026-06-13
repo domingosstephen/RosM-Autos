@@ -73,6 +73,10 @@ export default function AboutPage() {
                   <p>
                     Every unit is inspected and photographed before listing. Every quote includes vehicle price, shipping, documentation, and insurance — no surprise charges. Every shipment is tracked from our yard to your port. Our {STATS.satisfactionRate} satisfaction rate is not a marketing number — it is what happens when you deliver on your promises, every time.
                   </p>
+                  <p>
+                    We are a registered German automotive export business operating from Lübbecke, North Rhine-Westphalia. All vehicles are sold with proper German export documentation including Ausfuhrkennzeichen (export plates), Fahrzeugbrief (vehicle title), and customs clearance paperwork for the destination country.
+                  </p>
+                  <p className="text-sm text-muted mt-4">Last updated: June 2026</p>
                 </div>
               </div>
             </AnimateOnScroll>
