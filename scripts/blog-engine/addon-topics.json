@@ -3734,5 +3734,361 @@
         "What are the top car export hubs in Germany?"
       ]
     }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Total Cost Calculator: Importing Honda CR-V to Kenya from Germany",
+      "primaryKeyword": "Honda CR-V import cost Kenya",
+      "secondaryKeywords": [
+        "Honda CRV Kenya import duty",
+        "CRV total cost calculator Kenya",
+        "Honda CRV shipping cost Kenya"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Kenya"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How much does it cost to import Honda CR-V to Kenya?",
+        "What is Honda CR-V import duty in Kenya?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "BMW X5 Import Duty and Age Restrictions for Nigeria Vehicle Import",
+      "primaryKeyword": "BMW X5 import duty Nigeria",
+      "secondaryKeywords": [
+        "BMW X5 Nigeria customs",
+        "BMW X5 age limit Nigeria",
+        "BMW X5 total cost Nigeria"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Can I import BMW X5 to Nigeria?",
+        "What is BMW X5 import duty in Nigeria?"
+      ]
+    }
+  },
+  {
+    "category": "comparison",
+    "topic": {
+      "title": "Audi Q7 vs BMW X7: Best Premium SUV for Export to Eastern Europe",
+      "primaryKeyword": "Audi Q7 vs BMW X7 Eastern Europe",
+      "secondaryKeywords": [
+        "Q7 export Eastern Europe",
+        "BMW X7 export market",
+        "luxury SUV Eastern Europe import"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Eastern Europe"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "Which is better for Eastern Europe, Audi Q7 or BMW X7?",
+        "Should I export Q7 or X7 to Eastern Europe?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "How to Calculate Total Import Cost for Used Cars in Colombia: Complete 2026 Guide",
+      "primaryKeyword": "total cost import car Colombia calculator",
+      "secondaryKeywords": [
+        "Colombia vehicle import cost",
+        "car import duty Colombia",
+        "Colombia customs calculator vehicle"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Colombia"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How much does it cost to import a car to Colombia?",
+        "How to calculate vehicle import costs in Colombia?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing a Used Car to Pakistan: Karachi Port Process and SRO 678 Regulations",
+      "primaryKeyword": "import used car to Pakistan",
+      "secondaryKeywords": [
+        "Pakistan car import policy",
+        "Karachi port vehicle clearance",
+        "Pakistan customs duty calculator",
+        "SRO 678 regulations"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Pakistan"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How to import a used car to Pakistan?",
+        "What are Pakistan car import duties?",
+        "Can I import old cars to Pakistan?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "Used Car Insurance Claims After Import: How to Handle Damage and Coverage Issues",
+      "primaryKeyword": "imported car insurance claims",
+      "secondaryKeywords": [
+        "vehicle damage claims",
+        "import insurance coverage",
+        "car insurance after import",
+        "transit damage claims"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa",
+        "South America",
+        "Eastern Europe"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How to claim insurance on imported car damage?",
+        "What insurance covers imported vehicles?",
+        "How to handle car damage during shipping?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "Vehicle Modification Laws by Country: What Changes Are Required for Imported Cars",
+      "primaryKeyword": "vehicle modification laws import",
+      "secondaryKeywords": [
+        "car modification requirements",
+        "vehicle compliance standards",
+        "headlight conversion laws",
+        "speedometer conversion"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa",
+        "South America",
+        "Eastern Europe"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "What modifications are required for imported cars?",
+        "Do I need to change headlights on imported cars?",
+        "What vehicle modifications are mandatory by country?"
+      ]
+    }
+  },
+  {
+    "category": "how-to",
+    "topic": {
+      "title": "Vehicle Emissions Testing for Imported Cars: Country Requirements and Certification Process",
+      "primaryKeyword": "imported car emissions testing",
+      "secondaryKeywords": [
+        "vehicle emissions certificate",
+        "import emissions standards",
+        "Euro emission compliance",
+        "emissions testing requirements"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa",
+        "South America",
+        "Eastern Europe"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "Do imported cars need emissions testing?",
+        "What emissions standards are required for imported vehicles?",
+        "How to get emissions certificate for imported car?"
+      ]
+    }
+  },
+  {
+    "category": "market-insight",
+    "topic": {
+      "title": "Currency Exchange Impact on Car Import Costs: Hedging Strategies for International Buyers",
+      "primaryKeyword": "currency exchange car import",
+      "secondaryKeywords": [
+        "exchange rate impact",
+        "currency hedging strategies",
+        "foreign exchange car buying",
+        "import cost currency risk"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Africa",
+        "South America",
+        "Eastern Europe"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "How does currency exchange affect car import costs?",
+        "When is the best time to buy cars with currency exchange?",
+        "How to protect against currency fluctuations when importing cars?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Complete Guide to Importing a Used Car to Chile: Valparaíso Port Process and Servicio Nacional de Aduanas",
+      "primaryKeyword": "import used car to Chile",
+      "secondaryKeywords": [
+        "Chile car import duty",
+        "Valparaíso port vehicle clearance",
+        "Chile customs process",
+        "Servicio Nacional de Aduanas"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Chile"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How to import a used car to Chile?",
+        "What are Chile car import duties?",
+        "How much does it cost to import a car to Chile?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "Hidden Costs of Importing Used Cars: What Nigerian Buyers Don't Expect",
+      "primaryKeyword": "hidden costs importing used cars Nigeria",
+      "secondaryKeywords": [
+        "import duty Nigeria",
+        "vehicle clearing costs",
+        "unexpected fees importing cars",
+        "total cost importing car Nigeria"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "What are all the costs of importing a car to Nigeria?",
+        "Why is my car import more expensive than quoted?",
+        "What hidden fees should I expect when importing?"
+      ]
+    }
+  },
+  {
+    "category": "shipping",
+    "topic": {
+      "title": "Why Do Used Cars from Germany Take So Long to Arrive? Shipping Timeline Explained",
+      "primaryKeyword": "why German cars take long to ship",
+      "secondaryKeywords": [
+        "used car shipping time Germany",
+        "vehicle transport delay",
+        "car shipping timeline Africa",
+        "when will my car arrive"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Tanzania",
+        "Cameroon"
+      ],
+      "priority": 2,
+      "aiQueryTargets": [
+        "How long does it take to ship a car from Germany to Africa?",
+        "Why is my car taking so long to arrive?",
+        "What causes delays in car shipping?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "Is It Safe to Pay Full Amount Before Seeing the Car? Payment Security Guide",
+      "primaryKeyword": "safe payment methods importing cars",
+      "secondaryKeywords": [
+        "secure car import payment",
+        "escrow services car import",
+        "payment protection buying cars Germany",
+        "wire transfer safety"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Brazil",
+        "Colombia"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How to pay safely when importing a car?",
+        "Should I pay full amount before car ships?",
+        "What payment methods are safe for car imports?"
+      ]
+    }
+  },
+  {
+    "category": "country-guide",
+    "topic": {
+      "title": "How to Import a Used Car to Poland from Germany: Complete Tax and Process Guide",
+      "primaryKeyword": "import used car Poland from Germany",
+      "secondaryKeywords": [
+        "Poland car import tax",
+        "used vehicle registration Poland",
+        "EU car import rules",
+        "Poland customs clearance cars"
+      ],
+      "searchIntent": "commercial",
+      "targetRegions": [
+        "Poland"
+      ],
+      "priority": 3,
+      "aiQueryTargets": [
+        "How to import a car from Germany to Poland?",
+        "What taxes apply when importing cars to Poland?",
+        "Do I need to pay VAT on German cars in Poland?"
+      ]
+    }
+  },
+  {
+    "category": "buying-guide",
+    "topic": {
+      "title": "German Used Car Mileage Tampering: How to Spot Odometer Fraud Before Buying",
+      "primaryKeyword": "German car mileage tampering",
+      "secondaryKeywords": [
+        "odometer fraud Germany",
+        "check car mileage authentic",
+        "mileage manipulation used cars",
+        "verify kilometers German cars"
+      ],
+      "searchIntent": "informational",
+      "targetRegions": [
+        "Nigeria",
+        "Ghana",
+        "Kenya",
+        "Brazil",
+        "Romania"
+      ],
+      "priority": 1,
+      "aiQueryTargets": [
+        "How to check if German car mileage is real?",
+        "Do German dealers manipulate odometers?",
+        "How to verify true mileage on used cars?"
+      ]
+    }
   }
 ]
