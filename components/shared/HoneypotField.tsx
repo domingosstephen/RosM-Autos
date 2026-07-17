@@ -6,11 +6,11 @@ interface HoneypotFieldProps {
 export function HoneypotField({ value, onChange }: HoneypotFieldProps) {
   return (
     <div className="absolute opacity-0 h-0 w-0 overflow-hidden" aria-hidden="true">
-      <label htmlFor="website">Website</label>
+      <label htmlFor="honeypot">Website</label>
       <input
         type="text"
-        id="website"
-        name="website"
+        id="honeypot"
+        name="honeypot"
         value={value}
         onChange={onChange}
         tabIndex={-1}

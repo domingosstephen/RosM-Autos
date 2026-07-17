@@ -11,6 +11,8 @@ import { HoneypotField } from '@/components/shared/HoneypotField'
 import { Button } from '@/components/shared/Button'
 import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll'
 
+const WEB3FORMS_KEY = '22d879ce-78c3-4c8f-8db8-ef022a1c3ad2'
+
 const countryOptions = PRIORITY_COUNTRIES.map((c) => ({ value: c, label: c }))
 
 interface FormData {
@@ -77,13 +79,25 @@ export function InquiryForm() {
     setIsSubmitting(true)
 
     try {
-      const res = await fetch('/api/inquiry', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(result.data),
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `Vehicle Inquiry — ${result.data.vehicleInterest || 'General'}`,
+          from_name: result.data.fullName,
+          name: result.data.fullName,
+          email: result.data.email,
+          phone: result.data.phone,
+          country: result.data.country,
+          vehicle_interest: result.data.vehicleInterest,
+          message: result.data.message,
+        }),
       })
 
-      if (res.ok) {
+      const data = await res.json().catch(() => null)
+
+      if (res.ok && data?.success) {
         setSubmitStatus('success')
         setFormData(initialFormData)
       } else {

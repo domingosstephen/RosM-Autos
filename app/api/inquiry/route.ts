@@ -46,7 +46,9 @@ export async function POST(request: Request) {
       }),
     })
 
-    if (!web3Res.ok) {
+    const web3Data = await web3Res.json().catch(() => null)
+
+    if (!web3Res.ok || !web3Data?.success) {
       return NextResponse.json(
         { success: false, message: 'Failed to send inquiry' },
         { status: 502 }
